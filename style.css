@@ -82,7 +82,7 @@ margin: 0 0.5rem;
     flex: 1;
     min-width: 300px;
     text-align: left; /* Ensures paragraph stays aligned to one side */
-    background-color: gray;
+    /* background-color: #d6a832; */
     padding: 10px 15px 25px 15px;
     border-radius: 10px;
 }
@@ -95,8 +95,7 @@ margin: 0 0.5rem;
 
 .about-text p {
     font-size: 1.2rem;
-    color: white;
-    font-weight: bold;
+    color:black;
     line-height: 1.6;
     margin-left: 2rem;
 }
