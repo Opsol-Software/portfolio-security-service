@@ -47,8 +47,28 @@ function reveal() {
       }
     }
   }
+
+function startAnimation() {
+  var animation_container = document.getElementById("contact-animation-container")
+
+  var animation_left = document.getElementById("animation-left")
+  var animation_right = document.getElementById("animation-right")
+  var animation_bottom = document.getElementById("animation-bottom")
+
+  var windowHeight = window.innerHeight
+  var elementTop = animation_container.getBoundingClientRect().top
+  var elementVisible = 150
+
+  if (elementTop < windowHeight - elementVisible) {
+    animation_left.classList.add("slide-in-left")
+    animation_right.classList.add("slide-in-right")
+    animation_bottom.classList.add("slide-in-bottom")
+  }
+
+}
   
   window.addEventListener("scroll", reveal, {passive: true});
+  window.addEventListener("scroll", startAnimation, {passive: true})
 
 
 //   document.addEventListener("DOMContentLoaded", () => {

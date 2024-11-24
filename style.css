@@ -89,13 +89,16 @@ margin: 0 0.5rem;
 
 .about-text h1 {
     margin-bottom: 1rem;
-    color: whitesmoke;
+    color: #d6a832;
+    font-size: 1.2rem;
 }
 
 .about-text p {
-    font-size: 1rem;
-    color: whitesmoke;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
     line-height: 1.6;
+    margin-left: 2rem;
 }
 
 .about-image {
@@ -627,5 +630,95 @@ opacity: 1;
     .container {
         flex-direction: column;
         gap: 20px;
+    }
+}
+
+
+/* Contact-Banner */ 
+
+.contact-banner {
+    display: flex;
+    margin: auto;
+    padding: 10px 15px;
+    background-color:#d6a832;
+    height: 120px;
+}
+
+.contact-banner-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.contact-banner-text {
+    width: 320px;
+    display: none;
+}
+
+.contact-banner-sub-text {
+    float: right;
+}
+
+.contact-banner-text a {
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    background-color: #1a1a1a;
+    color: whitesmoke;
+    padding: 10px 15px;
+    border-radius: 50vw;
+    margin: 20px auto;
+}
+
+#call-icon {
+    margin-top: 10px;
+}
+
+.slide-in-left {
+    transform: translateX(-100%);
+    animation: slide-in-left 1s ease-out forwards;
+    display: block;
+}
+
+.slide-in-right {
+    transform: translateX(100%);
+    animation: slide-in-right 1s ease-out forwards;
+    display: block;
+}
+
+.slide-in-bottom {
+    transform: translateY(100%);
+    animation: slide-in-bottom 1s ease-out forwards;
+    display: block;
+}
+
+@keyframes slide-in-left {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translate(0);
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-bottom {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
     }
 }
