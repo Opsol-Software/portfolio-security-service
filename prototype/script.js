@@ -46,7 +46,7 @@ function reveal() {
         reveals[i].classList.remove("active");
       }
     }
-  }
+}
 
 function startAnimation() {
   var animation_container = document.getElementById("contact-animation-container")
