@@ -21,6 +21,8 @@
 
     --primery-color: #fd562a;
     --secondary-color: rgba(255, 255, 255, .4);
+
+    --num-logo: 9;
 }
 
 .roboto-regular {
@@ -135,24 +137,56 @@ nav a:hover {
     padding-right: 50px;
 }
 
+.quick-link-container .quick-link {
+    width: 150px;
+}
+
 .quick-link {
-    text-decoration: none;
-    font-size: var(--font-size-large);
-    font-weight: var(--font-weight-medium);
-    background-color: black;
-    color: var(--font-color-1);
-    padding: 10px 15px;
-    border-radius: 50vw;
-    margin: 20px;
-    transition: all 0.3s ease-in-out;
+    height: 50px;
+    width: 200px;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #252525;
+    overflow: hidden;
+    border-radius: 30px;
+    color: #333;
+    transition: all 0.5s ease-in-out;  
 }
 
-.quotation-link {
-    background-color: #FFBF61;
+.btn-txt {
+    z-index: 1;
+    font-weight: 800;
+    letter-spacing: 4px;
 }
 
-.contact-link {
-    background-color: #629584;
+.type1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    background-color: #333;
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+}
+
+.quick-link .nav-btn-1 .type1::after {
+    background-color: gold;
+}
+
+.quick-link:hover {
+    box-shadow: 1px 1px 200px #252325;
+    color: #fff;
+    border: none;
+}
+
+.type1:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);
 }
 
 header.scrolled .quick-link {
@@ -302,12 +336,14 @@ header.scrolled .quick-link {
 /* Sections Styling */
 
 section {
-    min-height: 75vh;
+    min-height: 50vh;
 }
 
 
 .overlay {
     background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
 }
 
 .reveal{
@@ -322,20 +358,10 @@ section {
     opacity: 1;
 }
 
-/* Services Section */
-
-.services {
-    background: url(assets/images/security-guard-2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    display: grid;
-}
-
 /* About Us section */
 .about-us {
     display: flex;
-    background: url(assets/images/background-flip.png);
+    /* background: url(assets/images/background-flip.png); */
     background-size: cover;
 }
 
@@ -508,11 +534,17 @@ section {
     background: #555;
 }
 
+/* services section */
+.services-container {
+    background: url(assets/images/security-guard-2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 40px;
+}
+
 #service-section {
     min-height: 720px;
     width: 100%;
-    /* background: #e4e4e4; */
-    background: url('bg.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -520,10 +552,12 @@ section {
 }
 
 #service-section h2 {
-    color: #2c3e50;
-    font-size: 2rem;
+    color: var(--font-color-4);
+    font-size: var(--font-size-small);
     margin-bottom: 20px;
     position: relative;
+    align-self: flex-start;
+    margin-left: 8rem;
 }
 
 #service-section h2::after {
@@ -534,7 +568,7 @@ section {
     width: 0;
     border-top: 20px solid transparent;
     border-left: 2px solid var(--primery-color);
-}
+} 
 
 #service-section h2::before {
     position: absolute;
@@ -547,20 +581,21 @@ section {
 }
 
 #service-section #paragraph {
-    width: 45%;
-    font-size: 1rem;
-    color: #2c3e50;
-    text-align: center;
-    line-height: 1.5rem;
+    width: 90%;
+    font-size: var(--font-size-extra-large);
+    margin-left: 7rem;
+    color: var(--font-color-1);
+    text-align: left;
+    line-height: 4rem;
     margin-bottom: 40px;
     text-transform: uppercase;
+    margin-top: 0;
 }
-
 
 .cards .card img {
     width: 100%; /* Make the image fit the card width */
     height: auto; /* Maintain the aspect ratio */
-    border-radius: 8px; /* Rounded corners for the image */
+    border-radius: 8px; 
     object-fit: cover;/* Ensure proper scaling without distortion */
     max-height: 200px; /* Adjust the maximum height to prevent oversized images */
     margin-bottom: 15px; /* Spacing between the image and other content */
@@ -574,31 +609,18 @@ section {
     margin-top: 20px;
 }
 
-/* .cards .card {
-    height: 280px;
-    width: 380px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    padding: 0 8%;
-    background: rgb(65, 62, 105);
-    position: relative;
-} */
-
 .cards .card {
     height: auto; /* Allow card height to adjust based on content */
     width: 380px; /* Keep consistent width */
     padding: 20px; /* Add padding for spacing inside the card */
     background: rgb(174, 173, 184);
     position: relative;
-    border-radius: 10px; /* Add rounded corners */
+    border-radius: 10px; 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
-
-
 
 .cards .card::before {
     position: absolute;
@@ -689,7 +711,7 @@ section {
 .cards .card img {
     width: 100%; /* Make the image fit the card width */
     height: auto; /* Maintain the aspect ratio */
-    border-radius: 8px; /* Rounded corners for the image */
+    /* border-radius: 8px;  */
     object-fit: cover; /* Ensure proper scaling without distortion */
     max-height: 200px; /* Adjust the maximum height to prevent oversized images */
     margin-bottom: 15px; /* Spacing between the image and other content */
@@ -699,6 +721,8 @@ section {
 .cards .card:hover img {
     transform: scale(1.05); /* Slight zoom effect on image hover */
 }
+
+/* Client Information */
 
 .client-info {
     display: flex;
@@ -789,6 +813,173 @@ section {
     top: 78%;
 }
 
+
+/* Client Logo container*/
+
+.brand-container {
+    height: 100px;
+    width: 100%;
+    max-width: 1536px;
+    margin-inline: auto;
+    position: relative;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0)
+    );
+}
+
+@keyframes scrollLeft {
+
+    to {
+        left: -200px;
+    }
+}
+
+.item {
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+    position:absolute;
+    left: calc(200px * var(--num-logo));
+    animation-name: scrollLeft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+.item img{
+    object-fit: contain;
+    width: 300px;
+    height: 100px;
+}
+
+.item-1 {
+    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 1) * -1);
+}
+
+.item-2 {
+    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 2) * -1);
+}
+.item-3 {
+    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 3) * -1);
+}
+.item-4 {
+    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 4) * -1);
+}
+.item-5 {
+    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 5) * -1);
+}
+.item-6 {
+    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 6) * -1);
+}
+.item-7 {
+    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 7) * -1);
+}
+.item-8 {
+    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 8) * -1);
+}
+.item-9 {
+    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 9) * -1);
+}
+
+
+/* Contact Banner */
+
+.contact-banner {
+    display: flex;
+    margin: auto;
+    padding: 10px 15px;
+    background-color:#d6a832;
+    height: 120px;
+}
+
+.contact-banner-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.contact-banner-text {
+    width: 320px;
+    display: none;
+}
+
+.contact-banner-sub-text {
+    float: right;
+}
+
+.contact-banner-text a {
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    background-color: #1a1a1a;
+    color: whitesmoke;
+    padding: 10px 15px;
+    border-radius: 50vw;
+    margin: 20px auto;
+}
+
+#call-icon {
+    margin-top: 10px;
+}
+
+.slide-in-left {
+    transform: translateX(-100%);
+    animation: slide-in-left 1s ease-out forwards;
+    display: block;
+}
+
+.slide-in-right {
+    transform: translateX(100%);
+    animation: slide-in-right 1s ease-out forwards;
+    display: block;
+}
+
+.slide-in-bottom {
+    transform: translateY(100%);
+    animation: slide-in-bottom 1s ease-out forwards;
+    display: block;
+}
+
+@keyframes slide-in-left {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translate(0);
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-bottom {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+
 @keyframes pulse {
     100% {
         opacity: 0;
@@ -797,6 +988,139 @@ section {
 }
 
 
+/* Legacy */
+.Scontainer {
+    display: flex;
+    justify-content: space-between; /* Divides space evenly between children */
+    align-items: stretch; /* Makes child divs the same height */
+    background-color: #000;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); */
+    width: 100%; /* Fits the window width */
+    height: 100vh; /* Fits the window height */
+    box-sizing: border-box; /* Ensures padding doesn’t overflow */
+}
+
+.Slogo {
+    flex: 1; /* Equal space division with Scontent */
+    display: flex;
+    justify-content: center; /* Centers the logo horizontally */
+    align-items: center; /* Centers the logo vertically */
+    background-color: #fff; /* Optional: Adds background for better contrast */
+    padding: 10px;
+}
+
+.Slogo img {
+    max-width: 80%; /* Responsive scaling */
+    height: auto;
+}
+
+.Scontent {
+    flex: 1; /* Equal space division with Slogo */
+    text-align: left; /* Left-aligns the text */
+    background-color: #000000; /* Optional: Adds background for better contrast */
+    padding: 20px; /* Adds spacing for the text */
+    display: flex;
+    flex-direction: column; /* Aligns content vertically */
+    justify-content: center; /* Centers text vertically */
+    color: #fff; /* Ensures readability */
+    margin-left: 30px;
+    position: relative;
+}
+
+.Scontent h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 36px; /* Increased size for heading */
+    margin-top: -20px; /* Moves the heading slightly upwards */
+}
+
+.Scontent p {
+    font-size: 20px; /* Larger text for better readability */
+    line-height: 1.5; /* Improved line spacing */
+    margin-bottom: 20px;
+}
+
+.Scontent button {
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge #ffffff;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+  
+.Scontent button::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #000000;
+    transition: 0.5s;
+    transform-origin: center;
+}
+  
+.Scontent button::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #000000;
+    transition: 0.5s;
+}
+  
+.Scontent button:hover::before, button:hover::after {
+    transform: scale(0)
+}
+  
+.Scontent button:hover {
+    box-shadow: inset 0px 0px 25px #ffffff;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+  footer .container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer h3 {
+    margin-bottom: 10px;
+  }
+  footer a {
+    color: #e74c3c;
+    text-decoration: none;
+  }
+  .social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  .social-icons a:hover {
+    color: #e74c3c;
+  }
+  footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+  }
 
 @media(max-width: 1330px) {
     .nav-link-container, .quick-link-container {
