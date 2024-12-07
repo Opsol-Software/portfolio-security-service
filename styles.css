@@ -1356,6 +1356,14 @@ section {
         height: 250px;
 
     }
+
+    header {
+        max-width: 100vw;
+    }
+
+    header .logo h2 {
+        margin-left: 0px;
+    }
 }
 
 
@@ -1374,8 +1382,18 @@ section {
         display: none;
     }
 
+    .contact-banner {
+        height: fit-content;
+        border-radius: 0px;
+    }
+
+    .contact-banner-content {
+        display: flex;
+        flex-direction: column;
+    }
+
     .contact-banner h1 {
-        font-size: 1rem;
+        font-size: 2rem;
     }
 
     .contact-banner .slide-in-left p {
@@ -1383,24 +1401,33 @@ section {
     }
 
     .contact-banner #call-icon{
-        width: 20px;
+        width: 80px;
+        margin: 0;
     }
 
-    .contact-banner .slide-in-bottom .contact-banner-sub-text h2 {
-        font-size: 1rem;
+    .contact-banner .slide-in-bottom {
+        display: flex;
+        justify-content: center;
     }
 
     .about-us {
         flex-direction: column;
     }
 
-    .about-us-content {
-        margin-left: 0.5rem;
+    .about-us .section-content {
+        margin: 0;
     }
 
-    .about-us-content h1 {
-        line-height: 50px;
-        margin-top: 0;
+    .section-content p{
+        color: white;
+    }
+
+    .section-content h1 {
+        line-height: 3rem;
+    }
+
+    .section-content h4 {
+        font-size: 1.5rem;
     }
 
     .gallery {
@@ -1408,9 +1435,31 @@ section {
         margin-left: 5rem;
     }
 
-
-    /* #service-section .cards{
+    #service-section .cards{
         display: flex;
         flex-direction: column;
-    } */
+    }
+
+    #service-section h2 {
+        margin-left: 1.2rem;
+        font-size: 1.5rem;
+    }
+
+    #service-section h1#paragraph {
+        margin-left: 0;
+    }
+
+    .client-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .client-info * {
+        margin-left: 0;
+    }
+
+    .client-info .map {
+        margin-left: 5rem;
+    }    
+
 } 
