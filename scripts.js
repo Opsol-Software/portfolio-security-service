@@ -1,13 +1,13 @@
 // navbar transformation animation
-const navbar = document.getElementById("navbar")
+// const navbar = document.getElementById("navbar")
 
-window.addEventListener("scroll", () => {
-    if(window.scrollY > 50) {
-        navbar.classList.add("scrolled")
-    } else {
-        navbar.classList.remove("scrolled")
-    }
-})
+// window.addEventListener("scroll", () => {
+//     if(window.scrollY > 50) {
+//         navbar.classList.add("scrolled")
+//     } else {
+//         navbar.classList.remove("scrolled")
+//     }
+// })
 
 // navbar dropdown menu
 const menuIcon = document.getElementById("menu-icon")
@@ -15,6 +15,9 @@ const dropmenu = document.querySelector(".dropdown-menu")
 
 menuIcon.addEventListener("click", () => {
     dropmenu.classList.toggle("hidden")
+    menuIcon.classList.toggle("animate")
+    
+
 })
 
 // Home image carasoule
@@ -129,6 +132,16 @@ function startAnimation() {
     }
   
   }
+
+// active page indicator
+const activePage = window.location.pathname
+const navLinks = document.querySelectorAll('nav a')
+navLinks.forEach(link => {
+    if(link.href.includes(`${activePage}`)) {
+        link.classList.add('active')
+    }
+});
+
 
 window.addEventListener("scroll", reveal, {passive: true});
 window.addEventListener("scroll", startAnimation, {passive: true})
