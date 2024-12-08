@@ -5,6 +5,7 @@
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+
 }
 
 .header {
@@ -42,25 +43,36 @@
 
 /* About Section */
 .about-section {
-    padding: 50px 20px;
+    padding: 100px 50px;
     background: #f9f9f9;
+    
+    
 }
 
 .about-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     align-items: center;
+    margin: 30px;
 }
 
 .about-text {
     flex: 1 1 50%;
+    color: #333;
 }
 
 .about-text h2 {
     font-size: 2rem;
     margin-bottom: 10px;
+    color: #333;
 }
+
+.about-text p {
+    font-size: 1.25rem;
+    justify-self: auto;
+}
+
 
 .about-image {
     flex: 1 1 40%;
@@ -128,7 +140,7 @@
 
 .Lcard.expanded {
     height: 600px; /* Increase height on expansion */
-    background: linear-gradient(135deg, rgb(0, 0, 0), rgba(255, 0, 0, 0.7));
+    background: linear-gradient(135deg, rgb(0, 0, 0), rgba(65, 46, 46, 0.7));
 }
 
 /* Left Side (Photo) */
@@ -274,7 +286,7 @@
 
     .title h2{
         text-align: center;
-        color: #fff;
+        color: #ffffff;
         
         
     }
@@ -357,7 +369,7 @@
     .ourvalues .card .content h2{
         font-size: 1.5em;
         font-weight: 700;
-        color: var(--clr);
+        color: black
     }
 
     .ourvalues .card .content p{
