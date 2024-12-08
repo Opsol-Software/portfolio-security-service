@@ -1,36 +1,4 @@
 /* General Styles */
-
-* {
-    box-sizing: border-box;
-  }
-  
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #1a1a1a;
-    color: #ffffff;
-  }
-  
-  header.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #000000;
-  }
-  
-  header.navbar .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  header.navbar .menu a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #ffffff;
-  }
-  
-
   
   main.contact-section {
     display: flex;

@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="CSS/aboutus.css">
     <link rel="stylesheet" href="CSS/leadership.css">
-    <script src="/js/aboutus.js" defer></script>
-    <script src="/js/aboutus-ourvalues.js" defer></script>
+    
     <script src="js/main.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal" defer></script>
 
 </head>
 <body>
@@ -76,9 +76,7 @@
                     <div class="about-text">
                         <h2>Who We Are</h2>
                         <p>
-                            At [Company Name], we specialize in providing top-tier security services for 
-                            individuals, businesses, and communities. With years of experience in the industry, 
-                            we are dedicated to delivering innovative and reliable solutions to meet your unique security needs.
+                            Singha Security Solutions (Pvt) Ltd (SSS) provides top-notch security services to a diverse range of clients, including private households, multinational companies, and government organizations. We prioritize listening to our customers to meet their needs professionally and promptly. Our team of well-trained, highly professional, and experienced employees, many of whom are ex-service personnel, ensures absolute professionalism and efficiency in protecting property, assets, and people.
                         </p>
                     </div>
                     <div class="about-image">
@@ -97,7 +95,7 @@
             
             <div class="card" style="background-color: rgb(255, 255, 255);">
             <div class="imgBx">
-                <img src="assets/images/director.jpg">
+                <img src="assets/images/OIP.jpg">
             </div>
             <div class="content">
                 <h2>Customer Focus</h2>
@@ -109,7 +107,7 @@
     
             <div class="card" style="background-color: rgb(255, 255, 255);">
             <div class="imgBx">
-                <img src="assets/images/director.jpg">
+                <img src="assets/images/expertise-icon-23.jpg">
             </div>
             <div class="content">
                 <h2>Expertise</h2>
@@ -292,7 +290,45 @@
     span2.onclick = function() {
     modal2.style.display = "none";
     };
+
+// Initialize ScrollReveal
+ScrollReveal().reveal('.reveal', {
+    distance: '50px',
+    origin: 'bottom',
+    duration: 1000,
+    easing: 'ease-in-out',
+    reset: true, // Makes animations replay when scrolled back into view
+    interval: 200, // Adds a delay between revealing multiple elements
+    viewOffset: { top: 50, right: 0, bottom: 50, left: 0 } // Adjust values as needed
+});
+
+// Specific animations for other elements
+ScrollReveal().reveal('.about-section img', { 
+    origin: 'left', 
+    distance: '200px', 
+    duration: 1200 
+});
+ScrollReveal().reveal('.card', { 
+    origin: 'right', 
+    distance: '80px', 
+    duration: 1000 
+});
+ScrollReveal().reveal('.Lcard', { 
+    origin: 'top', 
+    distance: '70px', 
+    duration: 1200 
+});
+ScrollReveal().reveal('.certifications h2', { 
+    origin: 'top', 
+    distance: '50px', 
+    duration: 800 
+});
+
+
     </script>
+
+<script src="js/aboutus.js"></script>
+    
 
 <footer class="footer">
     <div class="footer-container">
