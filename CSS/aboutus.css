@@ -19,6 +19,7 @@ body {
     padding: 50px 20px;
     position: relative;
     z-index: 1;
+    
 }
 
 .header::before {
@@ -266,6 +267,18 @@ body {
     }
 
 /*our values*/
+
+    .title{
+        background-color: #333;
+
+    }
+
+    .title h2{
+        text-align: center;
+        color: #fff;
+        
+        
+    }
     .ourvalues{
         margin: 0;
         padding: 0;
@@ -275,7 +288,6 @@ body {
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        background-color: rgb(0, 0, 0) ;
         position: relative;
         flex-wrap: wrap;
         gap: 100px 50px;
