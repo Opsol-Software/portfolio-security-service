@@ -413,7 +413,7 @@ section {
 }
 
 .section-content {
-    padding-left: 2rem;
+    padding-left: 1rem;
     padding-top: 2rem;
     margin-left: 6rem;
     margin-top: 3rem;
@@ -785,7 +785,7 @@ section {
 
 .client-info {
     display: flex;
-    width: 90vw;
+    width: 100vw;
 }
 
 .client-info h4 {
@@ -1369,8 +1369,9 @@ section {
 
 @media(max-width: 450px) {
     
-    html {
-        width: 100vw;
+    header .logo h2 {
+        font-size: 1.5rem;
+        margin-left: 5.5rem;
     }
 
     .menu-container {
@@ -1405,9 +1406,18 @@ section {
         margin: 0;
     }
 
+    .contact-banner .slide-in-left {
+        max-width: 100%;
+    }
+
     .contact-banner .slide-in-bottom {
         display: flex;
+        max-width: 100%;
         justify-content: center;
+    }
+
+    .contact-banner .slide-in-right {
+        max-width: 100%;
     }
 
     .about-us {
@@ -1460,6 +1470,10 @@ section {
 
     .client-info .map {
         margin-left: 5rem;
-    }    
+    }  
+    
+    .Scontent {
+        padding: 10px 5px;
+    }
 
 } 
