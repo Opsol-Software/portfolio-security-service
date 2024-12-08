@@ -178,7 +178,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 10px 0;
     background-color: rgb(39, 37, 37);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
@@ -1375,6 +1375,10 @@ section {
         margin-left: 10%;
     }
 
+    .section-content {
+        margin: 0;
+    }
+
     .section-content h1 {
         line-height: 3rem;
     }
@@ -1382,7 +1386,6 @@ section {
     .client-info {
         max-height: fit-content;
     }
-
 
     .client-info * {
         margin-left: 0;
@@ -1410,6 +1413,15 @@ section {
 
     .contact-banner .slide-in-right {
         max-width: 100%;
+    }
+
+    #service-section h2 {
+        margin-left: 2rem;
+        font-size: 1.5rem;
+    }
+
+    #service-section h1#paragraph {
+        margin-left: -3rem;
     }
 }
 
@@ -1477,10 +1489,6 @@ section {
         flex-direction: column;
     }
 
-    .about-us .section-content {
-        margin: 0;
-    }
-
     .section-content h1 {
         line-height: 3rem;
     }
@@ -1495,14 +1503,14 @@ section {
         flex-direction: column;
     }
 
-    #service-section h2 {
+    /* #service-section h2 {
         margin-left: 1.2rem;
         font-size: 1.5rem;
     }
 
     #service-section h1#paragraph {
         margin-left: 0;
-    }
+    } */
 
     .client-info {
         display: flex;
