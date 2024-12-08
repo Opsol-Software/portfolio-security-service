@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Page</title>
+  <link rel="stylesheet" href="CSS/map.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">SinghaBhahu</div>
+    <nav class="menu">
+      <a href="#">Home</a>
+      <a href="#">Contact</a>
+      <a href="#">About us</a>
+      <a href="#">Support</a>
+    </nav>
+  </header>
+  
+  <main class="contact-section">
+    <div class="info-box">
+      <h2>Get in touch</h2>
+      <p><strong>Visit us</strong><br>Keselhenawa, Dombagoda, Horana, Sri Lanka</p><br>
+      <p><strong>Chat to us</strong><br>info.singhasecurity@gmail.com</p><br>
+      <p><strong>Call us</strong><br>Mon-Fri from 8am to 5pm<br> (+94)77 1330 879/ (+94)77 0183 023</p><br>
+      <p><strong>Social media</strong></p>
+      <div class="social-icons bg-image-icons">
+        <a href="#" class="facebook-icon" aria-label="Facebook"></a>
+        <a href="#" class="twitter-icon" aria-label="Twitter"></a>
+        <a href="#" class="instagram-icon" aria-label="Instagram"></a>
+      </div>
+    </div>
+    
+    <!-- Map Frame -->
+    <div class="map-frame">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.532387846491!2d79.89827221602953!3d6.93667489498465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a0ebd23b455%3A0x730853d2d7c6468!2sHorana%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1692620636565!5m2!1sen!2sus" 
+        width="800px" 
+        height="500px" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </main>
+
+ <!-- Message Form Section -->
+<div class="message-section">
+    <div class="form-container">
+      <form class="contact-form">
+        <h2>Contact Us</h2>
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" placeholder="First Name">
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+          <label for="company-name">Company Name</label>
+          <input type="text" id="company-name" placeholder="Company Name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="Phone Number">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Tell us what we can help you with"></textarea>
+        </div>
+        <button type="submit" class="send-btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+  
+</body>
+</html>
