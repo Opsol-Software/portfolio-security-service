@@ -1,8 +1,7 @@
 /* General Styles */
 
 main{
-    top: 20px;
-    
+
 }
 
 .container {
@@ -129,11 +128,9 @@ main{
 
   
   
-  /* Leadership Section */
-
-  .Lcards-container {
+/* Leadership Section */
+.Lcards-container {
     max-width: 1000px;
-    max-height: 1000px;
     margin: 10px auto;
     padding: 10px;
     display: flex;
@@ -149,13 +146,18 @@ main{
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     display: flex;
-    flex-direction: row; /* Divide card into left and right parts */
+    flex-direction: row;
     align-items: center;
     height: 400px;
 }
 
+.Lcard:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.6);
+}
+
 .Lcard.expanded {
-    height: 600px; /* Increase height on expansion */
+    height: 600px;
     background: linear-gradient(135deg, rgb(0, 0, 0), rgba(65, 46, 46, 0.7));
 }
 
@@ -171,19 +173,18 @@ main{
 .Lleft-side img {
     max-width: 50%;
     max-height: 50%;
- 
     transition: all 0.3s ease-in-out;
 }
 
 .Lcard.expanded .Lleft-side img {
-    transform: scale(1.3); /* Enlarge image on expansion */
+    transform: scale(1.3);
 }
 
 /* Right Side (Description) */
 .Lright-side {
     flex: 2;
     padding: 10px 20px;
-    text-align: left; /* Align text to the left */
+    text-align: left;
 }
 
 .Lright-side h3 {
@@ -197,7 +198,7 @@ main{
     color: #ffffff;
 }
 
-/* Hidden Content leadership*/
+/* Hidden Content leadership */
 .Lhidden-content {
     display: none;
     transition: all 0.3s ease-in-out;
@@ -207,81 +208,168 @@ main{
     display: block;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Lcard {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .Lleft-side img {
+        max-width: 80%;
+    }
+
+    .Lright-side {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .Lright-side h3 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .Lcards-container {
+        gap: 10px;
+    }
+
+    .Lright-side {
+        padding: 5px;
+    }
+
+    .Lright-side h3 {
+        font-size: 1em;
+    }
+
+    .Lright-side p {
+        font-size: 0.9em;
+    }
+}
 
 
 
-    #myImg1, #myImg2 {
-    border-radius: 5px;
+
+
+/* Certifications Section */
+.certifications {
+    text-align: center;
+    background-color: black;
+    padding: 2rem 1rem;
+}
+
+.certifications h2 {
+    font-size: 2rem;
+    color: white;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.card {
+    flex: 1 1 calc(45% - 1.5rem);
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
     cursor: pointer;
-    transition: 0.3s;
-    }
+    transition: opacity 0.3s;
+}
 
-    #myImg1:hover, #myImg2:hover {
-    opacity: 0.7;
-    }
+.card img:hover {
+    opacity: 0.8;
+}
 
-    .modal {
+.card h3 {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #333;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+/* Modal Styles */
+.modal {
     display: none;
     position: fixed;
-    z-index: 1;
-    padding-top: 100px;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
     overflow: auto;
-    background-color: rgba(0,0,0,0.9);
-    }
+}
 
-    .modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
+.modal-content {
+    width: 90%;
     max-width: 700px;
-    }
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto; /* Ensures the image centers horizontally if overflow occurs */
+}
 
-    #caption1, #caption2 {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
+.caption {
+    margin-top: 10px;
     color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-    }
+    text-align: center;
+    font-size: 0.9rem;
+}
 
-    .modal-content, #caption1, #caption2 {  
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-    }
-
-    @-webkit-keyframes zoom {
-    from {-webkit-transform: scale(0);} 
-    to {-webkit-transform: scale(1);}
-    }
-
-    @keyframes zoom {
-    from {transform: scale(0);} 
-    to {transform: scale(1);}
-    }
-
-
-
-    .close:hover,
-    .close:focus {
-    color: #bbb;
-    text-decoration: none;
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 2rem;
     cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%;
+        max-width: 90%;
     }
 
-    @media only screen and (max-width: 700px){
-    .modal-content {
-        width: 100%;
+    .certifications h2 {
+        font-size: 1.5rem;
     }
+
+    .close {
+        font-size: 1.5rem;
     }
+
+    .caption {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+    
+
+
+/*Our values*/
 
     .title{
         background-color: #333;
@@ -380,14 +468,4 @@ main{
         color: #333;
     }
 
-    /* Modal close button style */
-.modal .close {
-    position: absolute; /* Ensures it stays at the top-right corner of the modal */
-    top: 7rem; /* Adjusted downward by increasing the top value */
-    right: 2rem; /* Keeps it aligned to the right */
-    color: white; /* Close button color */
-    font-size: 3rem; /* Size of the close button */
-    font-weight: bold; /* Makes it bold */
-    cursor: pointer; /* Changes cursor to pointer on hover */
-    z-index: 1000; /* Ensures it stays on top */
-}
+    

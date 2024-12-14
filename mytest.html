@@ -3,134 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Responsive Certifications</title>
     <style>
-        body, html P{
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            height: 200vh;
-            overflow-x: hidden;
+            box-sizing: border-box;
         }
 
-        .parallax-container {
-            position: relative;
-            height: 50vh;
-            width: 50vh;
-            margin: 50vh auto;
-            overflow: hidden;
-            border: 1px solid black;
+        /* Certifications Section */
+        .certifications {
+            text-align: center;
+            background-color: black;
+            padding: 2rem 1rem;
         }
 
-        .parallax-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 150%;
-            height: 100%;
-            object-fit: cover;
-            transform: translateX(0);
-            transition: transform 0.1s linear;
+        .certifications h2 {
+            font-size: 2rem;
+            color: white;
         }
 
-        .parallax-section {
-            background: url(assets/images/security-img-2.webp);
-            background-attachment: fixed;
-            height: 100vh;
+        .card-container {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .card {
+            flex: 1 1 calc(45% - 1.5rem);
+            max-width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: white;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .card img:hover {
+            opacity: 0.8;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            font-size: 1rem;
+            color: #333;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
             justify-content: center;
             align-items: center;
+            overflow: auto;
         }
 
-        .content {
-            padding: 2rem;
-            background: whitesmoke;
-            height: 50vh;
+        .modal-content {
+            width: 90%;
+            max-width: 700px;
+            border-radius: 8px;
         }
 
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: #333;
+        .caption {
+            margin-top: 10px;
+            color: #ccc;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
             color: white;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 30px;
-            transition: all 0.3s ease-in-out;
-            z-index: 1000;
+            font-size: 2rem;
+            cursor: pointer;
         }
 
-        header.scrolled {
-            background: #555;
-            padding: 10px 30px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        .close:hover {
+            color: red;
         }
 
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 1 100%;
+                max-width: 90%;
+            }
 
+            .certifications h2 {
+                font-size: 1.5rem;
+            }
 
-        nav {
-            display: flex;
-            gap: 15px;
-            padding: 0 50px;
-        }
+            .close {
+                font-size: 1.5rem;
+            }
 
-        nav a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #ddd;
-        }
-
-        main {
-            padding-top: 80px;
+            .caption {
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
 <body>
-
-    <header id="navbar">
-        <div class="logo">MySite</div>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
-
-    <main>
-        <div class="content"></div>
-        <section class="parallax-section">
-            <div class="parallax-container">
-                <img src="assets/images/security-img-1.webp" alt="" class="parallax-image">
+    <!-- Certificate Section -->
+    <div class="certifications">
+        <h2>Our Certifications</h2>
+        <div class="card-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <img id="myImg1" src="/assets/images/Certificate of Private Company.jpg" alt="Certificate of Private Company">
+                <h3>License</h3>
             </div>
-        </section>
-        <div class="content"></div>
-    </main>
+            <!-- Card 2 -->
+            <div class="card">
+                <img id="myImg2" src="assets/images/MOD Liecece.jpg" alt="MOD License">
+                <h3>Certificate</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Image 1 -->
+    <div id="myModal1" class="modal">
+        <span class="close" id="close1">&times;</span>
+        <img class="modal-content" id="img01">
+        <div class="caption" id="caption1"></div>
+    </div>
+
+    <!-- Modal for Image 2 -->
+    <div id="myModal2" class="modal">
+        <span class="close" id="close2">&times;</span>
+        <img class="modal-content" id="img02">
+        <div class="caption" id="caption2"></div>
+    </div>
 
     <script>
-        const parallaxImage = document.querySelector(".parallax-image")
-        const navbar = document.getElementById("navbar")
+        // JavaScript to handle pop-up modals for certificate images
 
-        window.addEventListener('scroll', () => {
-            const scrollX = window.scrollY
-            const parallaxSpeed = 0.1
-            parallaxImage.style.transform = `translateX(-${scrollX * parallaxSpeed}px)`
+        // Get modal elements for Image 1
+        const modal1 = document.getElementById("myModal1");
+        const img1 = document.getElementById("myImg1");
+        const modalImg1 = document.getElementById("img01");
+        const captionText1 = document.getElementById("caption1");
+        const close1 = document.getElementById("close1");
 
+        // Get modal elements for Image 2
+        const modal2 = document.getElementById("myModal2");
+        const img2 = document.getElementById("myImg2");
+        const modalImg2 = document.getElementById("img02");
+        const captionText2 = document.getElementById("caption2");
+        const close2 = document.getElementById("close2");
 
-            if (window.scrollY > 50) {
-                navbar.classList.add("scrolled")
-            } else {
-                navbar.classList.remove("scrolled")
+        // Image 1 click handler
+        img1.onclick = function() {
+            modal1.style.display = "flex";
+            modalImg1.src = this.src;
+            captionText1.textContent = this.alt;
+        };
+
+        // Image 2 click handler
+        img2.onclick = function() {
+            modal2.style.display = "flex";
+            modalImg2.src = this.src;
+            captionText2.textContent = this.alt;
+        };
+
+        // Close button handler for Image 1
+        close1.onclick = function() {
+            modal1.style.display = "none";
+        };
+
+        // Close button handler for Image 2
+        close2.onclick = function() {
+            modal2.style.display = "none";
+        };
+
+        // Optional: Close modal when clicking outside the modal content
+        window.onclick = function(event) {
+            if (event.target === modal1) {
+                modal1.style.display = "none";
             }
-        })
+            if (event.target === modal2) {
+                modal2.style.display = "none";
+            }
+        };
     </script>
 </body>
 </html>
