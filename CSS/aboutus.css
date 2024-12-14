@@ -1,5 +1,9 @@
 /* General Styles */
 
+main{
+    top: 20px;
+    
+}
 
 .container {
     width: 90%;
@@ -40,13 +44,10 @@
     margin-top: 10px;
 }
 
-
 /* About Section */
 .about-section {
     padding: 100px 50px;
     background: #f9f9f9;
-    
-    
 }
 
 .about-content {
@@ -73,7 +74,6 @@
     justify-self: auto;
 }
 
-
 .about-image {
     flex: 1 1 40%;
     text-align: center;
@@ -85,24 +85,40 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Media Queries */
 
-
-
-
-
-
-
-
-
-/* Fade In Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: flex-start;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .about-text {
+        flex: 1 1 100%;
+    }
+
+    .about-image {
+        flex: 1 1 100%;
+    }
+}
+
+/* For small mobile devices */
+@media (max-width: 480px) {
+    .about-section {
+        padding: 50px 20px;
+    }
+
+    .about-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .about-image img {
+        border-radius: 5px;
     }
 }
 
@@ -252,15 +268,7 @@
     to {transform: scale(1);}
     }
 
-    .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-    }
+
 
     .close:hover,
     .close:focus {
@@ -371,3 +379,15 @@
     .ourvalues .card .content p{
         color: #333;
     }
+
+    /* Modal close button style */
+.modal .close {
+    position: absolute; /* Ensures it stays at the top-right corner of the modal */
+    top: 7rem; /* Adjusted downward by increasing the top value */
+    right: 2rem; /* Keeps it aligned to the right */
+    color: white; /* Close button color */
+    font-size: 3rem; /* Size of the close button */
+    font-weight: bold; /* Makes it bold */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    z-index: 1000; /* Ensures it stays on top */
+}
