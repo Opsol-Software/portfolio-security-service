@@ -118,7 +118,7 @@
     
             <div class="card" style="background-color: rgb(255, 255, 255);">
                 <div class="imgBx">
-                    <img src="assets/images/director.jpg">
+                    <img src="assets/images/performance.jpg">
                 </div>
                 <div class="content">
                     <h2>Performance</h2>
@@ -130,7 +130,7 @@
     
                 <div class="card" style="background-color: rgb(255, 255, 255);">
                     <div class="imgBx">
-                        <img src="assets/images/director.jpg">
+                        <img src="assets/images/best people.jpg">
                     </div>
                     <div class="content">
                         <h2>Best People</h2>
@@ -144,7 +144,7 @@
     
                     <div class="card" style="background-color: rgb(255, 255, 255);">
                         <div class="imgBx">
-                            <img src="assets/images/director.jpg">
+                            <img src="assets/images/collaboration.jpg">
                         </div>
                         <div class="content">
                             <h2>Collaboration and Teamwork</h2>
@@ -155,7 +155,7 @@
     
             <div class="card" style="background-color: rgb(255, 255, 255);">
             <div class="imgBx">
-                <img src="assets/images/director.jpg">
+                <img src="assets/images/integrity.png">
             </div>
             <div class="content">
                 <h2>Integrity</h2>
@@ -216,114 +216,91 @@
     
     
     
-    <!-- Certificate -->
-    
-    
-    <div class="certifications" style="text-align: center; background-color: black; padding-top: 1.5rem;">
-        <h2 style="font-size: 2.5rem; color: white;">Our Certifications</h2>
-        <div class="card-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 10px;">
-            
+     <!-- Certificate Section -->
+     <div class="certifications">
+        <h2>Our Certifications</h2>
+        <div class="card-container">
             <!-- Card 1 -->
-            <div class="card" style="flex: 1 1 calc(50% - 40px); max-width: 300px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; text-align: center;">
-                <img id="myImg1" src="assets/images/Certificate of Private Company.jpg" alt="Certificate of Private Company" style="width: 100%; height: auto;">
-                <h3 style="margin: 10px 0; font-size: 1.2em;">License</h3>
+            <div class="card">
+                <img id="myImg1" src="/assets/images/Certificate of Private Company.jpg" alt="Certificate of Private Company">
+                <h3>License</h3>
             </div>
-    
             <!-- Card 2 -->
-            <div class="card" style="flex: 1 1 calc(50% - 40px); max-width: 300px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; text-align: center;">
-                <img id="myImg2" src="assets/images/MOD Liecece.jpg" alt="MOD Liecece" style="width: 100%; height: auto;">
-                <h3 style="margin: 10px 0; font-size: 1.2em;">Certificate</h3>
+            <div class="card">
+                <img id="myImg2" src="assets/images/MOD Liecece.jpg" alt="MOD License">
+                <h3>Certificate</h3>
             </div>
         </div>
     </div>
+
+    <!-- Modal for Image 1 -->
+    <div id="myModal1" class="modal">
+        <span class="close" id="close1">&times;</span>
+        <img class="modal-content" id="img01">
+        <div class="caption" id="caption1"></div>
+    </div>
+
+    <!-- Modal for Image 2 -->
+    <div id="myModal2" class="modal">
+        <span class="close" id="close2">&times;</span>
+        <img class="modal-content" id="img02">
+        <div class="caption" id="caption2"></div>
+    </div>
     
-    
-    
-    
-        <!-- Modal for Image 1 -->
-        <div id="myModal1" class="modal">
-          <span class="close" id="close1">&times;</span>
-          <img class="modal-content" id="img01">
-          <div id="caption1"></div>
-        </div>
-        
-        <!-- Modal for Image 2 -->
-        <div id="myModal2" class="modal">
-          <span class="close" id="close2">&times;</span>
-          <img class="modal-content" id="img02">
-          <div id="caption2"></div>
-        </div>
     </main>
     
-    <script>
-        var modal1 = document.getElementById("myModal1");
-    var img1 = document.getElementById("myImg1");
-    var modalImg1 = document.getElementById("img01");
-    var captionText1 = document.getElementById("caption1");
-    var span1 = document.getElementById("close1");
+   <script>
+    // JavaScript to handle pop-up modals for certificate images
 
-    img1.onclick = function() {
-    modal1.style.display = "block";
-    modalImg1.src = this.src;
-    captionText1.innerHTML = this.alt;
-    };
+// Get modal elements for Image 1
+const modal1 = document.getElementById("myModal1");
+const img1 = document.getElementById("myImg1");
+const modalImg1 = document.getElementById("img01");
+const captionText1 = document.getElementById("caption1");
+const close1 = document.getElementById("close1");
 
-    span1.onclick = function() {
+// Get modal elements for Image 2
+const modal2 = document.getElementById("myModal2");
+const img2 = document.getElementById("myImg2");
+const modalImg2 = document.getElementById("img02");
+const captionText2 = document.getElementById("caption2");
+const close2 = document.getElementById("close2");
+
+// Image 1 click handler
+img1.onclick = function() {
+  modal1.style.display = "block";
+  modalImg1.src = this.src;
+  captionText1.textContent = this.alt;
+};
+
+// Image 2 click handler
+img2.onclick = function() {
+  modal2.style.display = "block";
+  modalImg2.src = this.src;
+  captionText2.textContent = this.alt;
+};
+
+// Close button handler for Image 1
+close1.onclick = function() {
+  modal1.style.display = "none";
+};
+
+// Close button handler for Image 2
+close2.onclick = function() {
+  modal2.style.display = "none";
+};
+
+// Optional: Close modal when clicking outside the modal content
+window.onclick = function(event) {
+  if (event.target === modal1) {
     modal1.style.display = "none";
-    };
-
-    // Modal for Image 2
-    var modal2 = document.getElementById("myModal2");
-    var img2 = document.getElementById("myImg2");
-    var modalImg2 = document.getElementById("img02");
-    var captionText2 = document.getElementById("caption2");
-    var span2 = document.getElementById("close2");
-
-    img2.onclick = function() {
-    modal2.style.display = "block";
-    modalImg2.src = this.src;
-    captionText2.innerHTML = this.alt;
-    };
-
-    span2.onclick = function() {
+  }
+  if (event.target === modal2) {
     modal2.style.display = "none";
-    };
+  }
+};
 
-// Initialize ScrollReveal
-ScrollReveal().reveal('.reveal', {
-    distance: '50px',
-    origin: 'bottom',
-    duration: 1000,
-    easing: 'ease-in-out',
-    reset: true, // Makes animations replay when scrolled back into view
-    interval: 200, // Adds a delay between revealing multiple elements
-    viewOffset: { top: 50, right: 0, bottom: 50, left: 0 } // Adjust values as needed
-});
-
-// Specific animations for other elements
-ScrollReveal().reveal('.about-section img', { 
-    origin: 'left', 
-    distance: '200px', 
-    duration: 1200 
-});
-ScrollReveal().reveal('.card', { 
-    origin: 'right', 
-    distance: '80px', 
-    duration: 1000 
-});
-ScrollReveal().reveal('.Lcard', { 
-    origin: 'top', 
-    distance: '70px', 
-    duration: 1200 
-});
-ScrollReveal().reveal('.certifications h2', { 
-    origin: 'top', 
-    distance: '50px', 
-    duration: 800 
-});
-
-
-    </script>
+   </script>
 
 <script src="js/aboutus.js"></script>
     
