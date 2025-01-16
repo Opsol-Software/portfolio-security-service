@@ -103,7 +103,7 @@
     width: 0;
    }
 
-
+/* Main image slider */
 
 
 .image-slider {
@@ -115,6 +115,17 @@
 .slide-container {
     display: flex;
     transition: transform 0.5s ease-in-out;
+}
+
+.slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1; /* Ensure it's on top of the image */
 }
 
 .slide {
@@ -138,6 +149,7 @@
     left: 10%;
     text-shadow: 10px 1px 15px black;
     animation: slideUp-text 4s infinite;
+    z-index: 5;
 }
 
 @keyframes slideUp-text {
@@ -262,6 +274,17 @@ section {
     z-index: 0;
     border-radius: 15px;
     background-size: contain;
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 10; /* Ensure it's on top of the image */
 }
 
 .gallery-item-1 {

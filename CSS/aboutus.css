@@ -1,8 +1,6 @@
 /* General Styles */
 
-main{
 
-}
 
 .container {
     width: 90%;
@@ -121,7 +119,85 @@ main{
     }
 }
 
+/*Vission mission section*/
+/* General Styles */
 
+
+.Vcontainer {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    gap: 20px; /* Space between left and right sides */
+    align-items: flex-start; /* Align items at the top */
+}
+
+.Vleft-side {
+    flex: 1; /* Takes up 50% of the container */
+    display: flex;
+    justify-content: center; /* Center the logo horizontally */
+}
+
+.Vright-side {
+    flex: 1; /* Takes up 50% of the container */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between sections */
+}
+
+.Vlogo img {
+    max-width: 100%; /* Ensure the logo is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.Vsection {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.Vcontainer h2 {
+    color: #000000;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.Vcontainer p {
+    margin: 0 0 15px;
+    color: #333;
+    font-size: 1.6rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Vcontainer {
+        flex-direction: column; /* Stack left and right sides vertically on small screens */
+        align-items: center; /* Center items vertically */
+    }
+
+    .Vleft-side, .Vright-side {
+        width: 100%; /* Full width on small screens */
+    }
+
+    .Vlogo img {
+        max-width: 150px; /* Adjust logo size for smaller screens */
+    }
+
+    .Vright-side {
+        gap: 15px; /* Reduce space between sections on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
 
 
 
@@ -371,101 +447,105 @@ main{
 
 /*Our values*/
 
-    .title{
-        background-color: #333;
-        background: url(../assets/images/black.gif) no-repeat center center/cover;
-    }
+   /* Our Values Section */
+.title {
+    background-color: #333;
+    background: url(../assets/images/background.png) no-repeat center center/cover;
+}
 
-    .title h2{
-        text-align: center;
-        color: #fff;
-        
-        
-    }
-    .ourvalues{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        position: relative;
-        flex-wrap: wrap;
-        gap: 100px 50px;
-        padding: 100px 50px;
-    } 
+.title h2 {
+    text-align: center;
+    color: #000000;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
 
-    .ourvalues .card{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        width: 350px;
-        height: 300px;
-        background: #fff;
-        border-radius: 28px;
-        box-shadow: 0 35px 80px rgb(162, 159, 159);
-        transition: 0.5s;
-    }
+.ourvalues {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+    overflow: visible; /* Ensure overflow is visible */
+}
 
-    .ourvalues .card:hover{
-        height: 400px;
+.ourvalues .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    height: 300px;
+    background: #fff;
+    border-radius: 28px;
+    box-shadow: 0 35px 80px rgb(162, 159, 159);
+    transition: 0.5s;
+    overflow: visible; /* Ensure overflow is visible */
+}
 
-    }
+.ourvalues .card:hover {
+    height: 400px !important;
+}
 
-    .ourvalues .card .imgBx{
-        position: absolute;
-        top: 20px;
-        width: 300px;
-        height: 220px;
-        background: #333;
-        border-radius: 10px;
-        overflow: hidden;
-        transition: 0.5s;
-    }
+.ourvalues .card .imgBx {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 2; /* Ensure the image is above other content */
+}
 
-    .ourvalues .card:hover .imgBx{
-        top: -100px;
-        scale: 0.75;
-        box-shadow: 0 15px 45px rgb(2, 2, 2);
+.ourvalues .card:hover .imgBx {
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgb(2, 2, 2);
+}
 
-    }
+.ourvalues .card .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-    .ourvalues .card .imgBx img{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+.ourvalues .card .content {
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    padding: 0 30px;
+    height: 45px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s;
+    z-index: 1; /* Ensure content is below the image */
+}
 
-    .ourvalues .card .content{
-        position: absolute;
-        top: 252px;
-        width: 100%;
-        padding: 0 30px;
-        height: 45px;
-        overflow: hidden;
-        text-align: center;
-        transition: 0.5s;
-    }
+.ourvalues .card:hover .content {
+    height: 250px;
+    top: 150px;
+}
 
-    .ourvalues .card:hover .content{
-        height: 250px;
-        top: 150px;
-    }
+.ourvalues .card .content h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: black;
+}
 
-    .ourvalues .card .content h2{
-        font-size: 1.5em;
-        font-weight: 700;
-        color: black
-    }
-
-    .ourvalues .card .content p{
-        color: #333;
-    }
-
+.ourvalues .card .content p {
+    color: #333;
+}
     

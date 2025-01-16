@@ -21,7 +21,7 @@
     <nav class="nav-link-container">
         <a href="index.html">Home</a>
         <a href="aboutus.html">About Us</a>
-        <a href="testimonials.html">Testimonials</a>
+        <!-- <a href="testimonials.html">Testimonials</a> -->
         <a href="map.html">Contact Us</a>
     </nav>
 
@@ -49,7 +49,7 @@
         <div class="dropdown-menu hidden">
             <a href="index.html" class="active"><img src="assets/icons/icons8-home-25.png" alt="">Home</a>
             <a href="aboutus.html"><img src="assets/icons/icons8-about-us-25.png" alt=""> About Us</a>
-            <a href="#"><img src="assets/icons/icons8-verify-25.png" alt=""> Testimonials</a>
+            <!-- <a href="#"><img src="assets/icons/icons8-verify-25.png" alt=""> Testimonials</a> -->
             <a href="map.html"><img src="assets/icons/icons8-contact-us-25.png" alt=""> Contact Us</a>
         </div>
     </div>
@@ -59,31 +59,32 @@
    <!-- Message Form Section -->
 <div class="message-section">
   <div class="form-container">
-    <form class="contact-form">
+    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="cd3fac6f-6f28-4abd-885f-8590558d59e0">
       <h2>Contact Us</h2>
       <div class="form-group">
         <label for="first-name">First Name</label>
-        <input type="text" id="first-name" placeholder="First Name">
+        <input type="text" id="first-name" name="first_name" placeholder="First Name">
       </div>
       <div class="form-group">
         <label for="last-name">Last Name</label>
-        <input type="text" id="last-name" placeholder="Last Name">
+        <input type="text" id="last-name" name="last_name" placeholder="Last Name">
       </div>
       <div class="form-group">
         <label for="company-name">Company Name</label>
-        <input type="text" id="company-name" placeholder="Company Name">
+        <input type="text" id="company-name" name="company_name" placeholder="Company Name">
       </div>
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Email">
+        <input type="email" id="email" name="Email" placeholder="Email">
       </div>
       <div class="form-group">
         <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" placeholder="Phone Number">
+        <input type="tel" id="phone" name="Phone_Number" placeholder="Phone Number">
       </div>
       <div class="form-group">
         <label for="message">Message</label>
-        <textarea id="message" placeholder="Tell us what we can help you with"></textarea>
+        <textarea id="message" name="Message" placeholder="Tell us what we can help you with"></textarea>
       </div>
       <button type="submit" class="send-btn">Send Message</button>
     </form>
