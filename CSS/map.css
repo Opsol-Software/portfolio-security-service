@@ -10,7 +10,7 @@
   .info-box {
     background: linear-gradient(to bottom, #323334, #1e2a2b);
     border-radius: 10px;
-    width: 40%;
+    width: 90%;
     line-height: 1.6;
     margin-bottom: 1em;
     letter-spacing: 0.02em;
@@ -23,41 +23,11 @@
   
   .contact-form {
     background-color: #222222;
-    padding: 35px;
+    padding: 0px;
     border-radius: 10px;
-    width: 100%;
+    width: 90%;
   }
   
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .form-group input, .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #333333;
-    color: white;
-  }
-  
-  textarea {
-    height: 80px;
-  }
-  
-  .send-btn {
-    background-color: #161a4c;
-    color: rgb(255, 255, 255);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
   
   .social-media-icons a {
     margin-right: 10px;
@@ -110,6 +80,9 @@
       padding: 5px 10px;
     }
   }
+
+
+  
   
   .social-icons {
     display: flex;
@@ -150,59 +123,110 @@
     border-radius: 10px;
 }
 
-/* Message Section Styles */
-
-
-.message-section {
-    display: flex;
-    justify-content: center; /* Center the form horizontally */
-    align-items: center; /* Center the form vertically if needed */
-    padding: 20px; /* Space around the section */
+//* Message Section Styles */
+.Fmessage-section {
+  display: flex;
+  justify-content: center; /* Center the form horizontally */
+  align-items: center; /* Center the form vertically */
+  padding: 20px; /* Space around the section */
+  min-height: 100vh; /* Ensure full screen height */
+  background-color: #121212; /* Added background for the entire section */
 }
 
-.contact-form {
-    width: 100%;
-  }
-
-.form-container {
-    width: 100%;
-    max-width: 1200px; /* Limit the form width */
-    margin: 0 20px; /* Add horizontal margin */
-    background-color: #181616; /* Optional: background for form container */
-    padding: 20px; /* Padding inside the container */
-    border-radius: 8px; /* Optional: rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
-  }
-
-.form-group {
-    margin-bottom: 15px;
+.Fform-container {
+  width: 100%;
+  max-width: 600px; /* Limit the form width */
+  margin: 0 auto; /* Center the form container */
+  background-color: #1c2222; /* Dark background for form container */
+  padding: 30px; /* Increased padding for better spacing */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
 }
 
-.form-group label {
-    margin-bottom: 5px;
-    display: block;
-    color: #ffffff;
+.Fcontact-form h2 {
+  text-align: center;
+  color: #ffffff; /* White text for headings */
+  margin-bottom: 25px; /* Increased margin for better spacing */
+  font-size: 1.8rem;
+  font-weight: 600; /* Added font weight for emphasis */
 }
 
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    background: #333333;
-    border: none;
-    border-radius: 5px;
-    color: white;
+.Fform-group {
+  margin-bottom: 20px; /* Increased margin for better spacing */
+}
+
+.Fform-group label {
+  margin-bottom: 8px;
+  display: block;
+  color: #ffffff; /* White text for labels */
+  font-size: 0.9rem;
+  font-weight: 500; /* Added font weight for better readability */
+}
+
+.Fform-group input,
+.Fform-group textarea {
+  width: 100%;
+  padding: 12px; /* Increased padding for better input field size */
+  background: #100f0f; /* Dark background for input fields */
+  border: 1px solid #333333; /* Added border for better visibility */
+  border-radius: 5px;
+  color: #ffffff; /* White text for input */
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box; /* Ensure proper padding behavior */
+  transition: border-color 0.3s ease; /* Smooth transition for focus state */
+}
+
+.Fform-group input:focus,
+.Fform-group textarea:focus {
+  border-color: #2d2db3; /* Highlight border on focus */
 }
 
 textarea {
-    height: 80px;
+  height: 120px; /* Slightly increased height for textarea */
+  resize: none; /* Prevent resizing of text areas */
 }
 
 .send-btn {
-    background-color: #161a4c;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  display: block;
+  width: 100%;
+  background-color: #2d2db3; /* Dark blue for the button */
+  color: #ffffff; /* White text for the button */
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500; /* Added font weight for better readability */
+  transition: background-color 0.3s ease;
+}
+
+.send-btn:hover {
+  background-color: #6268a3; /* Lighter blue on hover */
+}
+
+.send-btn:active {
+  background-color: #1a1a7a; /* Darker blue on active state */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .Fform-container {
+    padding: 20px; /* Adjusted padding for smaller screens */
+  }
+
+  .Fcontact-form h2 {
+    font-size: 1.5rem; /* Smaller heading for mobile */
+  }
+
+  .Fform-group input,
+  .Fform-group textarea {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+    padding: 10px; /* Adjusted padding for smaller screens */
+  }
+
+  .send-btn {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+    padding: 10px; /* Adjusted padding for smaller screens */
+  }
 }
