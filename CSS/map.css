@@ -123,7 +123,7 @@
     border-radius: 10px;
 }
 
-//* Message Section Styles */
+/* Message Section Styles */
 .Fmessage-section {
   display: flex;
   justify-content: center; /* Center the form horizontally */
