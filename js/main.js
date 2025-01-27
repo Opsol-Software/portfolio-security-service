@@ -38,7 +38,7 @@ navLinks.forEach(link => {
 
 // function to dial phone number
 const phoneNumber = '+94719829694'
-const dialbtn = document.getElementById("cal-btn") 
+const dialbtn = document.getElementById("call-btn") 
 dialbtn.addEventListener('click', () => {
   window.location.href = `tel:${phoneNumber}`
 })
