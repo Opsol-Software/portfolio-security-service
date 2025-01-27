@@ -36,6 +36,14 @@ navLinks.forEach(link => {
 });
 
 
+// function to dial phone number
+const phoneNumber = '+94719829694'
+const dialbtn = document.getElementById("cal-btn") 
+dialbtn.addEventListener('click', () => {
+  window.location.href = `tel:${phoneNumber}`
+})
+
+
 
 
 window.addEventListener("scroll", reveal, {passive: true});

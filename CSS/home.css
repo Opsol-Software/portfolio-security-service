@@ -268,6 +268,7 @@ section {
 .gallery-item {
     height: 250px;
     opacity: 0;
+    object-fit: cover;
     position: absolute;
     transition: all 0.3s ease-in-out;
     width: 350px;
@@ -1162,6 +1163,10 @@ section {
 
     .client-info * {
         margin-left: 0;
+    }
+
+    .contact-banner-sub-text h1 {
+        font-size: 2rem;
     }
 
     .contact-banner .slide-in-left p {
