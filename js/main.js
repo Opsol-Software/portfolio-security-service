@@ -26,14 +26,18 @@ function reveal() {
     }
 }
 
-// active page indicator
-const activePage = window.location.pathname
-const navLinks = document.querySelectorAll('nav a')
+// Active page indicator
+const activePage = window.location.pathname.endsWith("/") 
+    ? "/portfolio-security-service/index.html" 
+    : window.location.pathname;
+
+const navLinks = document.querySelectorAll('nav a');
 navLinks.forEach(link => {
-    if(link.href.includes(`${activePage}`)) {
-        link.classList.add('active')
+    if (link.href.endsWith(activePage)) {
+        link.classList.add('active');
     }
 });
+
 
 
 // function to dial phone number
