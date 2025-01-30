@@ -70,11 +70,13 @@
       <h2>Contact Us</h2>
       <div class="Fform-group">
         <label for="first-name">First Name</label>
-        <input type="text" id="first-name" name="first_name" placeholder="First Name">
+        <input type="text" id="first-name" name="first_name" placeholder="First Name"
+        required minlength="2" maxlength="50" pattern="[A-Za-z ]+">
       </div>
       <div class="Fform-group">
         <label for="last-name">Last Name</label>
-        <input type="text" id="last-name" name="last_name" placeholder="Last Name">
+        <input type="text" id="last-name" name="last_name" placeholder="Last Name"
+        required minlength="2" maxlength="50" pattern="[A-Za-z ]+">
       </div>
       <div class="Fform-group">
         <label for="company-name">Company Name</label>
@@ -82,15 +84,19 @@
       </div>
       <div class="Fform-group">
         <label for="email">Email</label>
-        <input type="email" id="email" name="Email" placeholder="Email">
+        <input type="email" id="email" name="Email" placeholder="Email" required>
       </div>
       <div class="Fform-group">
         <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="Phone_Number" placeholder="Phone Number">
+        <input type="tel" id="phone" name="phone" 
+        pattern="[0-9]{10}" title="10-digit phone number" placeholder="Phone Number" required>
       </div>
       <div class="Fform-group">
         <label for="message">Message</label>
-        <textarea id="message" name="Message" placeholder="Tell us what we can help you with"></textarea>
+        <textarea id="message" name="message" 
+          maxlength="500" 
+          oninput="this.value = this.value.replace(/<[^>]*>/g, '')"
+          placeholder="Tell us what we can help you with" required></textarea>
       </div>
       <button type="submit" class="send-btn">Send Message</button>
     </form>
