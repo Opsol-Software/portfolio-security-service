@@ -749,6 +749,20 @@
      animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 9) * -1);
  }
 
+.item-10 {
+    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 10) * -1);
+}
+.item-11 {
+    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 11) * -1);
+}
+.item-12 {
+    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 12) * -1);
+}
+.item-13 {
+    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 13) * -1);
+}
+
+
  .contact-banner {
      text-align: center;
      display: flex;
