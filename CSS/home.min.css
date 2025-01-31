@@ -575,7 +575,7 @@
      width: 100%;
      height: auto;
      object-fit: cover;
-     max-height: 200px;
+     max-height: 340px;
      margin-bottom: 15px;
      transition: transform 1s ease;
  }
