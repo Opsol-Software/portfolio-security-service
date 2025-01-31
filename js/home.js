@@ -93,4 +93,8 @@ function startAnimation() {
   
   }
 
-  window.addEventListener("scroll", startAnimation, {passive: true})
+  if (screen.width < 1000) {
+    window.addEventListener("DOMContentLoaded", startAnimation, {passive: true})
+  } else {
+    window.addEventListener("scroll", startAnimation, {passive: true})
+  }
