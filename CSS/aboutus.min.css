@@ -283,11 +283,11 @@
 
 @media (max-width: 480px) {
     .Lcards-container {
-        gap: 10px;
+        gap: 20px;
     }
 
     .Lright-side {
-        padding: 5px;
+        padding: 15px;
     }
 
     .Lright-side h3 {
