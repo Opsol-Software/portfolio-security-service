@@ -236,7 +236,8 @@
 
 .Lright-side {
     flex: 2;
-    padding: 10px 20px;
+    /* padding: 10px 60px; */
+    padding-right: 60px;
     text-align: left;
 }
 
