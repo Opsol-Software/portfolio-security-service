@@ -832,7 +832,7 @@
  }
 
  .contact-banner-content * {
-     margin: 0;
+    margin: 0px;
  }
 
  .contact-banner-text {
@@ -846,11 +846,12 @@
  }
 
  .contact-banner-sub-text h1 {
-     font-size: 3rem
+    font-size: 3rem;
  }
 
  #call-icon {
      margin-left: 3rem;
+     margin-top: 20px;
      background: transparent;
      width: 70px;
  }
