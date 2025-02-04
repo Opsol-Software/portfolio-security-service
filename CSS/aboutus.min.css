@@ -42,7 +42,7 @@
 .about-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 60px;
     align-items: center;
     margin: 30px;
 }
@@ -53,7 +53,7 @@
 }
 
 .about-text h2 {
-    font-size: 2rem;
+    font-size: 2.4rem;
     margin-bottom: 10px;
     color: #333;
 }
@@ -78,6 +78,7 @@
     .about-content {
         flex-direction: column;
         align-items: flex-start;
+        gap: 20px;
     }
 
     .about-text {
@@ -236,7 +237,8 @@
 
 .Lright-side {
     flex: 2;
-    padding: 10px 20px;
+    /* padding: 10px 60px; */
+    padding-right: 60px;
     text-align: left;
 }
 
@@ -282,11 +284,11 @@
 
 @media (max-width: 480px) {
     .Lcards-container {
-        gap: 10px;
+        gap: 20px;
     }
 
     .Lright-side {
-        padding: 5px;
+        padding: 15px;
     }
 
     .Lright-side h3 {
