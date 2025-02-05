@@ -422,6 +422,141 @@
     margin-top: 10px;
 }
 
+
+
+
+
+
+
+/* Global Styles */
+
+  
+  .VMcontainer {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  
+  .VMcontainer section {
+    padding: 50px 0;
+    border-bottom: 1px solid #444;
+    overflow: hidden;
+  }
+  
+  .VMcontainer section:last-child {
+    border-bottom: none;
+  }
+  
+  .VMcontainer h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #ddd;
+    text-align: center;
+  }
+  
+  .VMcontainer p {
+    font-size: 1.2em;
+    margin: 0;
+    text-align: center;
+  }
+  
+  
+  .VMcontainer .content-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    min-height: 400px; 
+  }
+  
+  
+  .VMcontainer .content-image {
+    flex: 1;
+    min-height: 400px; 
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .VMcontainer .content-text {
+    flex: 1;
+    padding: 40px;
+    min-height: 400px; 
+  }
+  
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  
+  .VMcontainer .animate-left {
+    animation: fadeInLeft 1s ease-out;
+  }
+  
+  .VMcontainer .animate-right {
+    animation: fadeInRight 1s ease-out;
+  }
+  
+
+  @media (max-width: 768px) {
+    .VMcontainer h2 {
+      font-size: 1.8em;
+    }
+    
+    .VMcontainer p {
+      font-size: 1em;
+    }
+    
+    .VMcontainer .content-block {
+      flex-direction: column;
+    }
+    
+    .VMcontainer .content-image, .content-text {
+      width: 100%;
+      min-height: 300px;  
+    }
+    
+    .VMcontainer .content-text {
+      padding: 20px;
+    }
+  }
+  
+  
+
+
+
+
+
+
+
+
+
 .ourvalues {
     margin: 0;
     padding: 0;
