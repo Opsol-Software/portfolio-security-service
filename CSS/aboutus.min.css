@@ -452,16 +452,17 @@
   }
   
   .VMcontainer h2 {
-    font-size: 2.2em;
+    font-size: 2.3em;
     margin-bottom: 20px;
     color: #ddd;
     text-align: center;
   }
   
   .VMcontainer p {
-    font-size: 1.2em;
+    font-size: 2.3em;
     margin: 0;
     text-align: center;
+    font-family: 'Markazi Text', serif;
   }
   
   
@@ -526,11 +527,11 @@
 
   @media (max-width: 768px) {
     .VMcontainer h2 {
-      font-size: 1.8em;
+      font-size: 2.3em;
     }
     
     .VMcontainer p {
-      font-size: 1em;
+      font-size: 2em;
     }
     
     .VMcontainer .content-block {
@@ -539,7 +540,7 @@
     
     .VMcontainer .content-image, .content-text {
       width: 100%;
-      min-height: 300px;  
+      min-height: 250px;  
     }
     
     .VMcontainer .content-text {
