@@ -1,18 +1,18 @@
 # Allow all search engines to crawl all pages except certain ones
 User-agent: *
-Disallow: /admin/           # Block admin login or admin pages
-Disallow: /login/           # Block login page
-Disallow: /cart/            # Block shopping cart page (for e-commerce sites)
-Disallow: /checkout/        # Block checkout page
-Disallow: /search/          # Block search results pages
-Disallow: /account/         # Block user account pages
-Disallow: /private/         # Block any private directory
-Disallow: /thank-you/       # Block thank-you or confirmation pages
+Disallow: /admin/           
+Disallow: /login/           
+Disallow: /cart/            
+Disallow: /checkout/        
+Disallow: /search/          
+Disallow: /account/         
+Disallow: /private/         
+Disallow: /thank-you/       
 
 # Allow search engines to crawl and index important pages
-Allow: /images/             # Allow crawling of images folder (helps with image search rankings)
-Allow: /css/                # Allow crawling of CSS files (helps with page rendering)
-Allow: /js/                 # Allow crawling of JavaScript files (needed for full page rendering)
+Allow: /images/             
+Allow: /css/                
+Allow: /js/                 
 
 # Sitemap location (make sure to replace with your actual sitemap URL)
 Sitemap: https://www.yourdomain.com/sitemap.xml

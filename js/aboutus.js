@@ -63,3 +63,4 @@ cards.forEach(card => {
             }
         };
 
+window.addEventListener("scroll", reveal, {passive: true});
