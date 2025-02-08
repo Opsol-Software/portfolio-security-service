@@ -108,83 +108,9 @@
     }
 }
 
-.Vcontainer {
-    display: flex;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0;
-    gap: 20px;
-    align-items: flex-start;
-}
 
-.Vleft-side {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
 
-.Vright-side {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
 
-.Vlogo img {
-    max-width: 100%;
-    height: auto;
-}
-
-.Vsection {
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.Vcontainer h2 {
-    color: #000000;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.Vcontainer p {
-    margin: 0 0 15px;
-    color: #333;
-    font-size: 1.6rem;
-    text-align: justify;
-}
-
-@media (max-width: 768px) {
-    .Vcontainer {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .Vleft-side,
-    .Vright-side {
-        width: 100%;
-    }
-
-    .Vlogo img {
-        max-width: 150px;
-    }
-
-    .Vright-side {
-        gap: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    h2 {
-        font-size: 1.5em;
-    }
-
-    p {
-        font-size: 0.9em;
-    }
-}
 
 .Lcards-container {
     max-width: 1000px;
@@ -299,6 +225,67 @@
         font-size: 0.9em;
     }
 }
+
+
+.LMcards-container {
+    max-width: 1000px;
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.LMcard {
+    background: rgb(0, 0, 0);
+    border: 1px solid #620202;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 400px;
+}
+
+.LMcard:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.6);
+}
+
+
+
+.LMleft-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.LMleft-side img {
+    max-width: 50%;
+    max-height: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.LMright-side {
+    flex: 2;
+    /* padding: 10px 60px; */
+    padding-right: 60px;
+    text-align: left;
+}
+
+.LMright-side h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+
+
 
 .certifications {
     text-align: center;
@@ -555,24 +542,30 @@
 
 
 
+  .Vtitle {
+    text-align: center;
+    font-size: large;
+    padding: 2rem 1rem;
+  }
 
 
-
-.ourvalues {
+  .ourvalues {
     margin: 0;
-    padding: 0;
+    padding: 70px 50px;
     box-sizing: border-box;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
     position: relative;
-    flex-wrap: wrap;
-    gap: 100px 50px;
-    padding: 100px 50px;
     overflow: visible;
+
+    /* Grid setup with fixed-width columns */
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    gap: 100px;
+    justify-content: center;
+    justify-items: center;
 }
+
 
 .ourvalues .card {
     position: relative;
@@ -586,6 +579,16 @@
     box-shadow: 0 35px 80px rgb(162, 159, 159);
     transition: 0.5s;
     overflow: visible;
+}
+
+.Vcontainer {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    gap: 20px;
+    align-items: flex-start;
 }
 
 .ourvalues .card:hover {
@@ -658,4 +661,14 @@
 .reveal.active {
     transform: translateY(0);
     opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .ourvalues {
+        /* You can change this as needed for responsiveness */
+        grid-template-columns: 1fr;
+    }
+    .card {
+        margin-bottom: 20px;
+    }
 }
