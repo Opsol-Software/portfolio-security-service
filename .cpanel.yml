@@ -1,0 +1,7 @@
+deployment:
+  tasks:
+    - echo "Starting deployment..."
+    - export REPOPATH=/home/singhas3/repositories/portfolio-security-service
+    - export DEPLOYPATH=/home/singhas3/public_html
+    - /bin/rsync -av --exclude='.git' $REPOPATH/ $DEPLOYPATH/
+    - echo "Deployment completed successfully."
