@@ -15,4 +15,4 @@ Allow: /css/
 Allow: /js/                 
 
 # Sitemap location (make sure to replace with your actual sitemap URL)
-Sitemap: https://www.yourdomain.com/sitemap.xml
+Sitemap: https://singhasecuritysolutions.lk/sitemap.xml
