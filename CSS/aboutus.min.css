@@ -34,59 +34,86 @@
     margin-top: 10px;
 }
 
+
+
+
+/* About Section with white background */
 .about-section {
-    padding: 100px 50px;
-    background: #f9f9f9;
+    padding: 80px 20px;
+    background: #fff; /* pure white background */
 }
 
+/* Flex container for content alignment */
 .about-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 60px;
+    gap: 40px;
     align-items: center;
-    margin: 30px;
+    margin: 0 auto;
 }
 
+/* Styling for the text block */
 .about-text {
     flex: 1 1 50%;
     color: #333;
+    padding: 20px;  /* added padding for better spacing */
 }
 
+/* Heading with a strong left accent */
 .about-text h2 {
     font-size: 2.4rem;
-    margin-bottom: 10px;
-    color: #333;
+    margin-bottom: 20px;
+    color: #290404; /* Dark blue accent color */
+    border-left: 5px solid #0f0505be;
+    padding-left: 15px;
 }
 
+/* Paragraph styling for improved readability */
 .about-text p {
-    font-size: 1.25rem;
-    justify-self: auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
 }
 
+/* Image container styling */
 .about-image {
     flex: 1 1 40%;
     text-align: center;
 }
 
+/* Image styling with enhanced box-shadow */
 .about-image img {
     max-width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Responsive adjustments for tablet and below */
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
     }
-
-    .about-text {
-        flex: 1 1 100%;
-    }
-
+    .about-text,
     .about-image {
         flex: 1 1 100%;
+    }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 480px) {
+    .about-section {
+        padding: 50px 20px;
+    }
+    .about-text h2 {
+        font-size: 1.8rem;
+    }
+    .about-text p {
+        font-size: 1rem;
+    }
+    .about-image img {
+        border-radius: 5px;
     }
 }
 
@@ -649,6 +676,7 @@
 
 .ourvalues .card .content p {
     color: #333;
+    margin: 12px 12px;
 }
 
 .reveal {
