@@ -215,43 +215,6 @@
     display: block;
 }
 
-@media (max-width: 768px) {
-    .Lcard {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .Lleft-side img {
-        max-width: 80%;
-    }
-
-    .Lright-side {
-        padding: 10px;
-        text-align: center;
-    }
-
-    .Lright-side h3 {
-        font-size: 1.2em;
-    }
-}
-
-@media (max-width: 480px) {
-    .Lcards-container {
-        gap: 20px;
-    }
-
-    .Lright-side {
-        padding: 15px;
-    }
-
-    .Lright-side h3 {
-        font-size: 1em;
-    }
-
-    .Lright-side p {
-        font-size: 0.9em;
-    }
-}
 
 
 .LMcards-container {
@@ -310,6 +273,83 @@
     font-size: 1.5em;
     color: #ffffff;
 }
+
+@media (max-width: 768px) {
+    .Lcard {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .Lleft-side img {
+        max-width: 80%;
+    }
+
+    .Lright-side {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .Lright-side h3 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .Lcards-container {
+        gap: 20px;
+    }
+
+    .Lright-side {
+        padding: 15px;
+    }
+
+    .Lright-side h3 {
+        font-size: 1em;
+    }
+
+    .Lright-side p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .LMcard {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .LMleft-side img {
+        max-width: 80%;
+    }
+
+    .LMright-side {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .LMright-side h3 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .LMcards-container {
+        gap: 20px;
+    }
+
+    .LMright-side {
+        padding: 15px;
+    }
+
+    .LMright-side h3 {
+        font-size: 1em;
+    }
+
+    .LMright-side p {
+        font-size: 0.9em;
+    }
+}
+
 
 
 
