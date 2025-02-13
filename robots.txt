@@ -1,4 +1,3 @@
-# Allow all search engines to crawl all pages except certain ones
 User-agent: *
 Disallow: /admin/           
 Disallow: /login/           
@@ -7,12 +6,15 @@ Disallow: /checkout/
 Disallow: /search/          
 Disallow: /account/         
 Disallow: /private/         
-Disallow: /thank-you/       
+Disallow: /thank-you/  
 
-# Allow search engines to crawl and index important pages
+User-agent: Googlebot
+Disallow: /duplicate-page
+
 Allow: /images/             
 Allow: /css/                
-Allow: /js/                 
+Allow: /js/  
+
 
 # Sitemap location (make sure to replace with your actual sitemap URL)
 Sitemap: https://singhasecuritysolutions.lk/sitemap.xml
