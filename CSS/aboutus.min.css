@@ -29,112 +29,115 @@
 
 
 
-/* About Section with white background */
+/* About Section with a subtle grey-white gradient background */
 .about-section {
-    padding: 80px 20px;
-    background: #fff; /* pure white background */
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #fff, #f0f0f0);
+}
+
+/* Container to constrain width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Flex container for content alignment */
 .about-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    align-items: center;
-    margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
 }
 
 /* Styling for the text block */
 .about-text {
-    flex: 1 1 50%;
-    color: #333;
-    padding: 20px;  /* added padding for better spacing */
+  flex: 1 1 50%;
+  color: #333; /* dark grey text */
+  padding: 20px;
 }
 
-/* Heading with a strong left accent */
+/* Heading with left accent, bolder black text, and subtle text-shadow */
 .about-text h2 {
-    font-size: 2.4rem;
-    margin-bottom: 20px;
-    color: #290404; /* Dark blue accent color */
-    border-left: 5px solid #0f0505be;
-    padding-left: 15px;
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: #000; /* pure black */
+  border-left: 5px solid #000;
+  padding-left: 15px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Paragraph styling for improved readability */
 .about-text p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Highlight effect for key text elements */
+.highlight {
+  background-color: #ccc; /* light grey highlight */
+  padding: 0 4px;
+  border-radius: 3px;
+  font-weight: bold;
 }
 
 /* Image container styling */
 .about-image {
-    flex: 1 1 40%;
-    text-align: center;
+  flex: 1 1 40%;
+  text-align: center;
 }
 
-/* Image styling with enhanced box-shadow */
+/* Image styling with enhanced box-shadow and a smooth hover effect */
 .about-image img {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
 
 /* Responsive adjustments for tablet and below */
 @media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-    }
-    .about-text,
-    .about-image {
-        flex: 1 1 100%;
-    }
+  .about-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .about-text,
+  .about-image {
+    flex: 1 1 100%;
+  }
 }
 
 /* Responsive adjustments for mobile devices */
 @media (max-width: 480px) {
-    .about-section {
-        padding: 50px 20px;
-    }
-    .about-text h2 {
-        font-size: 1.8rem;
-    }
-    .about-text p {
-        font-size: 1rem;
-    }
-    .about-image img {
-        border-radius: 5px;
-    }
-}
-
-@media (max-width: 480px) {
-    .about-section {
-        padding: 50px 20px;
-    }
-
-    .about-text h2 {
-        font-size: 1.5rem;
-    }
-
-    .about-text p {
-        font-size: 1rem;
-    }
-
-    .about-image img {
-        border-radius: 5px;
-    }
+  .about-section {
+    padding: 50px 20px;
+  }
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+  .about-text p {
+    font-size: 1rem;
+  }
+  .about-image img {
+    border-radius: 5px;
+  }
 }
 
 
 
 
 /* Containers for both card types */
-.leadership-section-x9h h2{
-    text-align: center;
-    font-size: 2.5rem;
+.leadership-section-x9h h2 {
+  text-align: center;
+  font-size: 2.5rem;
 }
+
 .Lcards-container,
 .LMcards-container {
   max-width: 1000px;
@@ -150,25 +153,36 @@
 .LMcard {
   background: #000;
   border: 1px solid #620202;
+  border-radius: 2rem;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   display: flex;
   align-items: center;
+
 }
 
+/* Standard Leadership Card */
 .Lcard {
-  height: 500px;
+  height: 450px;
   width: auto;
   flex-direction: row;
 }
 
-.LMcard {
-  height: 400px;
-  flex-direction: row;
+.Lcard:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.6);
 }
 
-.Lcard:hover,
+/* Revised Grid Card (LMcard) */
+.LMcard {
+  height: 250px;
+  width: auto;
+  flex-direction: row;
+  align-items: stretch; /* Ensures both image and text areas are full height */
+  padding: 0; /* Padding will be handled by inner containers */
+}
+
 .LMcard:hover {
   transform: scale(1.02);
   box-shadow: 0 4px 8px rgba(255, 0, 0, 0.6);
@@ -177,14 +191,24 @@
 /* Left side image containers */
 .Lleft-side,
 .LMleft-side {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Standard leadership card left side */
+.Lleft-side {
+  flex: 1;
   padding: 30px;
 }
 
-/* Images for each card type */
+/* Revised grid card left side */
+.LMleft-side {
+  flex: 1;
+  padding: 15px; /* Reduced padding for more image space */
+}
+
+/* Image styles for standard leadership card */
 .Lleft-side img {
   max-width: 100%;
   max-height: 90%;
@@ -192,20 +216,37 @@
   border-radius: 2rem;
 }
 
+/* Revised image styling for grid cards */
 .LMleft-side img {
-  max-width: 80%;
-  max-height: 90%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
   transition: transform 0.3s ease-in-out;
 }
 
-/* Right side content */
+/* Right side content containers */
 .Lright-side,
 .LMright-side {
-  flex: 2;
-  padding-right: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: left;
 }
 
+/* Standard leadership card right side */
+.Lright-side {
+  flex: 2;
+  padding-right: 60px;
+}
+
+/* Revised grid card right side */
+.LMright-side {
+  flex: 1;
+  padding: 15px;
+}
+
+/* Headings and paragraphs */
 .Lright-side h3,
 .LMright-side h3 {
   margin: 0;
@@ -243,7 +284,8 @@
 
   .Lleft-side img,
   .LMleft-side img {
-    max-width: 80%;
+    width: 100%;
+    height: auto;
   }
 
   .Lright-side,
