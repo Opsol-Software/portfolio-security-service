@@ -380,7 +380,7 @@ nav a.active {
     margin: 0;
 }
 
-@media (max-width: 1330px) {
+@media (max-width: 1024px) {
 
     .nav-link-container,
     .quick-link-container {
@@ -396,7 +396,7 @@ nav a.active {
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
     header .logo h2 {
         font-size: 2rem;
         margin-left: 25%;
