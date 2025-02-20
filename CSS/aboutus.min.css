@@ -71,6 +71,7 @@
   font-size: 1.2rem;
   line-height: 1.6;
   margin: 0;
+  text-align: justify;
 }
 
 /* Highlight effect for key text elements */
@@ -258,6 +259,11 @@
 .LMright-side p {
   margin: 8px 0;
   color: #fff;
+  
+}
+
+.Lright-side p{
+  text-align: justify;
 }
 
 /* Grid layout for LM cards */
@@ -458,123 +464,106 @@
 /* Global Styles */
 
   
-  .VMcontainer {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #1a1a1a;
-    border-radius: 8px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-  }
+.VMcontainer {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.VMcontainer section {
+  padding: 50px 0;
+  border-bottom: 1px solid #444;
+  overflow: hidden;
+}
+
+.VMcontainer section:last-child {
+  border-bottom: none;
+}
+
+.VMcontainer h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  padding: 20px;
+}
+
+
+
+.VMcontainer p {
+  font-size: 2.3em;
+  margin: 0;
+  text-align: center;
+  font-family: 'Markazi Text', serif;
   
-  
-  .VMcontainer section {
-    padding: 50px 0;
-    border-bottom: 1px solid #444;
-    overflow: hidden;
-  }
-  
-  .VMcontainer section:last-child {
-    border-bottom: none;
-  }
-  
+}
+
+/* Flex container for image and text */
+.VMcontainer .content-block {
+  display: flex;
+  align-items: stretch; /* Ensures both children get the same height */
+  justify-content: center;
+  gap: 20px;
+  background-color: #333;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  min-height: 500px; /* Set a unified min-height */
+}
+
+.VMcontainer .content-image {
+  flex: 1;
+  /* Adjust the min-height to match the container */
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+
+.VMcontainer .content-text {
+  flex: 1;
+  padding: 40px;
+  /* Make this a flex container to center its children vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 450px; /* Ensure same min-height as image for balance */
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .VMcontainer h2 {
     font-size: 2.3em;
-    margin-bottom: 20px;
-    color: #ddd;
-    text-align: center;
   }
   
   .VMcontainer p {
-    font-size: 2.3em;
-    margin: 0;
-    text-align: center;
-    font-family: 'Markazi Text', serif;
+    font-size: 2em;
   }
-  
   
   .VMcontainer .content-block {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    background-color: #333;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    min-height: 400px; 
+    flex-direction: column;
   }
   
-  
-  .VMcontainer .content-image {
-    flex: 1;
-    min-height: 500px; 
-    background-size: cover;
-    background-position: center;
-    object-fit: cover;
+  .VMcontainer .content-image,
+  .VMcontainer .content-text {
+    width: 100%;
+    min-height: 250px;
   }
   
   .VMcontainer .content-text {
-    flex: 1;
-    padding: 40px;
-    min-height: 400px; 
+    padding: 20px;
   }
-  
-  
-  @keyframes fadeInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes fadeInRight {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  
-  .VMcontainer .animate-left {
-    animation: fadeInLeft 1s ease-out;
-  }
-  
-  .VMcontainer .animate-right {
-    animation: fadeInRight 1s ease-out;
-  }
-  
+}
 
-  @media (max-width: 768px) {
-    .VMcontainer h2 {
-      font-size: 2.3em;
-    }
-    
-    .VMcontainer p {
-      font-size: 2em;
-    }
-    
-    .VMcontainer .content-block {
-      flex-direction: column;
-    }
-    
-    .VMcontainer .content-image, .content-text {
-      width: 100%;
-      min-height: 250px;  
-    }
-    
-    .VMcontainer .content-text {
-      padding: 20px;
-    }
-  }
+
   
   
 
@@ -690,7 +679,9 @@
 
 .ourvalues .card .content p {
     color: #333;
+    
     margin: 12px 12px;
+    text-align: center;
 }
 
 .reveal {
