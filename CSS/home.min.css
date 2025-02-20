@@ -496,6 +496,7 @@
      max-height: 400px;
      margin-bottom: 15px;
      transition: transform 1s ease;
+     border-radius: 10px;
  }
 
  .cards .card:hover img {
