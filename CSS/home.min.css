@@ -1220,6 +1220,10 @@
          max-width: 100%;
      }
 
+     .contact-banner-button {
+        margin: 0 auto;
+     }
+
      .about-us {
          flex-direction: column;
          margin-bottom: 1rem;
