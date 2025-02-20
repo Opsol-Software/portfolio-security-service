@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:wght@400;500;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 
 :root {
     --font-color-1: #F1F0E8;
@@ -78,6 +80,7 @@ header .logo {
 }
 
 header .logo-img img {
+    margin-top: 1.5rem;
     width: 70px;
     height: 90px;
     position: absolute;
@@ -85,7 +88,10 @@ header .logo-img img {
 
 header .logo h2 {
     margin-left: 120px;
-    font-size: 2rem;
+    font-family: 'Teko', serif;
+    font-size: 3rem;
+    font-weight: 200;
+    display: inline-block;
 }
 
 header .quick-link-container {
@@ -95,12 +101,6 @@ header .quick-link-container {
 nav {
     flex: 2;
     text-align: center;
-}
-
-#navbar h2 {
-    font-family: 'Markazi Text', serif;
-    font-size: 2rem;
-    font-weight: 200;
 }
 
 nav a {
@@ -398,14 +398,14 @@ nav a.active {
 
 @media (max-width: 1000px) {
     header .logo h2 {
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin-left: 25%;
     }
 
     header .logo-img img {
         top: 0;
         left: 0;
-        transform: translate(10%, 5%);
+        transform: translate(10%, -18%);
     }
 
     .menu-container {
