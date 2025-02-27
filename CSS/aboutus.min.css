@@ -464,11 +464,12 @@
 /* Global Styles */
 
   
+/* Global Styles */
 .VMcontainer {
   max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
-  background-color: #1a1a1a;
+  background-color: #202025;  
   border-radius: 8px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
@@ -491,16 +492,14 @@
   position: relative;
   display: inline-block;
   padding: 20px;
+  text-shadow: -1px 10px 40px #f1f0e8;
 }
-
-
 
 .VMcontainer p {
   font-size: 2.3em;
   margin: 0;
   text-align: center;
   font-family: 'Markazi Text', serif;
-  
 }
 
 /* Flex container for image and text */
@@ -509,7 +508,7 @@
   align-items: stretch; /* Ensures both children get the same height */
   justify-content: center;
   gap: 20px;
-  background-color: #333;
+  background-color: #161515;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -536,8 +535,6 @@
   min-height: 450px; /* Ensure same min-height as image for balance */
 }
 
-
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .VMcontainer h2 {
@@ -545,7 +542,8 @@
   }
   
   .VMcontainer p {
-    font-size: 2em;
+    font-size: 1.8em; /* Reduced font size for better fit */
+    overflow-wrap: break-word; /* Force wrapping to prevent overflow */
   }
   
   .VMcontainer .content-block {
@@ -554,16 +552,15 @@
   
   .VMcontainer .content-image,
   .VMcontainer .content-text {
-    width: 100%;
+    
     min-height: 250px;
   }
   
   .VMcontainer .content-text {
     padding: 20px;
+    height: auto; /* Allow dynamic growth */
   }
 }
-
-
   
   
 
