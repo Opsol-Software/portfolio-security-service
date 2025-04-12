@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:wght@400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+:root {
+    --font-color-1: #F1F0E8;
+    --font-color-2: #1A1A1D;
+    --font-color-3: #555454;
+    --font-color-4: #FAB12F;
+    --font-hover-color: #0A3981;
+    --bg-color-1: #536493;
+    --font-size-small: 1rem;
+    --font-size-medium: 1.2rem;
+    --font-size-large: 1.5rem;
+    --font-size-extra-large: 3rem;
+    --font-style: "Roboto", sans-serif;
+    --font-weight-normal: 400;
+    --font-weight-medium: 700;
+    --font-weight-large: 900;
+    --primery-color: #fd562a;
+    --secondary-color: rgba(255, 255, 255, .4);
+    --num-logo: 17;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: var(--font-weight-large);
+    font-style: normal;
+}
+
+.roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    height: 200vh;
+    box-sizing: border-box;
+    background-image: url('../assets/images/BG4\ COM.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: #ffa500;
+    font-weight: 600;
+}
+
+.section-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.section-content h4 {
+    font-size: 1.2rem;
+    color: #ffa500;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-content p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.top-bar {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.nav-links {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+main {
+    padding-top: 100px;
+}
+
+header {
+    position: fixed;
+    height: 80px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    background-color: rgb(39, 37, 37);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+header .logo {
+    margin-left: 10px;
+    flex: 1;
+}
+
+header .logo-img img {
+    margin-top: 1.5rem;
+    width: 70px;
+    height: 90px;
+    position: absolute;
+}
+
+header .logo h2 {
+    margin-left: 120px;
+    font-family: 'Teko', serif;
+    font-size: 3rem;
+    font-weight: 200;
+    display: inline-block;
+}
+
+header .quick-link-container {
+    flex: 1;
+}
+
+nav {
+    flex: 2;
+    text-align: center;
+}
+
+nav a {
+    color: rgb(255, 253, 253);
+    text-decoration: none;
+    font-size: var(--font-size-large);
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    color: red;
+}
+
+nav a.active {
+    border-bottom: 5px solid red;
+    pointer-events: none;
+}
+
+.menu-container {
+    display: none;
+    margin-right: 5%;
+    position: relative;
+    overflow-y: visible;
+}
+
+.bar {
+    height: 5px;
+    width: 40px;
+    margin-bottom: 10px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+#menu-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #3E3636;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    overflow-x: hidden;
+}
+
+#menu-icon.animate .bar-1 {
+    transform: translateY(300%) rotate(45deg);
+}
+
+#menu-icon.animate .bar-3 {
+    transform: translateY(-300%) rotate(-45deg);
+}
+
+#menu-icon.animate .bar-2 {
+    transform: translateX(-150%);
+}
+
+.dropdown-menu {
+    position: absolute;
+    background-color: #171717;
+    padding: 10px 15px;
+    width: 250px;
+    top: 150%;
+    left: -380%;
+    box-shadow: 1px 1px 20px 10px rgba(255, 255, 255, 0.202);
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    z-index: 10000;
+}
+
+.dropdown-menu a {
+    display: flex;
+    padding: 5px 8px;
+    justify-content: start;
+    align-items: center;
+    margin-top: 10px;
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-medium);
+    color: var(--font-color-1);
+    text-decoration: none;
+}
+
+.dropdown-menu a img {
+    margin-right: 10px;
+}
+
+.dropdown-menu a:hover {
+    color: var(--font-hover-color);
+}
+
+.dropdown-menu.hidden {
+    display: none;
+}
+
+/* From Uiverse.io by kleenpulse */
+/*Copyright - 2025 kleenpulse (Liquid) */
+
+.quick-link-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 1rem;
+}
+
+.quick-link-container .btn {
+    --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+    --border-width: 0.125em;
+    --curve-size: 0.5em;
+    --blur: 30px;
+    --bg: #080312;
+    --color: #afffff;
+    color: var(--color);
+    cursor: pointer;
+    /* use position: relative; so that BG is only for .btn */
+    position: relative;
+    isolation: isolate;
+    display: inline-grid;
+    place-content: center;
+    padding: 0.5em 1.5em;
+    font-size: 18px;
+    font-weight: bold;
+    border: 0;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+    clip-path: polygon(
+            /* Top-left */
+            0% var(--curve-size),
+            var(--curve-size) 0,
+            /* top-right */
+            100% 0,
+            100% calc(100% - var(--curve-size)),
+            /* bottom-right 1 */
+            calc(100% - var(--curve-size)) 100%,
+            /* bottom-right 2 */
+            0 100%);
+    transition: color 250ms;
+}
+
+.quick-link-container .btn::after,
+.quick-link-container .btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.quick-link-container .btn::before {
+    background: var(--border-color);
+    background-size: 300% 300%;
+    animation: move-bg7234 5s ease infinite;
+    z-index: -2;
+}
+
+@keyframes move-bg7234 {
+    0% {
+        background-position: 31% 0%;
+    }
+
+    50% {
+        background-position: 70% 100%;
+    }
+
+    100% {
+        background-position: 31% 0%;
+    }
+}
+
+.quick-link-container .btn::after {
+    background: var(--bg);
+    z-index: -1;
+    clip-path: polygon(
+            /* Top-left */
+            var(--border-width) calc(var(--curve-size) + var(--border-width) * 0.5),
+            calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+            /* top-right */
+            calc(100% - var(--border-width)) var(--border-width),
+            calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+            /* bottom-right 1 */
+            calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)),
+            /* bottom-right 2 */
+            var(--border-width) calc(100% - var(--border-width)));
+    transition: clip-path 500ms;
+}
+
+.quick-link-container .btn:where(:hover, :focus)::after {
+    clip-path: polygon(
+            /* Top-left */
+            calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+            calc(100% - var(--border-width)) var(--border-width),
+            /* top-right */
+            calc(100% - var(--border-width)) var(--border-width),
+            calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+            /* bottom-right 1 */
+            calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)),
+            /* bottom-right 2 */
+            calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)));
+    transition: 200ms;
+}
+
+.quick-link-container .btn:where(:hover, :focus) {
+    color: #fff;
+}
+
+
+.footer {
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin: 0 15px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer-column p,
+.footer-column ul {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #00bcd4;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 8px;
+    color: #f1f1f1;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00bcd4;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+
+    .nav-link-container,
+    .quick-link-container {
+        display: none;
+    }
+
+    .menu-container {
+        display: block;
+    }
+
+    header .logo h2 {
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    header .logo h2 {
+        font-size: 2rem;
+        margin-left: 25%;
+    }
+
+    header .logo-img img {
+        top: 0;
+        left: 0;
+        transform: translate(10%, -18%);
+    }
+
+    .menu-container {
+        display: block;
+    }
+
+    .nav-link-container,
+    .quick-link-container {
+        display: none;
+    }
+}

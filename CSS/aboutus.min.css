@@ -1,0 +1,704 @@
+.header {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  /* Container styling */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+
+
+
+
+/* About Section with a subtle grey-white gradient background */
+.about-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #fff, #f0f0f0);
+}
+
+/* Container to constrain width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Flex container for content alignment */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Styling for the text block */
+.about-text {
+  flex: 1 1 50%;
+  color: #333; /* dark grey text */
+  padding: 20px;
+}
+
+/* Heading with left accent, bolder black text, and subtle text-shadow */
+.about-text h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: #000; /* pure black */
+  border-left: 5px solid #000;
+  padding-left: 15px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraph styling for improved readability */
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 0;
+  text-align: justify;
+}
+
+/* Highlight effect for key text elements */
+.highlight {
+  background-color: #ccc; /* light grey highlight */
+  padding: 0 4px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+/* Image container styling */
+.about-image {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+/* Image styling with enhanced box-shadow and a smooth hover effect */
+.about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive adjustments for tablet and below */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .about-text,
+  .about-image {
+    flex: 1 1 100%;
+  }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 50px 20px;
+  }
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+  .about-text p {
+    font-size: 1rem;
+  }
+  .about-image img {
+    border-radius: 5px;
+  }
+}
+
+
+
+
+/* Containers for both card types */
+.leadership-section-x9h h2 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.Lcards-container,
+.LMcards-container {
+  max-width: 1000px;
+  margin: 10px auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Common styles for leadership cards */
+.Lcard,
+.LMcard {
+  background: #000;
+  border: 1px solid #620202;
+  border-radius: 2rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+
+}
+
+/* Standard Leadership Card */
+.Lcard {
+  height: 450px;
+  width: auto;
+  flex-direction: row;
+}
+
+.Lcard:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.6);
+}
+
+/* Revised Grid Card (LMcard) */
+.LMcard {
+  height: 250px;
+  width: auto;
+  flex-direction: row;
+  align-items: stretch; /* Ensures both image and text areas are full height */
+  padding: 0; /* Padding will be handled by inner containers */
+}
+
+.LMcard:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.6);
+}
+
+/* Left side image containers */
+.Lleft-side,
+.LMleft-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Standard leadership card left side */
+.Lleft-side {
+  flex: 1;
+  padding: 30px;
+}
+
+/* Revised grid card left side */
+.LMleft-side {
+  flex: 1;
+  padding: 15px; /* Reduced padding for more image space */
+}
+
+/* Image styles for standard leadership card */
+.Lleft-side img {
+  max-width: 100%;
+  max-height: 90%;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 2rem;
+}
+
+/* Revised image styling for grid cards */
+.LMleft-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Right side content containers */
+.Lright-side,
+.LMright-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+/* Standard leadership card right side */
+.Lright-side {
+  flex: 2;
+  padding-right: 60px;
+}
+
+/* Revised grid card right side */
+.LMright-side {
+  flex: 1;
+  padding: 15px;
+}
+
+/* Headings and paragraphs */
+.Lright-side h3,
+.LMright-side h3 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #fff;
+}
+
+.Lright-side p,
+.LMright-side p {
+  margin: 8px 0;
+  color: #fff;
+  
+}
+
+.Lright-side p{
+  text-align: justify;
+}
+
+/* Grid layout for LM cards */
+.LMcards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .LMcards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .Lcard,
+  .LMcard {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .Lleft-side img,
+  .LMleft-side img {
+    width: 100%;
+    height: auto;
+  }
+
+  .Lright-side,
+  .LMright-side {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .Lright-side h3,
+  .LMright-side h3 {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .Lcards-container,
+  .LMcards-container {
+    gap: 20px;
+  }
+
+  .Lright-side,
+  .LMright-side {
+    padding: 15px;
+  }
+
+  .Lright-side h3,
+  .LMright-side h3 {
+    font-size: 1em;
+  }
+
+  .Lright-side p,
+  .LMright-side p {
+    font-size: 0.9em;
+  }
+}
+
+
+
+
+
+
+.certifications {
+    text-align: center;
+    background-color: black;
+    padding: 2rem 1rem;
+}
+
+.certifications h2 {
+    font-size: 2rem;
+    color: white;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.card {
+    flex: 1 1 calc(45% - 1.5rem);
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.card img:hover {
+    opacity: 0.8;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #333;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 700px;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+.caption {
+    margin-top: 10px;
+    color: #ccc;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%;
+        max-width: 90%;
+    }
+
+    .certifications h2 {
+        font-size: 1.5rem;
+    }
+
+    .close {
+        font-size: 1.5rem;
+    }
+
+    .caption {
+        font-size: 0.8rem;
+    }
+}
+
+.title {
+    background-color: #333;
+    background: url(../assets/images/background.webp) no-repeat center center/cover;
+}
+
+.title h2 {
+    text-align: center;
+    color: #000000;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+/* Global Styles */
+
+  
+/* Global Styles */
+.VMcontainer {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #202025;  
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.VMcontainer section {
+  padding: 50px 0;
+  border-bottom: 1px solid #444;
+  overflow: hidden;
+}
+
+.VMcontainer section:last-child {
+  border-bottom: none;
+}
+
+.VMcontainer h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  padding: 20px;
+  text-shadow: -1px 10px 40px #f1f0e8;
+}
+
+.VMcontainer p {
+  font-size: 2.3em;
+  margin: 0;
+  text-align: center;
+  font-family: 'Markazi Text', serif;
+}
+
+/* Flex container for image and text */
+.VMcontainer .content-block {
+  display: flex;
+  align-items: stretch; /* Ensures both children get the same height */
+  justify-content: center;
+  gap: 20px;
+  background-color: #161515;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  min-height: 500px; /* Set a unified min-height */
+}
+
+.VMcontainer .content-image {
+  flex: 1;
+  /* Adjust the min-height to match the container */
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+
+.VMcontainer .content-text {
+  flex: 1;
+  padding: 40px;
+  /* Make this a flex container to center its children vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 450px; /* Ensure same min-height as image for balance */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .VMcontainer h2 {
+    font-size: 2.3em;
+  }
+  
+  .VMcontainer p {
+    font-size: 1.8em; /* Reduced font size for better fit */
+    overflow-wrap: break-word; /* Force wrapping to prevent overflow */
+  }
+  
+  .VMcontainer .content-block {
+    flex-direction: column;
+  }
+  
+  .VMcontainer .content-image,
+  .VMcontainer .content-text {
+    
+    min-height: 250px;
+  }
+  
+  .VMcontainer .content-text {
+    padding: 20px;
+    height: auto; /* Allow dynamic growth */
+  }
+}
+  
+  
+
+
+
+
+
+
+  .Vtitle {
+    text-align: center;
+    font-size: large;
+    padding: 2rem 1rem;
+  }
+
+
+  .ourvalues {
+    margin: 0;
+    padding: 70px 50px;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    min-height: 100vh;
+    position: relative;
+    overflow: visible;
+
+    /* Grid setup with fixed-width columns */
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    gap: 100px;
+    justify-content: center;
+    justify-items: center;
+}
+
+
+.ourvalues .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    height: 300px;
+    background: #fff;
+    border-radius: 28px;
+    box-shadow: 0 35px 80px rgb(162, 159, 159);
+    transition: 0.5s;
+    overflow: visible;
+}
+
+.Vcontainer {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.ourvalues .card:hover {
+    height: 350px !important;
+}
+
+.ourvalues .card .imgBx {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #ffffff00;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.ourvalues .card:hover .imgBx {
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgb(2, 2, 2);
+}
+
+.ourvalues .card .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+}
+
+.ourvalues .card .content {
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    padding: 0 30px;
+    height: 45px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.ourvalues .card:hover .content {
+    height: 250px;
+    top: 150px;
+}
+
+.ourvalues .card .content h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: black;
+    
+    
+}
+
+.ourvalues .card .content p {
+    color: #333;
+    
+    margin: 12px 12px;
+    text-align: center;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .ourvalues {
+        /* You can change this as needed for responsiveness */
+        grid-template-columns: 1fr;
+    }
+    .card {
+        margin-bottom: 20px;
+    }
+}
