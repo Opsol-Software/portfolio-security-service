@@ -467,11 +467,53 @@ section {
     letter-spacing: 1px;
 }
 
+.services-container {
+    position: relative;
+    background: url('../assets/images/B4.png');
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 40px;
+    z-index: 1;
+}
+
+.services-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#service-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+#service-section h1 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+#service-section #paragraph {
+    color: #ffa500;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     padding: 1rem;
+}
+
+/* This rule centers only the last card in the grid when it's alone in the row */
+.card:last-child {
+    justify-self: center;
 }
 
 .card {

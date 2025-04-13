@@ -21,10 +21,7 @@ body {
     font-size: 14px;
 }
 
-.contact-info, .company-info {
-    display: flex;
-    gap: 20px;
-}
+
 
 .iso-badge img {
     height: 30px;
