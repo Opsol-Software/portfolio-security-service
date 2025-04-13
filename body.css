@@ -14,12 +14,13 @@ body {
 /* Hero Section */
 .hero-section {
     position: relative;
+    margin-top: -100px;
     width: 100%;
     height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('assets/images/training-bg.jpg');
+    background-image: url('assets/images/train2.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
