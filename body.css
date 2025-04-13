@@ -142,10 +142,27 @@ body {
 
 /* Trusted Partner Section */
 .trusted-partner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+
+
+    align-items: center;
+    justify-content: center;
+    background-image: url('assets/images/train2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
+    background-image: url('assets/images/train10.png');
+    background-repeat: no-repeat;
     text-align: center;
+
+
     padding: 4rem 0;
     background-color: #333;
 }
+
+
 
 .trusted-partner h2 {
     font-size: 2rem;
