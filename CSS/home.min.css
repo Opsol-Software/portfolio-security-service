@@ -209,7 +209,7 @@ section {
 .section-content h1 {
     font-size: var(--font-size-extra-large);
     margin-bottom: 0;
-    line-height: 1.5rem;
+    line-height: 3rem;
 }
 
 .section-content p {
@@ -236,7 +236,7 @@ section {
 .gallery-container {
     align-items: center;
     display: flex;
-    height: 400px;
+    height: 38rem;
     margin: 0 auto;
     max-width: 1000px;
     position: relative;
@@ -271,8 +271,14 @@ section {
     transform: translateX(-50%);
 }
 
+.gallery-item-1 {
+    left: 30%;  /* Reduced from 60% to shift it left */
+    opacity: 0.4;
+    transform: translateX(-50%);
+}
+
 .gallery-item-2 {
-    left: 70%;
+    left: 50%;  /* Centered at 50% */
     opacity: 1;
     transform: translateX(-50%);
     height: 400px;
@@ -281,10 +287,11 @@ section {
 }
 
 .gallery-item-3 {
-    left: 80%;
+    left: 70%;  /* Shifted less than before */
     opacity: 0.4;
     transform: translateX(-50%);
 }
+
 
 .gallery-controls {
     display: flex;
