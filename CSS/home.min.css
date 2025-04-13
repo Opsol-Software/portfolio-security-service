@@ -403,10 +403,7 @@ section {
     left: 0;
     width: 200%;
     height: 100%;
-    background: linear-gradient(115deg,
-            #4fcf70, #fad648,
-            #a767e5, #12bcfe,
-            #44ce7b);
+    background: linear-gradient(115deg, #fad648);
     background-size: 50% 100%;
     border-radius: inherit;
 }
@@ -782,7 +779,7 @@ section {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: conic-gradient(from var(--angle), red, blue, red);
+    background: conic-gradient(from var(--angle), gold, white, gold);
     top: 50%;
     left: 50%;
     translate: -50% -50%;
