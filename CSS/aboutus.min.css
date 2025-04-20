@@ -76,7 +76,6 @@
 
 /* Highlight effect for key text elements */
 .highlight {
-  background-color: #ccc; /* light grey highlight */
   padding: 0 4px;
   border-radius: 3px;
   font-weight: bold;
