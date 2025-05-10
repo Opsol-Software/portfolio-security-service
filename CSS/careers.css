@@ -224,8 +224,8 @@ main {
 
 .job-position {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0;
+    flex-wrap: nowrap;
+    align-items: stretch;
     margin-bottom: 60px;
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
@@ -239,7 +239,7 @@ main {
 
 .job-image {
     flex: 1 1 50%;
-    height: 100%;
+    display: flex;
 }
 
 .job-image img {

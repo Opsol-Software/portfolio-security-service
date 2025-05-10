@@ -58,7 +58,7 @@ main {
 }
 
 /* Training Section */
-.training-section {
+/* .training-section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -135,7 +135,119 @@ main {
     color: #ffa500;
     position: absolute;
     left: 0;
+} */
+
+.training-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
+
+.training-block {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    margin-bottom: 60px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 300px;
+}
+
+.training-block:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.training-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.training-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.training-content {
+    flex: 1 1 50%;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.training-content h2 {
+    color: #ffa500;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.training-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #ffa500;
+}
+
+.training-content p {
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.training-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.training-content ul li {
+    color: #fff;
+    margin-bottom: 0.8rem;
+    padding-left: 24px;
+    position: relative;
+    line-height: 1.6;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.training-content ul li::before {
+    content: '•';
+    color: #ffa500;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .training-block {
+        flex-direction: column;
+    }
+
+    .training-image,
+    .training-content {
+        flex: 1 1 100%;
+        height: auto;
+    }
+
+    .training-image img {
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+}
+
+
 
 /* Trusted Partner Section */
 .trusted-partner {
