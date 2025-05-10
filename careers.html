@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers | Singha Security Solutions</title>
+    <title>Careers at Singha Security Solutions - Join Our Expert Team</title>
+    <meta name="description" content="Explore exciting career opportunities at Singha Security Solutions. Join a dedicated team providing professional security services across Sri Lanka." />
+    <meta name="keywords" content="Singha Security jobs, security careers, join Singha Security, security officer jobs, career in security, Sri Lanka security jobs" />
+    <meta name="author" content="Singha Security Solutions" />
+
+    <link rel="canonical" href="https://singhasecuritysolutions.lk/careers.html">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
     <link rel="stylesheet" href="./CSS/main.min.css">
     <link rel="stylesheet" href="./CSS/careers.css">
     <link rel="stylesheet" href="./CSS/navbar.css">
@@ -55,7 +62,7 @@
 
         <div class="careers-container">
             <!-- Chief Security Officer -->
-            <div class="job-position">
+            <!-- <div class="job-position">
                 <div class="job-image">
                     <img src="" alt="Chief Security Officer">
                 </div>
@@ -73,7 +80,7 @@
                         <li>Act lawfully in direct defence of life or property</li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Officer In Charge -->
             <div class="job-position">
@@ -97,7 +104,7 @@
             </div>
 
             <!-- Senior Security Officer -->
-            <div class="job-position">
+            <!-- <div class="job-position">
                 <div class="job-image">
                     <img src="assets/images/sso.jpg" alt="Senior Security Officer">
                 </div>
@@ -114,7 +121,7 @@
                         <li>Application of not conforming to the QMS requirements/ other compliances</li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Junior Security Officer -->
             <div class="job-position">
@@ -155,22 +162,21 @@
 
         <!-- Apply Today Section -->
         <div class="apply-section">
-            <h2>Apply Today</h2>
+            <h2>Work With Us</h2>
             <p>Applicants are required to submit the below details and we will get back to you shortly</p>
-            <form class="apply-form">
+            <form class="apply-form" action="https://api.web3forms.com/submit" method="post">
+                <input type="hidden" name="access_key" value="acd0a3e8-78d8-41bf-98a2-661ff0ebb4de">
+                <input type="hidden" name="subject" value="Web Job Application">
                 <div class="form-row">
-                    <input type="text" placeholder="Your name" required>
-                    <input type="tel" placeholder="Your phone" required>
+                    <input type="text" placeholder="Your First Name" name="First Name" required>
+                    <input type="text" placeholder="Your Last Name" name="Last Name" required>
                 </div>
                 <div class="form-row">
-                    <input type="date" placeholder="Date of birth" required>
-                    <input type="text" placeholder="Current address" required>
+                    <input type="email" placeholder="Your Email" name="Email" required>
+                    <input type="tel" placeholder="Your Phone Number" name="Phone Number" required>
                 </div>
-                <div class="form-row">
-                    <input type="email" placeholder="Your email (optional)">
-                    <input type="text" placeholder="Your NIC number" required>
-                </div>
-                <textarea placeholder="Previous Experience" required></textarea>
+                
+                <textarea name="Experience" id="experience" placeholder="Mention your previous experiences"></textarea>
                 <button type="submit" class="submit-btn">SUBMIT</button>
             </form>
         </div>

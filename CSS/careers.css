@@ -119,94 +119,6 @@ main {
 }
 
 /* Careers Page Styles */
-/* .careers-title {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #fff;
-    margin: 3rem 0;
-    text-transform: uppercase;
-    padding: 20px;
-}
-
-.careers-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.job-position {
-    display: flex;
-    gap: 40px;
-    margin-bottom: 60px;
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 30px;
-    border-radius: 8px;
-}
-
-.job-position:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-.job-image {
-    flex: 0 0 40%;
-}
-
-.job-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.job-details {
-    flex: 0 0 60%;
-}
-
-.job-details h2 {
-    color: #ffa500;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    position: relative;
-    display: inline-block;
-}
-
-.job-details h2::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background-color: #ffa500;
-}
-
-.job-details h3 {
-    color: #fff;
-    font-size: 1.2rem;
-    margin: 1rem 0;
-}
-
-.job-details ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.job-details li {
-    color: #fff;
-    margin-bottom: 0.8rem;
-    padding-left: 20px;
-    position: relative;
-    line-height: 1.6;
-}
-
-.job-details li::before {
-    content: '•';
-    color: #ffa500;
-    position: absolute;
-    left: 0;
-} */
-
 .careers-title {
     text-align: center;
     font-size: 2.5rem;
@@ -490,3 +402,5 @@ main {
         font-size: 1.5rem;
     }
 }
+
+
