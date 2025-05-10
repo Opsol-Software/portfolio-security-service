@@ -14,14 +14,20 @@
 <body>
     <div class="top-bar">
         <div class="contact-info">
-            <span>071 982 9694/ 074 150 6033</span>
-            <span>info.singasec@gmail.com</span>
+            <span>
+                <i class="fas fa-phone"></i> 
+                <a href="tel:0719829694">071 982 9694</a> / 
+                <a href="tel:0741506033">074 150 6033</a>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:info.singhasec@gmail.com">info.singhasec@gmail.com</a>
+            </span>
         </div>
         <div class="company-info">
-            <span>Singha security (PVT) LTD</span>
-            <span>6/3B, Rathnapura Rd., Ilimba Junction, Munagama, Horana.</span>
+            <span><i class="fas fa-building"></i> Singha Security (PVT) LTD</span>
+            <span><i class="fas fa-map-marker-alt"></i> 6/3B, Rathnapura Rd., Ilimba Junction, Munagama, Horana</span>
         </div>
-        
     </div>
 
     <nav class="main-nav">
@@ -31,7 +37,7 @@
         <div class="nav-links">
             <a href="index.html" class="nav-item">HOME</a>
             <a href="aboutus.html" class="nav-item">ABOUT US</a>
-            <a href="#" class="nav-item">SERVICES</a>
+            <a href="index.html#service-section" class="nav-item">SERVICES</a>
             <a href="careers.html" class="nav-item active">CAREERS</a>
             <a href="training.html" class="nav-item">TRAINING & DEVELOPMENT</a>
            
@@ -188,7 +194,7 @@
                 <span>6/3B, Rathnapura Rd., Ilimba Junction, Munagama, Horana.</span>
             </div>
             <div class="footer-hours">
-                <span>⏰ Mon - Sat: 8.30 am - 5.30 pm</span>
+                <span>⏰ Mon - Sat: 8.00 am - 5.30 pm</span>
                 <span>Sunday: CLOSED</span>
             </div>
         </div>
@@ -226,6 +232,26 @@
             <p>Copyright © Singha Security Solutions (Pvt) Limited. All Rights Reserved | Solution by <span class="footer-highlight">OPSOL</span></p>
         </div>
     </footer>
+    <button class="scroll-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        const scrollToTopBtn = document.querySelector('.scroll-to-top');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 
 </html>
