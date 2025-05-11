@@ -109,6 +109,7 @@
     text-transform: uppercase;
     background: transparent;
     border: 2px solid #fff;
+    border-radius: 25px;
     color: #fff;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -832,7 +833,7 @@ section {
     background-color: #3C3D37;
     margin: 20px auto;
     height: 110px;
-    width: 95%;
+    width: 90%;
     border: 2px solid black;
     border-radius: 30px;
     position: relative;
