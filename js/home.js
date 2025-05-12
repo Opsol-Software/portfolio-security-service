@@ -110,3 +110,62 @@ dialbtn.addEventListener('click', () => {
 
 
 window.addEventListener("scroll", reveal, {passive: true});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const slideContainer = document.querySelector('.slide-container');
+    const slides = document.querySelectorAll('.slide');
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+    
+    let currentSlide = 0;
+    const slideCount = slides.length;
+    
+    // Initialize
+    updateSlidePosition();
+    
+    // Auto slide every 5 seconds
+    let slideInterval = setInterval(nextSlide, 5000);
+    
+    // Navigation button click handlers
+    prevButton.addEventListener('click', () => {
+        prevSlide();
+        resetInterval();
+    });
+    
+    nextButton.addEventListener('click', () => {
+        nextSlide();
+        resetInterval();
+    });
+    
+    // Functions
+    function updateSlidePosition() {
+        slideContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+    
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slideCount;
+        updateSlidePosition();
+    }
+    
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+        updateSlidePosition();
+    }
+    
+    function resetInterval() {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, 5000);
+    }
+    
+    // Add click handlers for slider buttons
+    const aboutButtons = document.querySelectorAll('.slider-btn');
+    aboutButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            if (this.textContent === 'ABOUT US') {
+                window.location.href = 'aboutus.html';
+            } else if (this.textContent === 'CONTACT US') {
+                window.location.href = 'contactus.html';
+            }
+        });
+    });
+});

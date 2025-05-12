@@ -15,76 +15,101 @@
     <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/main.min.css">
     <link rel="stylesheet" href="./CSS/home.min.css">
-
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
     <script src="./js/main.js" defer></script>
     <script src="./js/home.js" defer></script>
     
 </head>
 
 <body>
-    <header id="navbar">
+    <div class="top-bar">
+        <div class="contact-info">
+            <span>
+                <i class="fas fa-phone"></i> 
+                <a href="tel:0719829694">071 982 9694</a> / 
+                <a href="tel:0741506033">074 150 6033</a>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:info.singhasec@gmail.com">info.singhasec@gmail.com</a>
+            </span>
+        </div>
+        <div class="company-info">
+            <span><i class="fas fa-building"></i> Singha Security (PVT) LTD</span>
+            <span><i class="fas fa-map-marker-alt"></i> 6/3B, Rathnapura Rd., Ilimba Junction, Munagama, Horana</span>
+        </div>
+    </div>
+
+
+
+    <nav class="main-nav">
         <div class="logo">
-            <div class="logo-img">
-                <img src="assets/images/company-logo.png" alt="">
-            </div>
-            <h2>Singha Security</h2>
+            <img src="assets/images/company-logo.png" alt="Singha Security Logo">
         </div>
-
-        <nav class="nav-link-container">
-            <a href="./index.html">Home</a>
-            <a href="./aboutus.html">About Us</a>
-            <!-- <a href="testimonials.html">Testimonials</a> -->
-            <a href="./contactus.html">Contact Us</a>
-        </nav>
-
-        <div class="quick-link-container">
-            <a href="contactus.html">
-                <button class="btn">Obtain a Proposal</button>
-            </a>
-            <a href="contactus.html#contact-section">
-                <button class="btn">Contact Us</button>
-            </a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-item active">HOME</a>
+            <a href="aboutus.html" class="nav-item">ABOUT US </a>
+            <a href="index.html#service-section" class="nav-item">SERVICES</a>
+            <a href="careers.html" class="nav-item">CAREERS</a>
+            <a href="training.html" class="nav-item">TRAINING & DEVELOPMENT</a>
+            <a href="contactus.html" class="nav-item">CONTACT US</a>
         </div>
-
-        <div class="menu-container">
-            <div id="menu-icon">
-                <div class="bar bar-1"></div>
-                <div class="bar bar-2"></div>
-                <div class="bar bar-3"></div>
-            </div>
-            <div class="dropdown-menu hidden">
-                <a href="index.html" class="active"><img src="assets/icons/icons8-home-25.png" alt="">Home</a>
-                <a href="aboutus.html"><img src="assets/icons/icons8-about-us-25.png" alt=""> About Us</a>
-                <!-- <a href="#"><img src="assets/icons/icons8-verify-25.png" alt=""> Testimonials</a> -->
-                <a href="contactus.html"><img src="assets/icons/icons8-contact-us-25.png" alt=""> Contact Us</a>
-            </div>
-        </div>
-    </header>
+    </nav>
 
     <main>
         <!-- Main Image Slider -->
         <div class="image-slider">
+            <div class="slider-nav slider-nav-left">
+                <button class="nav-button prev-button">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
             <div class="slide-container">
                 <div class="slide">
-                    <img src="assets/banner_images/DSC_0186 COM.webp" alt="">
+                    <img src="assets/banner_images/DSC_0186 COM.webp" alt="Security Services">
                     <div class="img-overlay-text">
-                        <h1>Your Trusted Partner In Security</h1>
+                        <h1>We, Singha Security</h1>
+                        <p>provides Leading Security</p>
+                        <div class="slider-buttons">
+                            <button class="slider-btn">ABOUT US</button>
+                            <button class="slider-btn">CONTACT US</button>
+                        </div>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="assets/banner_images/DSC_0207 COM.webp" alt="">
+                    <img src="assets/banner_images/DSC_0207 COM.webp" alt="Security Personnel">
                     <div class="img-overlay-text">
                         <h1>Experienced Security Personnel</h1>
+                        <p>Professional and Trained Staff</p>
+                        <div class="slider-buttons">
+                            <button class="slider-btn">ABOUT US</button>
+                            <button class="slider-btn">CONTACT US</button>
+                        </div>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="assets/banner_images/inspecting_intruderR.webp" alt="">
+                    <img src="assets/banner_images/inspecting_intruderR.webp" alt="Customer Service">
                     <div class="img-overlay-text">
                         <h1>Friendly Customer Service</h1>
+                        <p>24/7 Support and Assistance</p>
+                        <div class="slider-buttons">
+                            <button class="slider-btn">ABOUT US</button>
+                            <button class="slider-btn">CONTACT US</button>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="slider-nav slider-nav-right">
+                <button class="nav-button next-button">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
         </div>
 
@@ -127,21 +152,11 @@
 
         <!-- About us Section -->
         <section class="about-us reveal">
-
             <div class="section-content">
                 <h4>About Us</h4>
-                <h1>Your Trusted Partner In All</h1>
-                <h1>Security Solutions</h1>
-                <p>At Singha Security Solutions (Pvt) Ltd (SSS), we provide exceptional security services tailored to
-                    meet the diverse needs of our clients.
-                </p>
-
-                <p>Our offerings range from private households to multinational corporations and government
-                    organizations. With a steadfast dedication to <span
-                        style="color:red;font-weight:600">PROFESSIONALISM</span> and <span
-                        style="color:red;font-weight:600">EFFIENCY</span>. We focus on delivering 
-                        <span style="color:red;font-weight:600">TIMELY</span> and <span
-                        style="color:red;font-weight:600">RELIABLE</span> solutions that exceed expectations.</p>
+                <h1>Your Trusted Partner In All Security Solutions</h1>
+                <p>At Singha Security Solutions (Pvt) Ltd (SSS), we provide exceptional security services tailored to meet the diverse needs of our clients.</p>
+                <p>Our offerings range from private households to multinational corporations and government organizations. With a steadfast dedication to <span class="highlight">PROFESSIONALISM</span> and <span class="highlight">EFFICIENCY</span>, we focus on delivering <span class="highlight">TIMELY</span> and <span class="highlight">RELIABLE</span> solutions that exceed expectations.</p>
                 <a href="aboutus.html">
                     <button class="explore-button">
                         <span>More...</span>
@@ -185,90 +200,69 @@
         <section class="services-container overlay reveal">
             <div id="service-section">
                 <h1>Our Services</h1>
-                <h1 id="paragraph">Reliable Services For Loss Prevention</h1>
+                <h1 id="paragraph">RELIABLE SERVICES FOR LOSS PREVENTION</h1>
                 <div class="cards">
                     <div class="card">
-                        <!-- <i class="fa-brands fa-react"></i> -->
                         <div class="content">
-                            <!-- <img loading="lazy" src="assets/images/image (14).webp" alt=""> -->
-                            <img loading="lazy" src="assets/imagesAI/personal-security.webp" alt="">
+                            <img loading="lazy" src="assets/imagesAI/personal-security.webp" alt="Personal Security">
                             <h3>Personal Security</h3>
                             <p>Professional protection services to ensure your personal safety and peace of mind.</p>
-
                         </div>
                     </div>
                     <div class="card">
-                        <!-- <i class="fa-regular fa-gem"></i> -->
                         <div class="content">
-                            <img loading="lazy" src="assets/imagesAI/singhasecurity_vip_security.webp" alt="">
+                            <img loading="lazy" src="assets/imagesAI/singhasecurity_vip_security.webp" alt="VIP Security">
                             <h3>Security for VIPs</h3>
                             <p>Discreet and reliable security solutions designed for high-profile individuals.</p>
-
                         </div>
                     </div>
                     <div class="card">
-                        <!-- <i class="fa-solid fa-rocket"></i> -->
                         <div class="content">
-                            <img loading="lazy" src="assets/imagesAI/bank-security.webp" alt="">
+                            <img loading="lazy" src="assets/imagesAI/bank-security.webp" alt="Bank Security">
                             <h3>Bank Security</h3>
-                            <p>Specialized security services for financial institutions, ensuring a safe environment.
-                            </p>
-
+                            <p>Specialized security services for financial institutions, ensuring a safe environment.</p>
                         </div>
                     </div>
-                    <!-- New Row of Cards -->
                     <div class="card">
-                        <!-- <i class="fa-solid fa-code"></i> -->
                         <div class="content">
-                            <img loading="lazy" src="assets/imagesAI/singhasecurity_security_consultation.webp" alt="">
+                            <img loading="lazy" src="assets/imagesAI/singhasecurity_security_consultation.webp" alt="Security Consultation">
                             <h3>Security Consultants</h3>
-                            <p>Expert guidance to develop customized security plans for your business or home..</p>
-
+                            <p>Expert guidance to develop customized security plans for your business or home.</p>
                         </div>
                     </div>
                     <div class="card">
-                        <!-- <i class="fa-solid fa-chart-line"></i> -->
                         <div class="content">
-                            <img loading="lazy" src="assets/imagesAI/singhasecurity_cctv.webp" alt="">
+                            <img loading="lazy" src="assets/imagesAI/singhasecurity_cctv.webp" alt="CCTV Systems">
                             <h3>CCTV & Alarm Systems</h3>
                             <p>Advanced surveillance and alarm systems to monitor and protect your premises.</p>
-
                         </div>
                     </div>
                     <div class="card">
-                        <!-- <i class="fa-solid fa-network-wired"></i> -->
                         <div class="content">
-                            <img loading="lazy" src="assets/imagesAI/event-security.webp" alt="">
+                            <img loading="lazy" src="assets/imagesAI/event-security.webp" alt="Event Security">
                             <h3>Event Security</h3>
                             <p>Comprehensive security solutions for events of all sizes, ensuring safety and order.</p>
-
                         </div>
                     </div>
                     <div class="card">
-                        <!-- <i class="fa-solid fa-network-wired"></i> -->
                         <div class="content">
-                            <img loading="lazy" src="assets/imagesAI/retail-security.webp" alt="">
+                            <img loading="lazy" src="assets/imagesAI/retail-security.webp" alt="Retail Security">
                             <h3>Retail Security</h3>
                             <p>Ensure a safe shopping environment with vigilant loss prevention and customer safety measures.</p>
-
                         </div>
                     </div>
                     <div class="card">
-                        <!-- <i class="fa-solid fa-network-wired"></i> -->
                         <div class="content">
-                            <img loading="lazy" src="assets/imagesAI/school-security.webp" alt="">
+                            <img loading="lazy" src="assets/imagesAI/school-security.webp" alt="School Security">
                             <h3>School Security</h3>
                             <p>Protect students and staff with tailored security solutions, access control, and emergency response.</p>
-
                         </div>
                     </div>
                     <div class="card">
-                        <!-- <i class="fa-solid fa-network-wired"></i> -->
                         <div class="content">
-                            <img loading="lazy" src="assets/imagesAI/business-security.webp" alt="">
+                            <img loading="lazy" src="assets/imagesAI/business-security.webp" alt="Business Security">
                             <h3>Business Security</h3>
                             <p>Safeguard assets, employees, and operations with comprehensive surveillance, monitoring, and risk management.</p>
-
                         </div>
                     </div>
                 </div>
@@ -341,46 +335,71 @@
         </div>
     </main>
 
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>About Us</h3>
-                <p>We provide top-notch security services to protect your assets and ensure peace of mind. Trusted by
-                    thousands worldwide.</p>
+    <footer class="custom-footer">
+        <div class="footer-top">
+            <div class="footer-contact">
+                <span>📞071 982 9694/ 074 150 6033</span>
+                <span>📧info.singhasec@gmail.com</span>
             </div>
-            <div class="footer-column">
-                <h3>Services</h3>
+            <div class="footer-address">
+                <span>Singha Security Solutions (Pvt) Limited.</span>
+                <span>6/3B, Rathnapura Rd., Ilimba Junction, Munagama, Horana.</span>
+            </div>
+            <div class="footer-hours">
+                <span>⏰ Mon - Sat: 8.00 am - 5.30 pm</span>
+                <span>Sunday: CLOSED</span>
+            </div>
+        </div>
+    
+        <div class="footer-middle">
+            <div class="footer-logo">
+                <img src="assets/images/company-logo.png" alt=" Security Logo"> 
+            </div>
+            <div class="footer-motto">
+                <h3>Our Mission</h3>
+                <p>"<strong>To provide innovative security solutions with high quality standards in order to help our clients in preventing losses of life, property, assets and the environment.</strong>"</p>
+            </div>
+            <div class="footer-motto">
+                 <h3>Our Vision</h3>
+                <p>"<strong>To be the most professional and reliable security solutions partner in the industry by exceeding our customer's expectations while valuing our employees.</strong>"</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quicklink</h3>
                 <ul>
-                    <li><a href="#">personal Security</a></li>
-                    <li><a href="#">Security For Vip</a></li>
-                    <li><a href="#">Bank Security</a></li>
-                    <li><a href="#">Security Consultants</a></li>
-                    <li><a href="#">CCTV & Alarm System</a></li>
-                    <li><a href="#">Event Management</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="body2.html">Careers</a></li>
+                    <li><a href="body.html">Training & Development</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
                 </ul>
             </div>
-            <div class="footer-column">
-                <h3>Contact Us</h3>
-                <p>Email: info.singhasec@gmail.com</p>
-                <p>Phone: 074 150 6033</p>
-                <p>Phone: 071 982 9694</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
         </div>
+    
         <div class="footer-bottom">
-            <p>&copy; <span id="year"></span> Singha Security Solutions (Pvt) Ltd. All rights reserved.</p>
+            <p>Copyright © Singha Security Solutions (Pvt) Limited. All Rights Reserved | Solution by <span class="footer-highlight">OPSOL</span></p>
         </div>
-        
-        <script>
-            document.getElementById("year").textContent = new Date().getFullYear();
-        </script>
-        
     </footer>
+    <button class="scroll-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        const scrollToTopBtn = document.querySelector('.scroll-to-top');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 
 </html>

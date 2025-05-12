@@ -1,30 +1,30 @@
 .header {
-    position: relative;
-    overflow: hidden;
-    color: #fff;
-    text-align: center;
-    padding: 50px 20px;
-  }
-  
-  .bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
-  
-  /* Container styling */
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-  }
-  
+
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Container styling */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
 
 
 
@@ -49,56 +49,75 @@
   align-items: center;
 }
 
-/* Styling for the text block */
+/* Text Section Styling */
 .about-text {
   flex: 1 1 50%;
-  color: #333; /* dark grey text */
-  padding: 20px;
+  color: #444;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Heading with left accent, bolder black text, and subtle text-shadow */
+/* Hover effect on the text container */
+.about-text:hover {
+  background-color: #fff;
+  transform: translateY(-5px);
+}
+
+/* Heading Styling */
 .about-text h2 {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   margin-bottom: 20px;
-  color: #000; /* pure black */
-  border-left: 5px solid #000;
-  padding-left: 15px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  color: #222;
+  border-left: 6px solid #ffa500;
+  padding-left: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Paragraph styling for improved readability */
+/* Paragraph Styling */
 .about-text p {
   font-size: 1.2rem;
-  line-height: 1.6;
-  margin: 0;
+  line-height: 1.7;
+  margin: 15px 0;
   text-align: justify;
+  color: #555;
+  font-weight: 400;
+  word-spacing: 2px;
+  letter-spacing: 0.5px;
 }
 
-/* Highlight effect for key text elements */
+/* Highlighted Text Styling */
 .highlight {
-  background-color: #ccc; /* light grey highlight */
-  padding: 0 4px;
-  border-radius: 3px;
-  font-weight: bold;
+  color: #ffa500;
+  padding: 0 6px;
+  border-radius: 4px;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
-/* Image container styling */
+/* Image Section Styling */
 .about-image {
   flex: 1 1 40%;
   text-align: center;
 }
 
-/* Image styling with enhanced box-shadow and a smooth hover effect */
+/* Image Styling with Hover Effect */
 .about-image img {
   max-width: 100%;
+  height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-image img:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive adjustments for tablet and below */
@@ -106,32 +125,41 @@
   .about-content {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 30px;
   }
+
   .about-text,
   .about-image {
     flex: 1 1 100%;
+  }
+
+  .about-text p {
+    font-size: 1.1rem;
+  }
+
+  .about-text h2 {
+    font-size: 2.2rem;
   }
 }
 
 /* Responsive adjustments for mobile devices */
 @media (max-width: 480px) {
   .about-section {
-    padding: 50px 20px;
+    padding: 40px 20px;
   }
+
   .about-text h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
+
   .about-text p {
     font-size: 1rem;
   }
+
   .about-image img {
     border-radius: 5px;
   }
 }
-
-
-
 
 /* Containers for both card types */
 .leadership-section-x9h h2 {
@@ -180,8 +208,10 @@
   height: 250px;
   width: auto;
   flex-direction: row;
-  align-items: stretch; /* Ensures both image and text areas are full height */
-  padding: 0; /* Padding will be handled by inner containers */
+  align-items: stretch;
+  /* Ensures both image and text areas are full height */
+  padding: 0;
+  /* Padding will be handled by inner containers */
 }
 
 .LMcard:hover {
@@ -206,7 +236,8 @@
 /* Revised grid card left side */
 .LMleft-side {
   flex: 1;
-  padding: 15px; /* Reduced padding for more image space */
+  padding: 15px;
+  /* Reduced padding for more image space */
 }
 
 /* Image styles for standard leadership card */
@@ -259,10 +290,10 @@
 .LMright-side p {
   margin: 8px 0;
   color: #fff;
-  
+
 }
 
-.Lright-side p{
+.Lright-side p {
   text-align: justify;
 }
 
@@ -307,6 +338,7 @@
 }
 
 @media (max-width: 480px) {
+
   .Lcards-container,
   .LMcards-container {
     gap: 20px;
@@ -334,125 +366,125 @@
 
 
 .certifications {
-    text-align: center;
-    background-color: black;
-    padding: 2rem 1rem;
+  text-align: center;
+  background-color: black;
+  padding: 2rem 1rem;
 }
 
 .certifications h2 {
-    font-size: 2rem;
-    color: white;
+  font-size: 2rem;
+  color: white;
 }
 
 .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .card {
-    flex: 1 1 calc(45% - 1.5rem);
-    max-width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: white;
-    text-align: center;
+  flex: 1 1 calc(45% - 1.5rem);
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  text-align: center;
 }
 
 .card img {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-    transition: opacity 0.3s;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: opacity 0.3s;
 }
 
 .card img:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .card h3 {
-    margin: 10px 0;
-    font-size: 1rem;
-    color: #333;
-    padding: 10px;
-    background-color: #f4f4f4;
-    border-radius: 5px;
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #333;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    justify-content: center;
-    align-items: center;
-    overflow: auto;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
 }
 
 .modal-content {
-    width: 90%;
-    max-width: 700px;
-    border-radius: 8px;
-    display: block;
-    margin: 0 auto;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
 }
 
 .caption {
-    margin-top: 10px;
-    color: #ccc;
-    text-align: center;
-    font-size: 0.9rem;
+  margin-top: 10px;
+  color: #ccc;
+  text-align: center;
+  font-size: 0.9rem;
 }
 
 .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 .close:hover {
-    color: red;
+  color: red;
 }
 
 @media (max-width: 768px) {
-    .card {
-        flex: 1 1 100%;
-        max-width: 90%;
-    }
+  .card {
+    flex: 1 1 100%;
+    max-width: 90%;
+  }
 
-    .certifications h2 {
-        font-size: 1.5rem;
-    }
+  .certifications h2 {
+    font-size: 1.5rem;
+  }
 
-    .close {
-        font-size: 1.5rem;
-    }
+  .close {
+    font-size: 1.5rem;
+  }
 
-    .caption {
-        font-size: 0.8rem;
-    }
+  .caption {
+    font-size: 0.8rem;
+  }
 }
 
 .title {
-    background-color: #333;
-    background: url(../assets/images/background.webp) no-repeat center center/cover;
+  background-color: #333;
+  background: url(../assets/images/background.webp) no-repeat center center/cover;
 }
 
 .title h2 {
-    text-align: center;
-    color: #000000;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-top: 10px;
+  text-align: center;
+  color: #000000;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 
@@ -463,13 +495,13 @@
 
 /* Global Styles */
 
-  
+
 /* Global Styles */
 .VMcontainer {
   max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
-  background-color: #202025;  
+  background-color: #202025;
   border-radius: 8px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
@@ -498,21 +530,24 @@
 .VMcontainer p {
   font-size: 2.3em;
   margin: 0;
+  font-weight: 600;
   text-align: center;
-  font-family: 'Markazi Text', serif;
+  font-family: 'Roboto', serif;
 }
 
 /* Flex container for image and text */
 .VMcontainer .content-block {
   display: flex;
-  align-items: stretch; /* Ensures both children get the same height */
+  align-items: stretch;
+  /* Ensures both children get the same height */
   justify-content: center;
   gap: 20px;
   background-color: #161515;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  min-height: 500px; /* Set a unified min-height */
+  min-height: 500px;
+  /* Set a unified min-height */
 }
 
 .VMcontainer .content-image {
@@ -532,7 +567,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 450px; /* Ensure same min-height as image for balance */
+  min-height: 450px;
+  /* Ensure same min-height as image for balance */
 }
 
 /* Responsive adjustments */
@@ -540,165 +576,169 @@
   .VMcontainer h2 {
     font-size: 2.3em;
   }
-  
+
   .VMcontainer p {
-    font-size: 1.8em; /* Reduced font size for better fit */
-    overflow-wrap: break-word; /* Force wrapping to prevent overflow */
+    font-size: 1.8em;
+    /* Reduced font size for better fit */
+    overflow-wrap: break-word;
+    /* Force wrapping to prevent overflow */
   }
-  
+
   .VMcontainer .content-block {
     flex-direction: column;
   }
-  
+
   .VMcontainer .content-image,
   .VMcontainer .content-text {
-    
+
     min-height: 250px;
   }
-  
+
   .VMcontainer .content-text {
     padding: 20px;
-    height: auto; /* Allow dynamic growth */
+    height: auto;
+    /* Allow dynamic growth */
   }
 }
-  
-  
 
 
 
 
 
 
-  .Vtitle {
-    text-align: center;
-    font-size: large;
-    padding: 2rem 1rem;
-  }
 
 
-  .ourvalues {
-    margin: 0;
-    padding: 70px 50px;
-    box-sizing: border-box;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    min-height: 100vh;
-    position: relative;
-    overflow: visible;
+.Vtitle {
+  text-align: center;
+  font-size: large;
+  padding: 2rem 1rem;
+}
 
-    /* Grid setup with fixed-width columns */
-    display: grid;
-    grid-template-columns: repeat(3, 350px);
-    gap: 100px;
-    justify-content: center;
-    justify-items: center;
+
+.ourvalues {
+  margin: 0;
+  padding: 70px 50px;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  min-height: 100vh;
+  position: relative;
+  overflow: visible;
+
+  /* Grid setup with fixed-width columns */
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  gap: 100px;
+  justify-content: center;
+  justify-items: center;
 }
 
 
 .ourvalues .card {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 350px;
-    height: 300px;
-    background: #fff;
-    border-radius: 28px;
-    box-shadow: 0 35px 80px rgb(162, 159, 159);
-    transition: 0.5s;
-    overflow: visible;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 350px;
+  height: 300px;
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 35px 80px rgb(162, 159, 159);
+  transition: 0.5s;
+  overflow: visible;
 }
 
 .Vcontainer {
-    display: flex;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0;
-    gap: 20px;
-    align-items: flex-start;
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  gap: 20px;
+  align-items: flex-start;
 }
 
 .ourvalues .card:hover {
-    height: 350px !important;
+  height: 350px !important;
 }
 
 .ourvalues .card .imgBx {
-    position: absolute;
-    top: 20px;
-    width: 300px;
-    height: 220px;
-    background: #ffffff00;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: 0.5s;
-    z-index: 2;
+  position: absolute;
+  top: 20px;
+  width: 300px;
+  height: 220px;
+  background: #ffffff00;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 2;
 }
 
 .ourvalues .card:hover .imgBx {
-    top: -100px;
-    scale: 0.75;
-    box-shadow: 0 15px 45px rgb(2, 2, 2);
+  top: -100px;
+  scale: 0.75;
+  box-shadow: 0 15px 45px rgb(2, 2, 2);
 }
 
 .ourvalues .card .imgBx img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit:fill;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
 
 .ourvalues .card .content {
-    position: absolute;
-    top: 252px;
-    width: 100%;
-    padding: 0 30px;
-    height: 45px;
-    overflow: hidden;
-    text-align: center;
-    transition: 0.5s;
-    z-index: 1;
+  position: absolute;
+  top: 252px;
+  width: 100%;
+  padding: 0 30px;
+  height: 45px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.5s;
+  z-index: 1;
 }
 
 .ourvalues .card:hover .content {
-    height: 250px;
-    top: 150px;
+  height: 250px;
+  top: 150px;
 }
 
 .ourvalues .card .content h2 {
-    font-size: 1.5em;
-    font-weight: 700;
-    color: black;
-    
-    
+  font-size: 1.5em;
+  font-weight: 700;
+  color: black;
+
+
 }
 
 .ourvalues .card .content p {
-    color: #333;
-    
-    margin: 12px 12px;
-    text-align: center;
+  color: #333;
+
+  margin: 12px 12px;
+  text-align: center;
 }
 
 .reveal {
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: 1s all ease;
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
 }
 
 .reveal.active {
-    transform: translateY(0);
-    opacity: 1;
+  transform: translateY(0);
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
-    .ourvalues {
-        /* You can change this as needed for responsiveness */
-        grid-template-columns: 1fr;
-    }
-    .card {
-        margin-bottom: 20px;
-    }
+  .ourvalues {
+    /* You can change this as needed for responsiveness */
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
 }
