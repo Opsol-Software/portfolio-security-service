@@ -273,13 +273,15 @@ section {
 }
 
 .gallery-item-1 {
-    left: 30%;  /* Reduced from 60% to shift it left */
+    left: 30%;
+    /* Reduced from 60% to shift it left */
     opacity: 0.4;
     transform: translateX(-50%);
 }
 
 .gallery-item-2 {
-    left: 50%;  /* Centered at 50% */
+    left: 50%;
+    /* Centered at 50% */
     opacity: 1;
     transform: translateX(-50%);
     height: 400px;
@@ -288,7 +290,8 @@ section {
 }
 
 .gallery-item-3 {
-    left: 70%;  /* Shifted less than before */
+    left: 70%;
+    /* Shifted less than before */
     opacity: 0.4;
     transform: translateX(-50%);
 }
@@ -642,12 +645,14 @@ section {
     margin-right: auto;
     display: block;
     position: relative;
-    max-width: 90%; /* Makes it responsive */
+    max-width: 90%;
+    /* Makes it responsive */
     text-align: center;
 }
 
 .map img {
-    width: 80%; /* Makes the map responsive */
+    width: 80%;
+    /* Makes the map responsive */
     height: auto;
 }
 
@@ -657,7 +662,8 @@ section {
     width: 0.7em;
     height: 0.7em;
     border-radius: 50%;
-    transform: translate(-50%, -50%); /* Centers the pin */
+    transform: translate(-50%, -50%);
+    /* Centers the pin */
 }
 
 .pin::before {
@@ -688,33 +694,76 @@ section {
 }
 
 /* Positioning the pins using percentages for responsiveness */
-.galle { top: 96%; left: 31%; }
-.galle span { transform: translate(-160%, -35%); }
+.galle {
+    top: 96%;
+    left: 31%;
+}
 
-.colombo { left: 18%; top: 75%; }
-.colombo span { transform: translate(-140%, -35%); }
+.galle span {
+    transform: translate(-160%, -35%);
+}
 
-.panadura { left: 19%; top: 76%; }
-.panadura span { transform: translateY(-90%); }
+.colombo {
+    left: 18%;
+    top: 75%;
+}
 
-.matara { left: 43%; top: 99%; }
+.colombo span {
+    transform: translate(-140%, -35%);
+}
 
-.ratnapura { left: 43%; top: 84%; }
+.panadura {
+    left: 19%;
+    top: 76%;
+}
 
-.horana { left: 24%; top: 79%; }
+.panadura span {
+    transform: translateY(-90%);
+}
 
-.bandaragama { left: 22%; top: 79%; }
-.bandaragama span { transform: translate(-140%, -35%); }
+.matara {
+    left: 43%;
+    top: 99%;
+}
 
-.kalutara { left: 23%; top: 82%; }
-.kalutara span { transform: translate(-140%, 18%); }
+.ratnapura {
+    left: 43%;
+    top: 84%;
+}
 
-.kandy { left: 48%; top: 64%; }
+.horana {
+    left: 24%;
+    top: 79%;
+}
+
+.bandaragama {
+    left: 22%;
+    top: 79%;
+}
+
+.bandaragama span {
+    transform: translate(-140%, -35%);
+}
+
+.kalutara {
+    left: 23%;
+    top: 82%;
+}
+
+.kalutara span {
+    transform: translate(-140%, 18%);
+}
+
+.kandy {
+    left: 48%;
+    top: 64%;
+}
 
 /* Ensures proper scaling on different screens */
 @media (max-width: 768px) {
     .pin span {
-        font-size: 0.7em; /* Reduce label size on smaller screens */
+        font-size: 0.7em;
+        /* Reduce label size on smaller screens */
         padding: 0.2em 0.4em;
     }
 }
@@ -756,72 +805,8 @@ section {
     height: 100px;
 }
 
-.item-1 {
-    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 1) * -1);
-}
-
-.item-2 {
-    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 2) * -1);
-}
-
-.item-3 {
-    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 3) * -1);
-}
-
-.item-4 {
-    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 4) * -1);
-}
-
-.item-5 {
-    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 5) * -1);
-}
-
-.item-6 {
-    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 6) * -1);
-}
-
-.item-7 {
-    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 7) * -1);
-}
-
-.item-8 {
-    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 8) * -1);
-}
-
-.item-9 {
-    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 9) * -1);
-}
-
-.item-10 {
-    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 10) * -1);
-}
-
-.item-11 {
-    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 11) * -1);
-}
-
-.item-12 {
-    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 12) * -1);
-}
-
-.item-13 {
-    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 13) * -1);
-}
-
-.item-14 {
-    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 14) * -1);
-}
-
-.item-15 {
-    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 15) * -1);
-}
-
-.item-16 {
-    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 16) * -1);
-}
-
-.item-17 {
-    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - 17) * -1);
+.item {
+    animation-delay: calc(30s / var(--num-logo) * (var(--num-logo) - var(--i)) * -1);
 }
 
 
@@ -906,42 +891,42 @@ section {
 }
 
 .phone-container {
-   position: relative;
-   display: inline-block;
-   margin-left: 2rem;
-   margin-top: 0.5rem;
+    position: relative;
+    display: inline-block;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
 }
 
 .phone {
-   width: 50px;
-   height: 90px;
-   background: black;
-   border-radius: 20px;
-   position: relative;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-   animation: vibrate 0.2s infinite alternate ease-in-out;
+    width: 50px;
+    height: 90px;
+    background: black;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    animation: vibrate 0.2s infinite alternate ease-in-out;
 }
 
 .screen {
-   width: 40px;
-   height: 70px;
-   background: linear-gradient(to bottom, #2c3e50, #34495e);
-   border-radius: 10px;
+    width: 40px;
+    height: 70px;
+    background: linear-gradient(to bottom, #2c3e50, #34495e);
+    border-radius: 10px;
 }
 
 .ring {
-   position: absolute;
-   left: 50%;
-   top: 50%;
-   transform: translate(-50%, -50%);
-   width: 50px;
-   height: 75px;
-   border-radius: 50px;
-   border: 4px solid rgba(0, 128, 255, 0.5);
-   animation: pulse 1s infinite ease-in-out;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 75px;
+    border-radius: 50px;
+    border: 4px solid rgba(0, 128, 255, 0.5);
+    animation: pulse 1s infinite ease-in-out;
 }
 
 @keyframes pulse {
@@ -949,6 +934,7 @@ section {
         transform: translate(-50%, -50%) scale(1);
         opacity: 1;
     }
+
     100% {
         transform: translate(-50%, -50%) scale(1.5);
         opacity: 0;
@@ -956,8 +942,13 @@ section {
 }
 
 @keyframes vibrate {
-    0% { transform: rotate(-3deg); }
-    100% { transform: rotate(3deg); }
+    0% {
+        transform: rotate(-3deg);
+    }
+
+    100% {
+        transform: rotate(3deg);
+    }
 }
 
 
@@ -1219,9 +1210,9 @@ html {
 
 @media(max-width: 1024px) {
 
-   .slide-container {
-       height: fit-content;
-   }
+    .slide-container {
+        height: fit-content;
+    }
 
     .img-overlay-text {
         font-size: var(--font-size-large);
@@ -1234,6 +1225,7 @@ html {
         margin-bottom: 2rem;
         flex-direction: column;
     }
+
     .gallery-item {
         height: 200px;
         width: 330px;
@@ -1261,7 +1253,7 @@ html {
     }
 
     .client-info .map {
-       margin: 0 auto;
+        margin: 0 auto;
     }
 
     .contact-banner-sub-text h1 {
@@ -1273,7 +1265,7 @@ html {
     }
 
     .contact-banner .phone-container {
-       display: none;
+        display: none;
     }
 
     .contact-banner .slide-in-left {
@@ -1291,9 +1283,9 @@ html {
     }
 
     .contact-banner-button {
-       padding-inline: 1rem;
-       margin-left: 0;
-   }
+        padding-inline: 1rem;
+        margin-left: 0;
+    }
 
     #service-section h2 {
         margin-left: 2rem;
@@ -1353,7 +1345,7 @@ html {
     }
 
     .contact-banner-button {
-       margin: 0 auto;
+        margin: 0 auto;
     }
 
     .about-us {
@@ -1367,7 +1359,7 @@ html {
     }
 
     .section-content p {
-       padding: 10px 10px 10px 0;
+        padding: 10px 10px 10px 0;
     }
 
     .gallery {
@@ -1398,7 +1390,7 @@ html {
     }
 
     .contact-banner-button {
-       padding-inline: 1rem;
-       padding-block: 0.3em;
+        padding-inline: 1rem;
+        padding-block: 0.3em;
     }
 }
