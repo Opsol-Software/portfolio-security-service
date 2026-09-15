@@ -1,744 +1,368 @@
-.header {
-
-  overflow: hidden;
-  color: #fff;
-  text-align: center;
-  padding: 50px 20px;
+.header,
+.page-hero--video {
+    position: relative;
+    min-height: 46vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    color: var(--white);
 }
 
 .bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
-/* Container styling */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
+.header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(8, 20, 31, 0.78), rgba(11, 28, 44, 0.48));
+    z-index: 1;
 }
 
+.header .container {
+    position: relative;
+    z-index: 2;
+    padding: 6rem 1.5rem 4rem;
+}
 
+.header h1 {
+    color: var(--white);
+    font-size: clamp(2.8rem, 7vw, 5rem);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
 
+.header p {
+    color: var(--gold);
+    font-size: 1.2rem;
+    margin: 0;
+}
 
-
-/* About Section with a subtle grey-white gradient background */
 .about-section {
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #fff, #f0f0f0);
+    padding: 5.5rem 0;
+    background: var(--paper);
 }
 
-/* Container to constrain width */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Flex container for content alignment */
 .about-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  align-items: center;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3.5rem;
+    align-items: center;
 }
 
-/* Text Section Styling */
 .about-text {
-  flex: 1 1 50%;
-  color: #444;
-  padding: 40px;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, transform 0.3s ease;
+    background: var(--white);
+    padding: 2.4rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--gold);
 }
 
-/* Hover effect on the text container */
-.about-text:hover {
-  background-color: #fff;
-  transform: translateY(-5px);
-}
-
-/* Heading Styling */
 .about-text h2 {
-  font-size: 2.8rem;
-  margin-bottom: 20px;
-  color: #222;
-  border-left: 6px solid #ffa500;
-  padding-left: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    font-size: clamp(2rem, 4vw, 3rem);
 }
 
-/* Paragraph Styling */
 .about-text p {
-  font-size: 1.2rem;
-  line-height: 1.7;
-  margin: 15px 0;
-  text-align: justify;
-  color: #555;
-  font-weight: 400;
-  word-spacing: 2px;
-  letter-spacing: 0.5px;
+    color: var(--text-muted);
 }
 
-/* Highlighted Text Styling */
-.highlight {
-  color: #ffa500;
-  padding: 0 6px;
-  border-radius: 4px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-/* Image Section Styling */
-.about-image {
-  flex: 1 1 40%;
-  text-align: center;
-}
-
-/* Image Styling with Hover Effect */
 .about-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
 }
 
-.about-image img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+.VMcontainer {
+    width: min(100% - 2.5rem, var(--max));
+    margin: 0 auto 2rem;
+    display: grid;
+    gap: 1.5rem;
 }
 
-/* Responsive adjustments for tablet and below */
-@media (max-width: 768px) {
-  .about-content {
+.VMcontainer section {
+    padding: 0;
+}
+
+.content-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 360px;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--navy);
+    box-shadow: var(--shadow);
+}
+
+.content-image {
+    min-height: 320px;
+    background-size: cover;
+    background-position: center;
+}
+
+.content-text {
+    padding: 3rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-text h2 {
+    color: var(--gold);
+    font-size: 2.4rem;
+}
+
+.content-text p {
+    color: var(--text-on-dark);
+    font-size: 1.15rem;
+    margin: 0;
+}
+
+.title {
+    padding: 5rem 1.5rem;
+    background: var(--cream);
+}
+
+.Vtitle {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    margin-bottom: 2.5rem;
+}
+
+.ourvalues {
+    width: min(100%, var(--max));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+}
+
+.ourvalues .card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1.8rem 1.5rem 1.6rem;
+    box-shadow: var(--shadow);
+    min-height: auto;
+    height: auto;
+    width: auto;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 30px;
-  }
-
-  .about-text,
-  .about-image {
-    flex: 1 1 100%;
-  }
-
-  .about-text p {
-    font-size: 1.1rem;
-  }
-
-  .about-text h2 {
-    font-size: 2.2rem;
-  }
 }
 
-/* Responsive adjustments for mobile devices */
-@media (max-width: 480px) {
-  .about-section {
-    padding: 40px 20px;
-  }
-
-  .about-text h2 {
-    font-size: 1.6rem;
-  }
-
-  .about-text p {
-    font-size: 1rem;
-  }
-
-  .about-image img {
-    border-radius: 5px;
-  }
+.ourvalues .card .imgBx {
+    position: static;
+    width: 64px;
+    height: 64px;
+    background: var(--gold-dim);
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 1.1rem;
 }
 
-/* Containers for both card types */
+.ourvalues .card .imgBx img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    position: static;
+}
+
+.ourvalues .card .content {
+    position: static;
+    height: auto;
+    overflow: visible;
+    padding: 0;
+    text-align: left;
+}
+
+.ourvalues .card .content h2 {
+    color: var(--navy);
+    font-size: 1.45rem;
+    margin-bottom: 0.4rem;
+}
+
+.ourvalues .card .content p {
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.ourvalues .card:hover {
+    height: auto !important;
+    transform: translateY(-6px);
+}
+
+.ourvalues .card:hover .imgBx,
+.ourvalues .card:hover .content {
+    top: auto;
+    scale: 1;
+    height: auto;
+}
+
+.leadership-section-x9h {
+    padding: 5rem 1.5rem;
+    background: var(--paper);
+}
+
 .leadership-section-x9h h2 {
-  text-align: center;
-  font-size: 2.5rem;
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    margin-bottom: 2.4rem;
 }
 
-.Lcards-container,
-.LMcards-container {
-  max-width: 1000px;
-  margin: 10px auto;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.Lcards-container {
+    width: min(100%, var(--max));
+    margin: 0 auto;
+    display: grid;
+    gap: 1.4rem;
 }
 
-/* Common styles for leadership cards */
 .Lcard,
 .LMcard {
-  background: #000;
-  border: 1px solid #620202;
-  border-radius: 2rem;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  display: flex;
-  align-items: center;
-
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    box-shadow: var(--shadow);
 }
 
-/* Standard Leadership Card */
 .Lcard {
-  height: 450px;
-  width: auto;
-  flex-direction: row;
+    min-height: 280px;
 }
 
-.Lcard:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.6);
-}
-
-/* Revised Grid Card (LMcard) */
-.LMcard {
-  height: 250px;
-  width: auto;
-  flex-direction: row;
-  align-items: stretch;
-  /* Ensures both image and text areas are full height */
-  padding: 0;
-  /* Padding will be handled by inner containers */
-}
-
-.LMcard:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.6);
-}
-
-/* Left side image containers */
 .Lleft-side,
 .LMleft-side {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background: var(--navy);
 }
 
-/* Standard leadership card left side */
-.Lleft-side {
-  flex: 1;
-  padding: 30px;
-}
-
-/* Revised grid card left side */
-.LMleft-side {
-  flex: 1;
-  padding: 15px;
-  /* Reduced padding for more image space */
-}
-
-/* Image styles for standard leadership card */
-.Lleft-side img {
-  max-width: 100%;
-  max-height: 90%;
-  transition: transform 0.3s ease-in-out;
-  border-radius: 2rem;
-}
-
-/* Revised image styling for grid cards */
+.Lleft-side img,
 .LMleft-side img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 2rem;
-  transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* Right side content containers */
 .Lright-side,
 .LMright-side {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
+    padding: 1.6rem 1.8rem;
 }
 
-/* Standard leadership card right side */
-.Lright-side {
-  flex: 2;
-  padding-right: 60px;
-}
-
-/* Revised grid card right side */
-.LMright-side {
-  flex: 1;
-  padding: 15px;
-}
-
-/* Headings and paragraphs */
 .Lright-side h3,
 .LMright-side h3 {
-  margin: 0;
-  font-size: 1.5em;
-  color: #fff;
+    color: var(--navy);
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
 }
 
 .Lright-side p,
 .LMright-side p {
-  margin: 8px 0;
-  color: #fff;
-
+    color: var(--text-muted);
+    margin: 0.35rem 0;
 }
 
-.Lright-side p {
-  text-align: justify;
+.Lright-side p b,
+.LMright-side p b {
+    color: var(--gold);
+    font-weight: 700;
 }
 
-/* Grid layout for LM cards */
 .LMcards-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  max-width: 1000px;
-  margin: 10px auto;
-  padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.4rem;
 }
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .LMcards-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .Lcard,
-  .LMcard {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .Lleft-side img,
-  .LMleft-side img {
-    width: 100%;
-    height: auto;
-  }
-
-  .Lright-side,
-  .LMright-side {
-    padding: 15px;
-    text-align: center;
-  }
-
-  .Lright-side h3,
-  .LMright-side h3 {
-    font-size: 1.2em;
-  }
-}
-
-@media (max-width: 480px) {
-
-  .Lcards-container,
-  .LMcards-container {
-    gap: 20px;
-  }
-
-  .Lright-side,
-  .LMright-side {
-    padding: 15px;
-  }
-
-  .Lright-side h3,
-  .LMright-side h3 {
-    font-size: 1em;
-  }
-
-  .Lright-side p,
-  .LMright-side p {
-    font-size: 0.9em;
-  }
-}
-
-
-
-
-
 
 .certifications {
-  text-align: center;
-  background-color: black;
-  padding: 2rem 1rem;
+    text-align: center;
+    padding: 5rem 1.5rem;
+    background: var(--navy);
 }
 
 .certifications h2 {
-  font-size: 2rem;
-  color: white;
+    color: var(--white);
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 2rem;
 }
 
 .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
-.card {
-  flex: 1 1 calc(45% - 1.5rem);
-  max-width: 300px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: white;
-  text-align: center;
+.card-container .card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    max-width: 320px;
+    box-shadow: var(--shadow-lg);
 }
 
-.card img {
-  width: 100%;
-  height: auto;
-  cursor: pointer;
-  transition: opacity 0.3s;
+.card-container .card img {
+    width: 100%;
+    cursor: pointer;
 }
 
-.card img:hover {
-  opacity: 0.8;
-}
-
-.card h3 {
-  margin: 10px 0;
-  font-size: 1rem;
-  color: #333;
-  padding: 10px;
-  background-color: #f4f4f4;
-  border-radius: 5px;
+.card-container .card h3 {
+    margin: 0;
+    padding: 0.9rem;
+    color: var(--navy);
 }
 
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  justify-content: center;
-  align-items: center;
-  overflow: auto;
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(8, 20, 31, 0.92);
+    overflow: auto;
 }
 
 .modal-content {
-  width: 90%;
-  max-width: 700px;
-  border-radius: 8px;
-  display: block;
-  margin: 0 auto;
+    width: min(90%, 720px);
+    margin: 6vh auto;
+    border-radius: 12px;
 }
 
 .caption {
-  margin-top: 10px;
-  color: #ccc;
-  text-align: center;
-  font-size: 0.9rem;
+    text-align: center;
+    color: var(--gold);
+    margin-top: -1rem;
 }
 
 .close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
+    position: absolute;
+    top: 18px;
+    right: 24px;
+    color: var(--white);
+    font-size: 2.2rem;
+    cursor: pointer;
 }
 
-.close:hover {
-  color: red;
-}
+@media (max-width: 900px) {
+    .about-content,
+    .content-block,
+    .ourvalues,
+    .Lcard,
+    .LMcard,
+    .LMcards-grid {
+        grid-template-columns: 1fr;
+    }
 
-@media (max-width: 768px) {
-  .card {
-    flex: 1 1 100%;
-    max-width: 90%;
-  }
-
-  .certifications h2 {
-    font-size: 1.5rem;
-  }
-
-  .close {
-    font-size: 1.5rem;
-  }
-
-  .caption {
-    font-size: 0.8rem;
-  }
-}
-
-.title {
-  background-color: #333;
-  background: url(../assets/images/background.webp) no-repeat center center/cover;
-}
-
-.title h2 {
-  text-align: center;
-  color: #000000;
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-
-
-
-
-
-
-/* Global Styles */
-
-
-/* Global Styles */
-.VMcontainer {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #202025;
-  border-radius: 8px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-}
-
-.VMcontainer section {
-  padding: 50px 0;
-  border-bottom: 1px solid #444;
-  overflow: hidden;
-}
-
-.VMcontainer section:last-child {
-  border-bottom: none;
-}
-
-.VMcontainer h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  color: #ffffff;
-  text-align: center;
-  position: relative;
-  display: inline-block;
-  padding: 20px;
-  text-shadow: -1px 10px 40px #f1f0e8;
-}
-
-.VMcontainer p {
-  font-size: 2.3em;
-  margin: 0;
-  font-weight: 600;
-  text-align: center;
-  font-family: 'Roboto', serif;
-}
-
-/* Flex container for image and text */
-.VMcontainer .content-block {
-  display: flex;
-  align-items: stretch;
-  /* Ensures both children get the same height */
-  justify-content: center;
-  gap: 20px;
-  background-color: #161515;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  min-height: 500px;
-  /* Set a unified min-height */
-}
-
-.VMcontainer .content-image {
-  flex: 1;
-  /* Adjust the min-height to match the container */
-  min-height: 500px;
-  background-size: cover;
-  background-position: center;
-  object-fit: cover;
-}
-
-.VMcontainer .content-text {
-  flex: 1;
-  padding: 40px;
-  /* Make this a flex container to center its children vertically */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 450px;
-  /* Ensure same min-height as image for balance */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .VMcontainer h2 {
-    font-size: 2.3em;
-  }
-
-  .VMcontainer p {
-    font-size: 1.8em;
-    /* Reduced font size for better fit */
-    overflow-wrap: break-word;
-    /* Force wrapping to prevent overflow */
-  }
-
-  .VMcontainer .content-block {
-    flex-direction: column;
-  }
-
-  .VMcontainer .content-image,
-  .VMcontainer .content-text {
-
-    min-height: 250px;
-  }
-
-  .VMcontainer .content-text {
-    padding: 20px;
-    height: auto;
-    /* Allow dynamic growth */
-  }
-}
-
-
-
-
-
-
-
-
-.Vtitle {
-  text-align: center;
-  font-size: large;
-  padding: 2rem 1rem;
-}
-
-
-.ourvalues {
-  margin: 0;
-  padding: 70px 50px;
-  box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  min-height: 100vh;
-  position: relative;
-  overflow: visible;
-
-  /* Grid setup with fixed-width columns */
-  display: grid;
-  grid-template-columns: repeat(3, 350px);
-  gap: 100px;
-  justify-content: center;
-  justify-items: center;
-}
-
-
-.ourvalues .card {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 350px;
-  height: 300px;
-  background: #fff;
-  border-radius: 28px;
-  box-shadow: 0 35px 80px rgb(162, 159, 159);
-  transition: 0.5s;
-  overflow: visible;
-}
-
-.Vcontainer {
-  display: flex;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 0;
-  gap: 20px;
-  align-items: flex-start;
-}
-
-.ourvalues .card:hover {
-  height: 350px !important;
-}
-
-.ourvalues .card .imgBx {
-  position: absolute;
-  top: 20px;
-  width: 300px;
-  height: 220px;
-  background: #ffffff00;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: 0.5s;
-  z-index: 2;
-}
-
-.ourvalues .card:hover .imgBx {
-  top: -100px;
-  scale: 0.75;
-  box-shadow: 0 15px 45px rgb(2, 2, 2);
-}
-
-.ourvalues .card .imgBx img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
-}
-
-.ourvalues .card .content {
-  position: absolute;
-  top: 252px;
-  width: 100%;
-  padding: 0 30px;
-  height: 45px;
-  overflow: hidden;
-  text-align: center;
-  transition: 0.5s;
-  z-index: 1;
-}
-
-.ourvalues .card:hover .content {
-  height: 250px;
-  top: 150px;
-}
-
-.ourvalues .card .content h2 {
-  font-size: 1.5em;
-  font-weight: 700;
-  color: black;
-
-
-}
-
-.ourvalues .card .content p {
-  color: #333;
-
-  margin: 12px 12px;
-  text-align: center;
-}
-
-.reveal {
-  position: relative;
-  transform: translateY(150px);
-  opacity: 0;
-  transition: 1s all ease;
-}
-
-.reveal.active {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-@media (max-width: 768px) {
-  .ourvalues {
-    /* You can change this as needed for responsiveness */
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    margin-bottom: 20px;
-  }
+    .content-image,
+    .Lleft-side img,
+    .LMleft-side img {
+        min-height: 240px;
+        height: 260px;
+    }
 }

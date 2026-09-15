@@ -1,40 +1,20 @@
-.footer-style{
-    color: gold;
-}
-
-/* Trusted Partner Section */
 .trusted-partner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-
-
-    align-items: center;
-    justify-content: center;
-    background-image: url('../assets/images/train2.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-    
-    background-image: url('../assets/images/train10.png');
-    background-repeat: no-repeat;
     text-align: center;
-
-
-    padding: 4rem 0;
-    background-color: #333;
+    padding: 5rem 1.5rem;
+    background:
+        linear-gradient(120deg, rgba(8, 20, 31, 0.88), rgba(18, 38, 58, 0.78)),
+        url('../assets/images/train10.png') center / cover no-repeat;
+    color: var(--white);
 }
-
-
 
 .trusted-partner h2 {
-    font-size: 2rem;
-    color: #fff;
-    margin-bottom: 1rem;
+    color: var(--white);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    letter-spacing: 0.12em;
 }
 
 .trusted-partner p {
-    max-width: 800px;
+    max-width: 720px;
     margin: 0 auto 2rem;
-    color: #fff;
-    line-height: 1.6;
+    color: var(--text-on-dark);
 }

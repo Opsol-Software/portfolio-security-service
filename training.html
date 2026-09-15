@@ -11,19 +11,23 @@
     <link rel="canonical" href="https://singhasecuritysolutions.lk/training.html">
     <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/main.min.css">
     <link rel="stylesheet" href="./CSS/training.css">
     <link rel="stylesheet" href="./CSS/navbar.css">
     <link rel="stylesheet" href="./CSS/tags.css">
     <link rel="stylesheet" href="./CSS/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="./js/main.js" defer></script>
 </head>
 <body>
     <div class="top-bar">
         <div class="contact-info">
             <span>
-                <i class="fas fa-phone"></i> 
-                <a href="tel:0719829694">071 982 9694</a> / 
+                <i class="fas fa-phone"></i>
+                <a href="tel:0719829694">071 982 9694</a> /
                 <a href="tel:0741506033">074 150 6033</a>
             </span>
             <span>
@@ -38,24 +42,29 @@
     </div>
 
     <nav class="main-nav">
-        <div class="logo">
+        <a href="index.html" class="logo">
             <img src="assets/images/company-logo.png" alt="Singha Security Logo">
-        </div>
+        </a>
+        <button class="nav-toggle" id="menu-icon" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <div class="nav-links">
-            <a href="index.html" class="nav-item">HOME</a>
-            <a href="aboutus.html" class="nav-item">ABOUT US</a>
-            <a href="index.html#service-section" class="nav-item">SERVICES</a>
-            <a href="careers.html" class="nav-item">CAREERS</a>
-            <a href="training.html" class="nav-item active">TRAINING & DEVELOPMENT</a>
-            
-            <a href="contactus.html" class="nav-item">CONTACT US</a>
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="aboutus.html" class="nav-item">About Us</a>
+            <a href="index.html#service-section" class="nav-item">Services</a>
+            <a href="careers.html" class="nav-item">Careers</a>
+            <a href="training.html" class="nav-item active">Training & Development</a>
+            <a href="contactus.html" class="nav-item">Contact Us</a>
+            <a href="contactus.html" class="nav-cta">Get a Quote</a>
         </div>
     </nav>
 
     <main>
         <section class="hero-section">
             <div class="hero-content">
-                <h1>TRAINING & DEVELOPMENT</h1>
+                <h1>Training & Development</h1>
                 <p>Pre-employment Trainings</p>
             </div>
         </section>
@@ -95,7 +104,7 @@
                         <li>Detect, deter, observe and reporting suspected personnel/situations</li>
                         <li>Fitness and self-defence</li>
                         <li>First Aid</li>
-                </ul>
+                    </ul>
                 </div>
                 <div class="training-image">
                     <img src="assets/employee_images/singhasecuritysolutions_training_4.webp" alt="On the Job Training">
@@ -103,7 +112,6 @@
             </div>
         </div>
 
-        <!-- Trusted Partner Section -->
         <div class="trusted-partner">
             <h2>YOUR TRUSTED PARTNER</h2>
             <p>Established in 2004, for over a decade Singha Security (PVT) LTD has offered professional security services at competitive prices throughout the island.</p>
@@ -114,48 +122,44 @@
     <footer class="custom-footer">
         <div class="footer-top">
             <div class="footer-contact">
-                <span>📞071 982 9694/ 074 150 6033</span>
-                <span>📧info.singhasec@gmail.com</span>
+                <span><i class="fas fa-phone-alt"></i> 071 982 9694 / 074 150 6033</span>
+                <span><i class="fas fa-envelope"></i> info.singhasec@gmail.com</span>
             </div>
             <div class="footer-address">
                 <span>Singha Security Solutions (Pvt) Limited.</span>
                 <span>6/3B, Rathnapura Rd., Ilimba Junction, Munagama, Horana.</span>
             </div>
             <div class="footer-hours">
-                <span>⏰ Mon - Sat: 8.00 am - 5.30 pm</span>
+                <span><i class="fas fa-clock"></i> Mon - Sat: 8.00 am - 5.30 pm</span>
                 <span>Sunday: CLOSED</span>
             </div>
         </div>
-    
+
         <div class="footer-middle">
             <div class="footer-logo">
-                <img src="assets/images/company-logo.png" alt=" Security Logo"> 
+                <img src="assets/images/company-logo.png" alt="Security Logo">
             </div>
             <div class="footer-motto">
                 <h3>Our Mission</h3>
                 <p>"<strong>To provide innovative security solutions with high quality standards in order to help our clients in preventing losses of life, property, assets and the environment.</strong>"</p>
-                
-                
             </div>
             <div class="footer-motto">
                  <h3>Our Vision</h3>
                 <p>"<strong>To be the most professional and reliable security solutions partner in the industry by exceeding our customer's expectations while valuing our employees.</strong>"</p>
             </div>
             <div class="footer-links">
-                <h3>Quicklink</h3>
+                <h3>Quick Links</h3>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="body2.html">Careers</a></li>
-                    <li><a href="body.html">Training & Development</a></li>
-                    
+                    <li><a href="index.html#service-section">Services</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="training.html">Training & Development</a></li>
                     <li><a href="contactus.html">Contact Us</a></li>
                 </ul>
             </div>
-           
         </div>
-    
+
         <div class="footer-bottom">
             <p>Copyright © Singha Security Solutions (Pvt) Limited. All Rights Reserved | Solution by <span class="footer-highlight">OPSOL</span></p>
         </div>
@@ -163,22 +167,5 @@
     <button class="scroll-to-top" aria-label="Back to top">
         <i class="fas fa-chevron-up"></i>
     </button>
-
-    <script>
-        const scrollToTopBtn = document.querySelector('.scroll-to-top');
-        window.onscroll = function() {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                scrollToTopBtn.style.display = "block";
-            } else {
-                scrollToTopBtn.style.display = "none";
-            }
-        };
-        scrollToTopBtn.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
 </body>
 </html>
