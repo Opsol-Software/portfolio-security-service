@@ -36,8 +36,7 @@
 .header h1 {
     color: var(--white);
     font-size: clamp(2.8rem, 7vw, 5rem);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    letter-spacing: -0.02em;
 }
 
 .header p {

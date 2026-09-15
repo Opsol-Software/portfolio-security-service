@@ -1,27 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap');
 
 :root {
-    --navy: #0b1c2c;
-    --navy-2: #12263a;
-    --navy-3: #1a3348;
-    --ink: #08141f;
-    --gold: #c4a35a;
-    --gold-2: #d4b56a;
-    --gold-dim: rgba(196, 163, 90, 0.16);
-    --cream: #f4f1ea;
-    --paper: #fbfaf7;
+    --navy: #10244d;
+    --navy-2: #1c2f54;
+    --navy-3: #243a66;
+    --ink: #0c1a38;
+    --gold: #f2b90d;
+    --gold-2: #ffc61a;
+    --gold-dim: rgba(242, 185, 13, 0.18);
+    --cream: #f7f9fa;
+    --paper: #f2f3f5;
     --white: #ffffff;
-    --text: #243140;
-    --text-muted: #5c6b78;
-    --text-on-dark: #e8eef4;
-    --border: #e6dfd2;
-    --shadow: 0 18px 50px rgba(11, 28, 44, 0.12);
-    --shadow-lg: 0 24px 60px rgba(11, 28, 44, 0.18);
+    --text: #333333;
+    --text-muted: #7a7a7a;
+    --text-on-dark: rgba(255, 255, 255, 0.86);
+    --border: #e1e4e8;
+    --shadow: 0 18px 50px rgba(16, 36, 77, 0.12);
+    --shadow-lg: 0 24px 60px rgba(16, 36, 77, 0.18);
     --radius: 16px;
     --radius-sm: 10px;
     --header-h: 78px;
-    --font-display: "Barlow Condensed", sans-serif;
-    --font-body: "Manrope", sans-serif;
+    --font-display: "Lexend", sans-serif;
+    --font-body: "Inter", sans-serif;
     --num-logo: 17;
     --max: 1180px;
     --transition: 0.28s ease;
@@ -65,9 +65,9 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.15;
-    letter-spacing: 0.02em;
+    letter-spacing: -0.02em;
     color: var(--navy);
     margin: 0 0 0.6em;
 }
@@ -84,10 +84,10 @@ p {
 .eyebrow {
     display: inline-block;
     color: var(--gold);
-    font-family: var(--font-display);
+    font-family: var(--font-body);
     font-size: 0.95rem;
-    font-weight: 700;
-    letter-spacing: 0.22em;
+    font-weight: 500;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     margin-bottom: 0.75rem;
 }
@@ -113,9 +113,9 @@ p {
 .contact-btn,
 .slider-btn {
     font-family: var(--font-display);
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: none;
     text-decoration: none;
     border: none;
     cursor: pointer;
@@ -250,8 +250,8 @@ p {
 .hero-section h1 {
     color: var(--white);
     font-size: clamp(2.2rem, 5.4vw, 4.4rem);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    text-transform: none;
     margin-bottom: 0.4rem;
     padding: 0 1.2rem;
 }
