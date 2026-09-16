@@ -1,53 +1,50 @@
+const modal1 = document.getElementById("myModal1");
+const img1 = document.getElementById("myImg1");
+const modalImg1 = document.getElementById("img01");
+const captionText1 = document.getElementById("caption1");
+const close1 = document.getElementById("close1");
 
+const modal2 = document.getElementById("myModal2");
+const img2 = document.getElementById("myImg2");
+const modalImg2 = document.getElementById("img02");
+const captionText2 = document.getElementById("caption2");
+const close2 = document.getElementById("close2");
 
- // JavaScript to handle pop-up modals for certificate images
+function openModal(modal, modalImg, caption, source) {
+    if (!modal || !source) return;
+    modal.style.display = "block";
+    if (modalImg) {
+        modalImg.src = source.src;
+        modalImg.alt = source.alt || "";
+    }
+    if (caption) caption.textContent = source.alt || "";
+}
 
-        // Get modal elements for Image 1
-        const modal1 = document.getElementById("myModal1");
-        const img1 = document.getElementById("myImg1");
-        const modalImg1 = document.getElementById("img01");
-        const captionText1 = document.getElementById("caption1");
-        const close1 = document.getElementById("close1");
+function closeModal(modal) {
+    if (modal) modal.style.display = "none";
+}
 
-        // Get modal elements for Image 2
-        const modal2 = document.getElementById("myModal2");
-        const img2 = document.getElementById("myImg2");
-        const modalImg2 = document.getElementById("img02");
-        const captionText2 = document.getElementById("caption2");
-        const close2 = document.getElementById("close2");
+if (img1) {
+    img1.style.cursor = "zoom-in";
+    img1.addEventListener("click", () => openModal(modal1, modalImg1, captionText1, img1));
+}
 
-        // Image 1 click handler
-        img1.onclick = function () {
-            modal1.style.display = "block";
-            modalImg1.src = this.src;
-            captionText1.textContent = this.alt;
-        };
+if (img2) {
+    img2.style.cursor = "zoom-in";
+    img2.addEventListener("click", () => openModal(modal2, modalImg2, captionText2, img2));
+}
 
-        // Image 2 click handler
-        img2.onclick = function () {
-            modal2.style.display = "block";
-            modalImg2.src = this.src;
-            captionText2.textContent = this.alt;
-        };
+if (close1) close1.addEventListener("click", () => closeModal(modal1));
+if (close2) close2.addEventListener("click", () => closeModal(modal2));
 
-        // Close button handler for Image 1
-        close1.onclick = function () {
-            modal1.style.display = "none";
-        };
+window.addEventListener("click", (event) => {
+    if (event.target === modal1) closeModal(modal1);
+    if (event.target === modal2) closeModal(modal2);
+});
 
-        // Close button handler for Image 2
-        close2.onclick = function () {
-            modal2.style.display = "none";
-        };
-
-        // Optional: Close modal when clicking outside the modal content
-        window.onclick = function (event) {
-            if (event.target === modal1) {
-                modal1.style.display = "none";
-            }
-            if (event.target === modal2) {
-                modal2.style.display = "none";
-            }
-        };
-
-window.addEventListener("scroll", reveal, {passive: true});
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        closeModal(modal1);
+        closeModal(modal2);
+    }
+});

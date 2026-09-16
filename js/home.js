@@ -1,127 +1,32 @@
-let currentSlide = 0;
-const totalSlides = document.querySelectorAll(".slide").length;
-
-function showSlides(index) {
-    const slider = document.querySelector(".slide-container");
-    if (!slider) return;
-    slider.style.transform = `translateX(-${index * 100}%)`;
-}
-
-function nextSlide() {
-    if (!totalSlides) return;
-    currentSlide = (currentSlide + 1) % totalSlides;
-    showSlides(currentSlide);
-}
-
-const galleryContainer = document.querySelector(".gallery-container");
-const galleryControlsContainer = document.querySelector(".gallery-controls");
-const galleryControls = ["previous", "next"];
-const galleryItems = document.querySelectorAll(".gallery-item");
-
-class Carousel {
-    constructor(container, items, controls) {
-        this.carouselContainer = container;
-        this.carouselControls = controls;
-        this.carouselArray = [...items];
-    }
-
-    updateGallery() {
-        this.carouselArray.forEach((el) => {
-            el.classList.remove("gallery-item-1");
-            el.classList.remove("gallery-item-2");
-            el.classList.remove("gallery-item-3");
-        });
-
-        this.carouselArray.slice(0, 3).forEach((el, i) => {
-            el.classList.add(`gallery-item-${i + 1}`);
-        });
-    }
-
-    setCurrentState(direction) {
-        if (direction.className == "gallery-controls-previous") {
-            this.carouselArray.unshift(this.carouselArray.pop());
-        } else {
-            this.carouselArray.push(this.carouselArray.shift());
-        }
-        this.updateGallery();
-    }
-
-    setControls() {
-        if (!galleryControlsContainer) return;
-        this.carouselControls.forEach((control) => {
-            galleryControlsContainer.appendChild(document.createElement("button")).className = `gallery-controls-${control}`;
-            document.querySelector(`.gallery-controls-${control}`).innerText = control;
-        });
-    }
-
-    useControls() {
-        if (!galleryControlsContainer) return;
-        const triggers = [...galleryControlsContainer.childNodes];
-        triggers.forEach((control) => {
-            control.addEventListener("click", () => {
-                this.setCurrentState(control);
-            });
-        });
-    }
-}
-
-if (galleryItems.length) {
-    const carousel = new Carousel(galleryContainer, galleryItems, galleryControls);
-    setInterval(() => {
-        carousel.carouselArray.unshift(carousel.carouselArray.pop());
-        carousel.updateGallery();
-    }, 2000);
-}
-
-function startAnimation() {
-    var animation_container = document.getElementById("contact-animation-container");
-    if (!animation_container) return;
-
-    var animation_left = document.getElementById("animation-left");
-    var animation_right = document.getElementById("animation-right");
-    var animation_bottom = document.getElementById("animation-bottom");
-
-    var windowHeight = window.innerHeight;
-    var elementTop = animation_container.getBoundingClientRect().top;
-    var elementVisible = 150;
-
-    if (elementTop < windowHeight - elementVisible) {
-        animation_left && animation_left.classList.add("slide-in-left");
-        animation_right && animation_right.classList.add("slide-in-right");
-        animation_bottom && animation_bottom.classList.add("slide-in-bottom");
-    }
-}
-
-if (screen.width < 1000) {
-    window.addEventListener("DOMContentLoaded", startAnimation, { passive: true });
-} else {
-    window.addEventListener("scroll", startAnimation, { passive: true });
-}
-
-const phoneNumber = "+94719829694";
-const dialbtn = document.getElementById("call-btn");
-if (dialbtn) {
-    dialbtn.addEventListener("click", () => {
-        window.location.href = `tel:${phoneNumber}`;
-    });
-}
-
-window.addEventListener("scroll", reveal, { passive: true });
-
 document.addEventListener("DOMContentLoaded", function () {
     const slideContainer = document.querySelector(".slide-container");
     const slides = document.querySelectorAll(".slide");
     const prevButton = document.querySelector(".prev-button");
     const nextButton = document.querySelector(".next-button");
+    const dotsWrap = document.querySelector(".slider-dots");
+    const slider = document.querySelector(".image-slider");
 
     if (!slideContainer || !slides.length) return;
 
     let currentSlide = 0;
     const slideCount = slides.length;
+    let slideInterval = setInterval(nextSlide, 6000);
+
+    if (dotsWrap) {
+        slides.forEach((_, index) => {
+            const dot = document.createElement("button");
+            dot.type = "button";
+            dot.setAttribute("aria-label", `Go to slide ${index + 1}`);
+            dot.addEventListener("click", () => {
+                currentSlide = index;
+                updateSlidePosition();
+                resetInterval();
+            });
+            dotsWrap.appendChild(dot);
+        });
+    }
 
     updateSlidePosition();
-
-    let slideInterval = setInterval(nextSlide, 5000);
 
     if (prevButton) {
         prevButton.addEventListener("click", () => {
@@ -137,8 +42,28 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    if (slider) {
+        slider.addEventListener("mouseenter", () => clearInterval(slideInterval));
+        slider.addEventListener("mouseleave", resetInterval);
+        slider.addEventListener("keydown", (event) => {
+            if (event.key === "ArrowRight") {
+                nextSlide();
+                resetInterval();
+            }
+            if (event.key === "ArrowLeft") {
+                prevSlide();
+                resetInterval();
+            }
+        });
+    }
+
     function updateSlidePosition() {
         slideContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+        if (dotsWrap) {
+            [...dotsWrap.children].forEach((dot, index) => {
+                dot.classList.toggle("is-active", index === currentSlide);
+            });
+        }
     }
 
     function nextSlide() {
@@ -153,17 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function resetInterval() {
         clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, 5000);
+        slideInterval = setInterval(nextSlide, 6000);
     }
-
-    const aboutButtons = document.querySelectorAll(".slider-btn");
-    aboutButtons.forEach((button) => {
-        button.addEventListener("click", function () {
-            if (this.textContent === "ABOUT US") {
-                window.location.href = "aboutus.html";
-            } else if (this.textContent === "CONTACT US") {
-                window.location.href = "contactus.html";
-            }
-        });
-    });
 });

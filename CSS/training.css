@@ -1,119 +1,136 @@
 .hero-section {
     position: relative;
-    min-height: 42vh;
+    min-height: 320px;
+    height: 380px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url('../assets/images/train2.png') center / cover no-repeat;
-    text-align: center;
+    align-items: flex-end;
+    background: url("../assets/images/train2.png") center / cover no-repeat;
 }
 
 .hero-section::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(120deg, rgba(8, 20, 31, 0.82), rgba(11, 28, 44, 0.5));
+    background: linear-gradient(90deg, rgba(7, 21, 37, 0.88) 0%, rgba(7, 21, 37, 0.5) 62%, rgba(7, 21, 37, 0.28) 100%);
 }
 
 .hero-content {
     position: relative;
     z-index: 1;
-    padding: 5.5rem 1.5rem 3.5rem;
+    width: min(100% - 2.5rem, var(--max));
+    margin: 0 auto;
+    padding: 4.5rem 0 3rem;
+}
+
+.training-intro {
+    width: min(100% - 2.5rem, var(--max));
+    margin: 0 auto;
+    padding: 4.5rem 0 1.5rem;
 }
 
 .training-section {
     width: min(100% - 2.5rem, var(--max));
     margin: 0 auto;
-    padding: 4.2rem 0 1rem;
+    padding: 0 0 2rem;
+    display: grid;
+    gap: 1.1rem;
 }
 
 .training-block {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    background: var(--white);
-    border-radius: var(--radius);
+    grid-template-columns: 0.95fr 1.05fr;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
     overflow: hidden;
-    box-shadow: var(--shadow);
-    margin-bottom: 1.8rem;
-    min-height: 320px;
+    min-height: 340px;
 }
 
-.training-block:nth-child(even) {
-    direction: rtl;
-}
-
-.training-block:nth-child(even) > * {
-    direction: ltr;
+.training-block.on-job {
+    grid-template-columns: 1.05fr 0.95fr;
 }
 
 .training-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    min-height: 280px;
+    min-height: 300px;
 }
 
 .training-content {
-    padding: 2.2rem;
+    padding: 2.3rem;
 }
 
 .training-content h2 {
-    font-size: 2rem;
-    position: relative;
-    padding-bottom: 0.7rem;
-    margin-bottom: 1rem;
+    font-size: 1.7rem;
+    margin-bottom: 0.8rem;
 }
 
-.training-content h2::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 52px;
-    height: 3px;
-    background: var(--gold);
-}
-
-.training-content p,
-.training-content li {
-    color: var(--text-muted);
+.training-content p {
+    color: var(--color-muted);
 }
 
 .training-content ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.training-content li {
-    position: relative;
-    padding-left: 1.2rem;
-    margin-bottom: 0.55rem;
-}
-
-.training-content li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.65rem;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--gold);
-}
-
-.page-title {
     display: none;
 }
 
-@media (max-width: 800px) {
-    .training-block {
+.topic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+    margin-top: 1.1rem;
+}
+
+.topic-card {
+    border: 1px solid var(--color-border);
+    padding: 0.75rem 0.85rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.topic-card i {
+    color: var(--color-blue);
+    width: 18px;
+    text-align: center;
+}
+
+.trusted-partner {
+    text-align: left;
+}
+
+.trusted-partner .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.trusted-partner h2 {
+    color: var(--color-white);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin: 0.3rem 0 0.6rem;
+}
+
+.trusted-partner p {
+    max-width: 720px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+@media (max-width: 900px) {
+    .training-block,
+    .training-block.on-job,
+    .topic-grid,
+    .trusted-partner .container {
         grid-template-columns: 1fr;
-        direction: ltr;
+        display: grid;
     }
 
-    .training-image img {
-        height: 240px;
-        min-height: 240px;
+    .hero-section {
+        height: 300px;
+        min-height: 300px;
     }
 }

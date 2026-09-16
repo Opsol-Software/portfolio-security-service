@@ -17,7 +17,7 @@
     <link rel="manifest" href="assets/favicon/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/main.min.css">
     <link rel="stylesheet" href="./CSS/aboutus.min.css">
     <link rel="stylesheet" href="./CSS/navbar.css">
@@ -29,51 +29,61 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="nav-overlay" id="nav-overlay" hidden></div>
+
     <div class="top-bar">
-        <div class="contact-info">
-            <span>
-                <i class="fas fa-phone"></i>
-                <a href="tel:0719829694">071 982 9694</a> /
-                <a href="tel:0741506033">074 150 6033</a>
-            </span>
-            <span>
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:info.singhasec@gmail.com">info.singhasec@gmail.com</a>
-            </span>
-        </div>
-        <div class="company-info">
-            <span><i class="fas fa-building"></i> Singha Security (PVT) LTD</span>
-            <span><i class="fas fa-map-marker-alt"></i> 6/3B, Rathnapura Rd., Ilimba Junction, Munagama, Horana</span>
+        <div class="container top-bar-inner">
+            <p class="top-bar-tagline">Your trusted partner in safety and security.</p>
+            <div class="top-bar-meta">
+                <span>
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:0719829694">071 982 9694</a> /
+                    <a href="tel:0741506033">074 150 6033</a>
+                </span>
+                <span>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info.singhasec@gmail.com">info.singhasec@gmail.com</a>
+                </span>
+                <span><i class="fas fa-clock"></i> 24/7, 365 days of service</span>
+            </div>
         </div>
     </div>
 
-    <nav class="main-nav">
-        <a href="index.html" class="logo">
-            <img src="assets/images/company-logo.png" alt="Singha Security Logo">
-        </a>
-        <button class="nav-toggle" id="menu-icon" aria-label="Toggle navigation" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <div class="nav-links">
-            <a href="index.html" class="nav-item">Home</a>
-            <a href="aboutus.html" class="nav-item active">About Us</a>
-            <a href="index.html#service-section" class="nav-item">Services</a>
-            <a href="careers.html" class="nav-item">Careers</a>
-            <a href="training.html" class="nav-item">Training & Development</a>
-            <a href="contactus.html" class="nav-item">Contact Us</a>
-            <a href="contactus.html" class="nav-cta">Get a Quote</a>
+    <nav class="main-nav" aria-label="Primary">
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/images/company-logo.png" alt="Singha Security Solutions">
+            </a>
+            <button class="nav-toggle" id="menu-icon" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="primary-nav">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="aboutus.html" class="nav-item active">About Us</a>
+                <a href="index.html#service-section" class="nav-item">Services</a>
+                <a href="careers.html" class="nav-item">Careers</a>
+                <a href="training.html" class="nav-item">Training & Development</a>
+                <a href="contactus.html" class="nav-item">Contact Us</a>
+                <a href="contactus.html" class="nav-cta">Get a Quote <i class="fas fa-arrow-right"></i></a>
+            </div>
         </div>
     </nav>
 
-    <main>
+    <main id="main">
         <div class="header">
             <video autoplay muted loop playsinline class="bg-video">
                 <source src="./assets/images/Untitled+design.webm" type="video/webm">
                 Your browser does not support the video tag.
             </video>
             <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span aria-current="page">About Us</span>
+                </nav>
                 <h1>About Us</h1>
                 <p>Your trusted partner in safety and security.</p>
             </div>
@@ -82,7 +92,11 @@
         <section class="about-section">
             <div class="container">
                 <div class="about-content">
+                    <div class="about-image">
+                        <img src="assets/imagesAI/lady_officer_at_singha_security_solutions.webp" alt="Security Team">
+                    </div>
                     <div class="about-text">
+                        <span class="eyebrow">About Singha Security Solutions</span>
                         <h2>Who We Are</h2>
                         <p>
                             <span class="highlight">Singha Security Solutions (Pvt) Ltd (SSS)</span> provides
@@ -103,9 +117,6 @@
                             <span class="highlight">property, assets, and people</span>.
                         </p>
                     </div>
-                    <div class="about-image">
-                        <img src="assets/imagesAI/lady_officer_at_singha_security_solutions.webp" alt="Security Team">
-                    </div>
                 </div>
             </div>
         </section>
@@ -113,10 +124,11 @@
         <div class="VMcontainer">
             <section class="vision reveal">
                 <div class="content-block">
-                    <div class="content-image animate-left"
+                    <div class="content-image"
                         style="background-image: url('./assets/banner_images/DSC_0186 COM.webp');">
                     </div>
-                    <div class="content-text animate-right">
+                    <div class="content-text">
+                        <span class="eyebrow">Vision</span>
                         <h2>Vision</h2>
                         <p>
                             "To be the most professional and reliable security solutions partner in the industry by
@@ -128,14 +140,15 @@
 
             <section class="mission reveal">
                 <div class="content-block">
-                    <div class="content-text animate-left">
+                    <div class="content-text">
+                        <span class="eyebrow">Mission</span>
                         <h2>Mission</h2>
                         <p>
                             "To provide innovative security solutions with high quality standards in order to help our
                             clients in preventing losses of life, property, assets and the environment."
                         </p>
                     </div>
-                    <div class="content-image animate-right"
+                    <div class="content-image"
                         style="background-image: url('./assets/banner_images/DSC_0207 COM.webp');">
                     </div>
                 </div>
@@ -329,45 +342,53 @@
         </div>
 
         <div id="myModal1" class="modal">
-            <span class="close" id="close1">&times;</span>
-            <img class="modal-content" id="img01">
+            <span class="close" id="close1" role="button" tabindex="0" aria-label="Close">&times;</span>
+            <img class="modal-content" id="img01" alt="">
             <div class="caption" id="caption1"></div>
         </div>
 
         <div id="myModal2" class="modal">
-            <span class="close" id="close2">&times;</span>
-            <img class="modal-content" id="img02">
+            <span class="close" id="close2" role="button" tabindex="0" aria-label="Close">&times;</span>
+            <img class="modal-content" id="img02" alt="">
             <div class="caption" id="caption2"></div>
         </div>
+
+        <section class="cta-band">
+            <div class="container">
+                <div>
+                    <span class="eyebrow eyebrow--light">Need professional security?</span>
+                    <h2>Your trusted partner in safety and security.</h2>
+                    <p>Always on, always here — 24/7, 365 days of service.</p>
+                </div>
+                <a class="btn btn-white" href="contactus.html">Contact Us <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
     </main>
 
     <footer class="custom-footer">
         <div class="footer-top">
-            <div class="footer-contact">
-                <span><i class="fas fa-phone-alt"></i> 071 982 9694 / 074 150 6033</span>
-                <span><i class="fas fa-envelope"></i> info.singhasec@gmail.com</span>
-            </div>
-            <div class="footer-address">
-                <span>Singha Security Solutions (Pvt) Limited.</span>
-                <span>6/3B, Rathnapura Rd., Ilimba Junction, Munagama, Horana.</span>
-            </div>
-            <div class="footer-hours">
-                <span><i class="fas fa-clock"></i> Mon - Sat: 8.00 am - 5.30 pm</span>
-                <span>Sunday: CLOSED</span>
+            <div class="container footer-top-inner">
+                <div class="footer-contact">
+                    <span><i class="fas fa-phone-alt"></i> 071 982 9694 / 074 150 6033</span>
+                    <span><i class="fas fa-envelope"></i> info.singhasec@gmail.com</span>
+                </div>
+                <div class="footer-address">
+                    <span>Singha Security Solutions (Pvt) Limited.</span>
+                    <span>6/3B, Rathnapura Rd., Ilimba Junction, Munagama, Horana.</span>
+                </div>
+                <div class="footer-hours">
+                    <span><i class="fas fa-clock"></i> Mon - Sat: 8.00 am - 5.30 pm</span>
+                    <span>Sunday: CLOSED</span>
+                </div>
             </div>
         </div>
 
         <div class="footer-middle">
-            <div class="footer-logo">
-                <img src="assets/images/company-logo.png" alt="Security Logo">
-            </div>
-            <div class="footer-motto">
-                <h3>Our Mission</h3>
-                <p>"<strong>To provide innovative security solutions with high quality standards in order to help our clients in preventing losses of life, property, assets and the environment.</strong>"</p>
-            </div>
-            <div class="footer-motto">
-                 <h3>Our Vision</h3>
-                <p>"<strong>To be the most professional and reliable security solutions partner in the industry by exceeding our customer's expectations while valuing our employees.</strong>"</p>
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="assets/images/company-logo.png" alt="Singha Security Solutions">
+                </div>
+                <p>At Singha Security Solutions (Pvt) Ltd (SSS), we provide exceptional security services tailored to meet the diverse needs of our clients.</p>
             </div>
             <div class="footer-links">
                 <h3>Quick Links</h3>
@@ -379,6 +400,37 @@
                     <li><a href="training.html">Training & Development</a></li>
                     <li><a href="contactus.html">Contact Us</a></li>
                 </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="index.html#personal-security">Personal Security</a></li>
+                    <li><a href="index.html#vip-security">Security for VIPs</a></li>
+                    <li><a href="index.html#bank-security">Bank Security</a></li>
+                    <li><a href="index.html#cctv-systems">CCTV & Alarm Systems</a></li>
+                    <li><a href="index.html#event-security">Event Security</a></li>
+                    <li><a href="index.html#retail-security">Retail Security</a></li>
+                    <li><a href="index.html#school-security">School Security</a></li>
+                    <li><a href="index.html#business-security">Business Security</a></li>
+                    <li><a href="index.html#security-consultants">Security Consultants</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact-col">
+                <h3>Contact</h3>
+                <p><a href="tel:0719829694">071 982 9694</a> / <a href="tel:0741506033">074 150 6033</a></p>
+                <p><a href="mailto:info.singhasec@gmail.com">info.singhasec@gmail.com</a></p>
+                <p>6/3B, Rathnapura Rd., Ilimba Junction, Munagama, Horana.</p>
+            </div>
+        </div>
+
+        <div class="footer-mission">
+            <div class="footer-motto">
+                <h3>Our Mission</h3>
+                <p>"<strong>To provide innovative security solutions with high quality standards in order to help our clients in preventing losses of life, property, assets and the environment.</strong>"</p>
+            </div>
+            <div class="footer-motto">
+                <h3>Our Vision</h3>
+                <p>"<strong>To be the most professional and reliable security solutions partner in the industry by exceeding our customer's expectations while valuing our employees.</strong>"</p>
             </div>
         </div>
 

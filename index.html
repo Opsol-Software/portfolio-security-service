@@ -17,7 +17,7 @@
     <link rel="manifest" href="assets/favicon/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/main.min.css">
     <link rel="stylesheet" href="./CSS/home.min.css">
     <link rel="stylesheet" href="./CSS/navbar.css">
@@ -28,158 +28,297 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="nav-overlay" id="nav-overlay" hidden></div>
+
     <div class="top-bar">
-        <div class="contact-info">
-            <span>
-                <i class="fas fa-phone"></i>
-                <a href="tel:0719829694">071 982 9694</a> /
-                <a href="tel:0741506033">074 150 6033</a>
-            </span>
-            <span>
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:info.singhasec@gmail.com">info.singhasec@gmail.com</a>
-            </span>
-        </div>
-        <div class="company-info">
-            <span><i class="fas fa-building"></i> Singha Security (PVT) LTD</span>
-            <span><i class="fas fa-map-marker-alt"></i> 6/3B, Rathnapura Rd., Ilimba Junction, Munagama, Horana</span>
+        <div class="container top-bar-inner">
+            <p class="top-bar-tagline">Your trusted partner in safety and security.</p>
+            <div class="top-bar-meta">
+                <span>
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:0719829694">071 982 9694</a> /
+                    <a href="tel:0741506033">074 150 6033</a>
+                </span>
+                <span>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info.singhasec@gmail.com">info.singhasec@gmail.com</a>
+                </span>
+                <span><i class="fas fa-clock"></i> 24/7, 365 days of service</span>
+            </div>
         </div>
     </div>
 
-    <nav class="main-nav">
-        <a href="index.html" class="logo">
-            <img src="assets/images/company-logo.png" alt="Singha Security Logo">
-        </a>
-        <button class="nav-toggle" id="menu-icon" aria-label="Toggle navigation" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <div class="nav-links">
-            <a href="index.html" class="nav-item active">Home</a>
-            <a href="aboutus.html" class="nav-item">About Us</a>
-            <a href="index.html#service-section" class="nav-item">Services</a>
-            <a href="careers.html" class="nav-item">Careers</a>
-            <a href="training.html" class="nav-item">Training & Development</a>
-            <a href="contactus.html" class="nav-item">Contact Us</a>
-            <a href="contactus.html" class="nav-cta">Get a Quote</a>
+    <nav class="main-nav" aria-label="Primary">
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/images/company-logo.png" alt="Singha Security Solutions">
+            </a>
+            <button class="nav-toggle" id="menu-icon" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="primary-nav">
+                <a href="index.html" class="nav-item active">Home</a>
+                <a href="aboutus.html" class="nav-item">About Us</a>
+                <a href="index.html#service-section" class="nav-item">Services</a>
+                <a href="careers.html" class="nav-item">Careers</a>
+                <a href="training.html" class="nav-item">Training & Development</a>
+                <a href="contactus.html" class="nav-item">Contact Us</a>
+                <a href="contactus.html" class="nav-cta">Get a Quote <i class="fas fa-arrow-right"></i></a>
+            </div>
         </div>
     </nav>
 
-    <main>
-        <div class="image-slider">
-            <div class="slider-nav slider-nav-left">
-                <button class="nav-button prev-button" aria-label="Previous slide">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-            </div>
-            <div class="slide-container">
-                <div class="slide">
-                    <img src="assets/banner_images/DSC_0186 COM.webp" alt="Security Services">
-                    <div class="img-overlay-text">
-                        <h1>We, Singha Security</h1>
-                        <p>provides Leading Security</p>
-                        <div class="slider-buttons">
-                            <button class="slider-btn">ABOUT US</button>
-                            <button class="slider-btn">CONTACT US</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="assets/banner_images/DSC_0207 COM.webp" alt="Security Personnel">
-                    <div class="img-overlay-text">
-                        <h1>Experienced Security Personnel</h1>
-                        <p>Professional and Trained Staff</p>
-                        <div class="slider-buttons">
-                            <button class="slider-btn">ABOUT US</button>
-                            <button class="slider-btn">CONTACT US</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="assets/banner_images/inspecting_intruderR.webp" alt="Customer Service">
-                    <div class="img-overlay-text">
-                        <h1>Friendly Customer Service</h1>
-                        <p>24/7 Support and Assistance</p>
-                        <div class="slider-buttons">
-                            <button class="slider-btn">ABOUT US</button>
-                            <button class="slider-btn">CONTACT US</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-nav slider-nav-right">
-                <button class="nav-button next-button" aria-label="Next slide">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-        </div>
-
-        <div class="contact-banner" id="contact-animation-container">
-            <div class="contact-banner-content">
-                <div class="contact-banner-text" id="animation-left">
-                    <h1>Protect What Matters Most!</h1>
-                    <p>Reliable security guard services tailored to your business needs.</p>
-                </div>
-
-                <div class="contact-banner-text" id="animation-bottom">
-                    <div class="phone-container">
-                        <div class="ring"></div>
-                        <div class="phone">
-                            <div class="screen"></div>
-                        </div>
-                    </div>
-                    <div class="contact-banner-sub-text">
-                        <h1>071 982 9694</h1>
-                        <h1>074 150 6033</h1>
-                    </div>
-                </div>
-
-                <div class="contact-banner-text" id="animation-right">
-                    <button class="contact-banner-button" id="call-btn">
-                        <span id="text">Call Now!</span>
-                        <svg fill="currentColor" viewBox="0 0 24 24" class="contact-banner-button-icon">
-                        <path
-                            clip-rule="evenodd"
-                            d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                            fill-rule="evenodd"
-                        ></path>
-                        </svg>
+    <main id="main">
+        <div class="hero-wrap">
+            <div class="image-slider">
+                <div class="slider-nav slider-nav-left">
+                    <button class="nav-button prev-button" aria-label="Previous slide">
+                        <i class="fas fa-chevron-left"></i>
                     </button>
                 </div>
+                <div class="slide-container">
+                    <div class="slide">
+                        <img src="assets/banner_images/DSC_0186 COM.webp" alt="Security Services">
+                        <div class="img-overlay-text">
+                            <div class="hero-copy">
+                                <span class="eyebrow eyebrow--light">Professional Security Solutions</span>
+                                <h1>We, Singha Security</h1>
+                                <p>provides Leading Security</p>
+                                <div class="slider-buttons">
+                                    <a class="slider-btn" href="index.html#service-section">Our Services <i class="fas fa-arrow-right"></i></a>
+                                    <a class="slider-btn" href="contactus.html">Contact Us <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <div class="hero-trust">
+                                    <div class="hero-trust-item">
+                                        <i class="fas fa-id-badge" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>Licensed</strong>
+                                            <span>Certificate of Private Company</span>
+                                        </div>
+                                    </div>
+                                    <div class="hero-trust-item">
+                                        <i class="fas fa-user-shield" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>Professional and Trained Staff</strong>
+                                            <span>Experienced Security Personnel</span>
+                                        </div>
+                                    </div>
+                                    <div class="hero-trust-item">
+                                        <i class="fas fa-headset" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>24/7 Support and Assistance</strong>
+                                            <span>Friendly Customer Service</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/banner_images/DSC_0207 COM.webp" alt="Security Personnel">
+                        <div class="img-overlay-text">
+                            <div class="hero-copy">
+                                <span class="eyebrow eyebrow--light">Professional Security Solutions</span>
+                                <h1>Experienced Security Personnel</h1>
+                                <p>Professional and Trained Staff</p>
+                                <div class="slider-buttons">
+                                    <a class="slider-btn" href="aboutus.html">About Us <i class="fas fa-arrow-right"></i></a>
+                                    <a class="slider-btn" href="contactus.html">Contact Us <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <div class="hero-trust">
+                                    <div class="hero-trust-item">
+                                        <i class="fas fa-id-badge" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>Licensed</strong>
+                                            <span>Certificate of Private Company</span>
+                                        </div>
+                                    </div>
+                                    <div class="hero-trust-item">
+                                        <i class="fas fa-user-shield" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>Professional and Trained Staff</strong>
+                                            <span>Experienced Security Personnel</span>
+                                        </div>
+                                    </div>
+                                    <div class="hero-trust-item">
+                                        <i class="fas fa-headset" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>24/7 Support and Assistance</strong>
+                                            <span>Friendly Customer Service</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/banner_images/inspecting_intruderR.webp" alt="Customer Service">
+                        <div class="img-overlay-text">
+                            <div class="hero-copy">
+                                <span class="eyebrow eyebrow--light">Professional Security Solutions</span>
+                                <h1>Friendly Customer Service</h1>
+                                <p>24/7 Support and Assistance</p>
+                                <div class="slider-buttons">
+                                    <a class="slider-btn" href="aboutus.html">About Us <i class="fas fa-arrow-right"></i></a>
+                                    <a class="slider-btn" href="contactus.html">Contact Us <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <div class="hero-trust">
+                                    <div class="hero-trust-item">
+                                        <i class="fas fa-id-badge" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>Licensed</strong>
+                                            <span>Certificate of Private Company</span>
+                                        </div>
+                                    </div>
+                                    <div class="hero-trust-item">
+                                        <i class="fas fa-user-shield" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>Professional and Trained Staff</strong>
+                                            <span>Experienced Security Personnel</span>
+                                        </div>
+                                    </div>
+                                    <div class="hero-trust-item">
+                                        <i class="fas fa-headset" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>24/7 Support and Assistance</strong>
+                                            <span>Friendly Customer Service</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-nav slider-nav-right">
+                    <button class="nav-button next-button" aria-label="Next slide">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="slider-dots" role="tablist" aria-label="Hero slides"></div>
+            </div>
+
+            <div class="hero-services">
+                <div class="hero-services-grid">
+                    <a class="hero-service" href="#personal-security">
+                        <i class="fas fa-user-shield" aria-hidden="true"></i>
+                        <h3>Personal Security</h3>
+                        <p>Professional protection services to ensure your personal safety and peace of mind.</p>
+                        <span class="more">Learn More <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                    <a class="hero-service" href="#vip-security">
+                        <i class="fas fa-user-tie" aria-hidden="true"></i>
+                        <h3>Security for VIPs</h3>
+                        <p>Discreet and reliable security solutions designed for high-profile individuals.</p>
+                        <span class="more">Learn More <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                    <a class="hero-service" href="#bank-security">
+                        <i class="fas fa-university" aria-hidden="true"></i>
+                        <h3>Bank Security</h3>
+                        <p>Specialized security services for financial institutions, ensuring a safe environment.</p>
+                        <span class="more">Learn More <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                    <a class="hero-service" href="#cctv-systems">
+                        <i class="fas fa-video" aria-hidden="true"></i>
+                        <h3>CCTV & Alarm Systems</h3>
+                        <p>Advanced surveillance and alarm systems to monitor and protect your premises.</p>
+                        <span class="more">Learn More <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                    <a class="hero-service" href="#event-security">
+                        <i class="fas fa-calendar-check" aria-hidden="true"></i>
+                        <h3>Event Security</h3>
+                        <p>Comprehensive security solutions for events of all sizes, ensuring safety and order.</p>
+                        <span class="more">Learn More <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                </div>
             </div>
         </div>
 
+        <section class="trust-strip" aria-label="Company facts">
+            <div class="container trust-strip-inner">
+                <div class="trust-item">
+                    <i class="fas fa-award" aria-hidden="true"></i>
+                    <div>
+                        <strong>Established in 2004</strong>
+                        <span>Professional security services</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-clock" aria-hidden="true"></i>
+                    <div>
+                        <strong>24/7, 365 days</strong>
+                        <span>Always on, always here</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-certificate" aria-hidden="true"></i>
+                    <div>
+                        <strong>Licensed</strong>
+                        <span>Certificate of Private Company</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                    <div>
+                        <strong>Throughout the island</strong>
+                        <span>Colombo, Kandy, Galle and more</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="about-us reveal">
+            <div class="about-media">
+                <div class="gallery-stack">
+                    <img loading="lazy" src="assets/imagesAI/singhasecurity_male_officer_2.webp" alt="Security officer">
+                    <img loading="lazy" src="assets/imagesAI/singhasecurity_constulation_2.webp" alt="Security consultation">
+                    <img loading="lazy" src="assets/imagesAI/security_officers_inspecting.webp" alt="Security officers inspecting">
+                </div>
+            </div>
             <div class="section-content">
-                <h4>About Us</h4>
+                <h4>About Singha Security Solutions</h4>
                 <h1>Your Trusted Partner In All Security Solutions</h1>
                 <p>At Singha Security Solutions (Pvt) Ltd (SSS), we provide exceptional security services tailored to meet the diverse needs of our clients.</p>
                 <p>Our offerings range from private households to multinational corporations and government organizations. With a steadfast dedication to <span class="highlight">PROFESSIONALISM</span> and <span class="highlight">EFFICIENCY</span>, we focus on delivering <span class="highlight">TIMELY</span> and <span class="highlight">RELIABLE</span> solutions that exceed expectations.</p>
-                <a href="aboutus.html">
-                    <button class="explore-button">
-                        <span>More...</span>
-                    </button>
-                </a>
+                <a class="btn btn-primary" href="aboutus.html">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
+        </section>
 
-            <div class="gallery">
-                <div class="gallery-container">
-                    <img loading="lazy" src="assets/imagesAI/singhasecurity_constulation_2.webp" alt="Security consultation"
-                        class="gallery-item gallery-item-1" data-index="1">
-                    <img loading="lazy" src="assets/imagesAI/singhasecurity_male_officer_2.webp" alt="Security officer"
-                        class="gallery-item gallery-item-2" data-index="2">
-                    <img loading="lazy" src="assets/imagesAI/security_officers_inspecting.webp" alt="Security officers inspecting"
-                        class="gallery-item gallery-item-3" data-index="3">
+        <section class="why-section">
+            <div class="container">
+                <span class="eyebrow eyebrow--light">Why Singha Security</span>
+                <h2>A steadfast dedication to professionalism and efficiency</h2>
+                <div class="why-grid">
+                    <article class="why-card">
+                        <span>01</span>
+                        <h3>Professionalism</h3>
+                        <p>With a steadfast dedication to PROFESSIONALISM, we protect property, assets, and people.</p>
+                    </article>
+                    <article class="why-card">
+                        <span>02</span>
+                        <h3>Efficiency</h3>
+                        <p>Our well-trained, highly professional, and experienced employees ensure efficiency in every assignment.</p>
+                    </article>
+                    <article class="why-card">
+                        <span>03</span>
+                        <h3>Timely</h3>
+                        <p>We focus on delivering TIMELY solutions that exceed expectations.</p>
+                    </article>
+                    <article class="why-card">
+                        <span>04</span>
+                        <h3>Reliable</h3>
+                        <p>We focus on delivering RELIABLE solutions for private households, multinational corporations and government organizations.</p>
+                    </article>
                 </div>
             </div>
         </section>
 
         <div class="Scontainer reveal">
-            <div class="Slogo">
-                <img src="assets/images/company-logo.png" alt="Logo">
-            </div>
+            <div class="Slogo" role="img" aria-label="Singha Security personnel"></div>
             <div class="Scontent">
+                <span class="eyebrow eyebrow--light">Our Legacy</span>
                 <h1>Our Legacy</h1>
                 <p>
                     Since inception, Singha Security Solutions (Pvt) Ltd has delivered top-tier security services,
@@ -187,79 +326,106 @@
                 </p>
                 <p>Our legacy is built on unwavering commitment to excellence, client satisfaction, and continuous
                     innovation. We listen, adapt, and exceed expectations, earning trust and reliability in every sector
-                    we serve.</p><br>
-                <a href="aboutus.html"><button>See More</button></a>
+                    we serve.</p>
+                <a class="btn btn-primary" href="aboutus.html">See More <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
 
         <section class="services-container overlay reveal">
             <div id="service-section">
-                <h1>Our Services</h1>
+                <h4 class="eyebrow">Our Services</h4>
                 <h1 id="paragraph">RELIABLE SERVICES FOR LOSS PREVENTION</h1>
                 <div class="cards">
-                    <div class="card">
+                    <article class="card" id="personal-security">
                         <div class="content">
-                            <img loading="lazy" src="assets/imagesAI/personal-security.webp" alt="Personal Security">
+                            <div class="image-wrap">
+                                <img loading="lazy" src="assets/imagesAI/personal-security.webp" alt="Personal Security">
+                            </div>
                             <h3>Personal Security</h3>
                             <p>Professional protection services to ensure your personal safety and peace of mind.</p>
+                            <a class="more" href="contactus.html">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
-                    </div>
-                    <div class="card">
+                    </article>
+                    <article class="card" id="vip-security">
                         <div class="content">
-                            <img loading="lazy" src="assets/imagesAI/singhasecurity_vip_security.webp" alt="VIP Security">
+                            <div class="image-wrap">
+                                <img loading="lazy" src="assets/imagesAI/singhasecurity_vip_security.webp" alt="VIP Security">
+                            </div>
                             <h3>Security for VIPs</h3>
                             <p>Discreet and reliable security solutions designed for high-profile individuals.</p>
+                            <a class="more" href="contactus.html">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
-                    </div>
-                    <div class="card">
+                    </article>
+                    <article class="card" id="bank-security">
                         <div class="content">
-                            <img loading="lazy" src="assets/imagesAI/bank-security.webp" alt="Bank Security">
+                            <div class="image-wrap">
+                                <img loading="lazy" src="assets/imagesAI/bank-security.webp" alt="Bank Security">
+                            </div>
                             <h3>Bank Security</h3>
                             <p>Specialized security services for financial institutions, ensuring a safe environment.</p>
+                            <a class="more" href="contactus.html">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
-                    </div>
-                    <div class="card">
+                    </article>
+                    <article class="card" id="security-consultants">
                         <div class="content">
-                            <img loading="lazy" src="assets/imagesAI/singhasecurity_security_consultation.webp" alt="Security Consultation">
+                            <div class="image-wrap">
+                                <img loading="lazy" src="assets/imagesAI/singhasecurity_security_consultation.webp" alt="Security Consultation">
+                            </div>
                             <h3>Security Consultants</h3>
                             <p>Expert guidance to develop customized security plans for your business or home.</p>
+                            <a class="more" href="contactus.html">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
-                    </div>
-                    <div class="card">
+                    </article>
+                    <article class="card" id="cctv-systems">
                         <div class="content">
-                            <img loading="lazy" src="assets/imagesAI/singhasecurity_cctv.webp" alt="CCTV Systems">
+                            <div class="image-wrap">
+                                <img loading="lazy" src="assets/imagesAI/singhasecurity_cctv.webp" alt="CCTV Systems">
+                            </div>
                             <h3>CCTV & Alarm Systems</h3>
                             <p>Advanced surveillance and alarm systems to monitor and protect your premises.</p>
+                            <a class="more" href="contactus.html">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
-                    </div>
-                    <div class="card">
+                    </article>
+                    <article class="card" id="event-security">
                         <div class="content">
-                            <img loading="lazy" src="assets/imagesAI/event-security.webp" alt="Event Security">
+                            <div class="image-wrap">
+                                <img loading="lazy" src="assets/imagesAI/event-security.webp" alt="Event Security">
+                            </div>
                             <h3>Event Security</h3>
                             <p>Comprehensive security solutions for events of all sizes, ensuring safety and order.</p>
+                            <a class="more" href="contactus.html">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
-                    </div>
-                    <div class="card">
+                    </article>
+                    <article class="card" id="retail-security">
                         <div class="content">
-                            <img loading="lazy" src="assets/imagesAI/retail-security.webp" alt="Retail Security">
+                            <div class="image-wrap">
+                                <img loading="lazy" src="assets/imagesAI/retail-security.webp" alt="Retail Security">
+                            </div>
                             <h3>Retail Security</h3>
                             <p>Ensure a safe shopping environment with vigilant loss prevention and customer safety measures.</p>
+                            <a class="more" href="contactus.html">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
-                    </div>
-                    <div class="card">
+                    </article>
+                    <article class="card" id="school-security">
                         <div class="content">
-                            <img loading="lazy" src="assets/imagesAI/school-security.webp" alt="School Security">
+                            <div class="image-wrap">
+                                <img loading="lazy" src="assets/imagesAI/school-security.webp" alt="School Security">
+                            </div>
                             <h3>School Security</h3>
                             <p>Protect students and staff with tailored security solutions, access control, and emergency response.</p>
+                            <a class="more" href="contactus.html">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
-                    </div>
-                    <div class="card">
+                    </article>
+                    <article class="card" id="business-security">
                         <div class="content">
-                            <img loading="lazy" src="assets/imagesAI/business-security.webp" alt="Business Security">
+                            <div class="image-wrap">
+                                <img loading="lazy" src="assets/imagesAI/business-security.webp" alt="Business Security">
+                            </div>
                             <h3>Business Security</h3>
                             <p>Safeguard assets, employees, and operations with comprehensive surveillance, monitoring, and risk management.</p>
+                            <a class="more" href="contactus.html">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -267,94 +433,100 @@
         <section class="client-info reveal">
             <div class="section-content">
                 <h4>Our Esteemed Clients</h4>
-                <h1>Trusted Protection</h1>
-                <h1>Anytime, Anywhere</h1>
+                <h1>Trusted Protection Anytime, Anywhere</h1>
                 <p>At Singha Security Solutions, we take pride in providing top-tier security services to a growing list
                     of esteemed clients across the region. Our presence spans a variety of locations, ensuring safety
                     and peace of mind for businesses, residential areas, and public spaces.</p>
-            </div>
-            <div class="map">
-                <img loading="lazy" src="assets/images/sri_lanka_map.png" alt="Service locations across Sri Lanka">
-                <div class="pin colombo">
+                <div class="location-list" aria-label="Service locations">
                     <span>Colombo</span>
-                </div>
-                <div class="pin matara">
                     <span>Matara</span>
-                </div>
-                <div class="pin galle">
                     <span>Galle</span>
-                </div>
-                <div class="pin ratnapura">
                     <span>Ratnapura</span>
-                </div>
-                <div class="pin horana">
                     <span>Horana</span>
-                </div>
-                <div class="pin kandy">
                     <span>Kandy</span>
-                </div>
-                <div class="pin panadura">
                     <span>Panadura</span>
-                </div>
-                <div class="pin kalutara">
                     <span>Kalutara</span>
-                </div>
-                <div class="pin bandaragama">
                     <span>Bandaragama</span>
                 </div>
             </div>
+            <div class="map">
+                <img loading="lazy" src="assets/images/sri_lanka_map.png" alt="Service locations across Sri Lanka">
+                <div class="pin colombo"><span>Colombo</span></div>
+                <div class="pin matara"><span>Matara</span></div>
+                <div class="pin galle"><span>Galle</span></div>
+                <div class="pin ratnapura"><span>Ratnapura</span></div>
+                <div class="pin horana"><span>Horana</span></div>
+                <div class="pin kandy"><span>Kandy</span></div>
+                <div class="pin panadura"><span>Panadura</span></div>
+                <div class="pin kalutara"><span>Kalutara</span></div>
+                <div class="pin bandaragama"><span>Bandaragama</span></div>
+            </div>
         </section>
 
-        <div class="brand-container">
-            <div class="item item-1"><img src="assets/images/client-logos/cesl_logo_new.png" alt="cesl_logo"></div>
-            <div class="item item-2"><img src="assets/images/client-logos/logo.png" alt=""></div>
-            <div class="item item-3"><img src="assets/images/client-logos/logo4.png" alt=""></div>
-            <div class="item item-4"><img src="assets/images/client-logos/logos23.png" alt=""></div>
-            <div class="item item-5"><img src="assets/images/client-logos/RAMCO.jpg" alt="sri ramco logo"></div>
-            <div class="item item-6"><img src="assets/images/client-logos/rajarata-food-products-horana-kalutara-sri-lanka.jpg" alt="rajarata foods logo"></div>
-            <div class="item item-7"><img src="assets/images/client-logos/Screenshot 2024-12-01 215019.png" alt="">
+        <section class="clients-section" aria-label="Client logos">
+            <div class="section-header">
+                <h4 class="eyebrow">Our Esteemed Clients</h4>
+                <h2>Trusted by organizations</h2>
             </div>
-            <div class="item item-8"><img src="assets/images/client-logos/Screenshot 2024-12-01 215313.png" alt="">
+            <div class="brand-container">
+                <div class="item item-1"><img src="assets/images/client-logos/cesl_logo_new.png" alt="CESL"></div>
+                <div class="item item-2"><img src="assets/images/client-logos/logo.png" alt="Client logo"></div>
+                <div class="item item-3"><img src="assets/images/client-logos/logo4.png" alt="Client logo"></div>
+                <div class="item item-4"><img src="assets/images/client-logos/logos23.png" alt="Client logo"></div>
+                <div class="item item-5"><img src="assets/images/client-logos/RAMCO.jpg" alt="Sri Ramco logo"></div>
+                <div class="item item-6"><img src="assets/images/client-logos/rajarata-food-products-horana-kalutara-sri-lanka.jpg" alt="Rajarata Foods logo"></div>
+                <div class="item item-7"><img src="assets/images/client-logos/Screenshot 2024-12-01 215019.png" alt="Client logo"></div>
+                <div class="item item-8"><img src="assets/images/client-logos/Screenshot 2024-12-01 215313.png" alt="Client logo"></div>
+                <div class="item item-9"><img src="assets/images/client-logos/serandib-logo.png" alt="Serandib logo"></div>
+                <div class="item item-10"><img src="assets/images/client-logos/summerfield.png" alt="Summerfield logo"></div>
+                <div class="item item-11"><img src="assets/images/client-logos/brightwood.png" alt="Brightwood logo"></div>
+                <div class="item item-12"><img src="assets/images/client-logos/don_carolis.png" alt="Don Carolis logo"></div>
+                <div class="item item-13"><img src="assets/images/client-logos/lanka_corrugated.jpeg" alt="Lanka Corrugated logo"></div>
+                <div class="item item-14"><img src="assets/images/client-logos/granite.jpg" alt="Granite logo"></div>
+                <div class="item item-15"><img src="assets/images/client-logos/sunco.jpg" alt="Sunco logo"></div>
+                <div class="item item-16"><img src="assets/images/client-logos/ukuwelkanda.jpg" alt="Ukuwelkanda logo"></div>
+                <div class="item item-17"><img src="assets/images/client-logos/nethsaru.jpg" alt="Nethsaru logo"></div>
             </div>
-            <div class="item item-9"><img src="assets/images/client-logos/serandib-logo.png" alt=""></div>
-            <div class="item item-10"><img src="assets/images/client-logos/summerfield.png" alt=""></div>
-            <div class="item item-11"><img src="assets/images/client-logos/brightwood.png" alt=""></div>
-            <div class="item item-12"><img src="assets/images/client-logos/don_carolis.png" alt=""></div>
-            <div class="item item-13"><img src="assets/images/client-logos/lanka_corrugated.jpeg" alt=""></div>
-            <div class="item item-14"><img src="assets/images/client-logos/granite.jpg" alt=""></div>
-            <div class="item item-15"><img src="assets/images/client-logos/sunco.jpg" alt=""></div>
-            <div class="item item-16"><img src="assets/images/client-logos/ukuwelkanda.jpg" alt=""></div>
-            <div class="item item-17"><img src="assets/images/client-logos/nethsaru.jpg" alt=""></div>
-        </div>
+        </section>
+
+        <section class="cta-band">
+            <div class="container">
+                <div>
+                    <span class="eyebrow eyebrow--light">Protect What Matters Most!</span>
+                    <h2>Reliable security guard services tailored to your business needs.</h2>
+                </div>
+                <a class="cta-call" href="tel:0719829694">
+                    <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                    Call Now
+                </a>
+            </div>
+        </section>
     </main>
 
     <footer class="custom-footer">
         <div class="footer-top">
-            <div class="footer-contact">
-                <span><i class="fas fa-phone-alt"></i> 071 982 9694 / 074 150 6033</span>
-                <span><i class="fas fa-envelope"></i> info.singhasec@gmail.com</span>
-            </div>
-            <div class="footer-address">
-                <span>Singha Security Solutions (Pvt) Limited.</span>
-                <span>6/3B, Rathnapura Rd., Ilimba Junction, Munagama, Horana.</span>
-            </div>
-            <div class="footer-hours">
-                <span><i class="fas fa-clock"></i> Mon - Sat: 8.00 am - 5.30 pm</span>
-                <span>Sunday: CLOSED</span>
+            <div class="container footer-top-inner">
+                <div class="footer-contact">
+                    <span><i class="fas fa-phone-alt"></i> 071 982 9694 / 074 150 6033</span>
+                    <span><i class="fas fa-envelope"></i> info.singhasec@gmail.com</span>
+                </div>
+                <div class="footer-address">
+                    <span>Singha Security Solutions (Pvt) Limited.</span>
+                    <span>6/3B, Rathnapura Rd., Ilimba Junction, Munagama, Horana.</span>
+                </div>
+                <div class="footer-hours">
+                    <span><i class="fas fa-clock"></i> Mon - Sat: 8.00 am - 5.30 pm</span>
+                    <span>Sunday: CLOSED</span>
+                </div>
             </div>
         </div>
 
         <div class="footer-middle">
-            <div class="footer-logo">
-                <img src="assets/images/company-logo.png" alt="Security Logo">
-            </div>
-            <div class="footer-motto">
-                <h3>Our Mission</h3>
-                <p>"<strong>To provide innovative security solutions with high quality standards in order to help our clients in preventing losses of life, property, assets and the environment.</strong>"</p>
-            </div>
-            <div class="footer-motto">
-                 <h3>Our Vision</h3>
-                <p>"<strong>To be the most professional and reliable security solutions partner in the industry by exceeding our customer's expectations while valuing our employees.</strong>"</p>
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="assets/images/company-logo.png" alt="Singha Security Solutions">
+                </div>
+                <p>At Singha Security Solutions (Pvt) Ltd (SSS), we provide exceptional security services tailored to meet the diverse needs of our clients.</p>
             </div>
             <div class="footer-links">
                 <h3>Quick Links</h3>
@@ -366,6 +538,37 @@
                     <li><a href="training.html">Training & Development</a></li>
                     <li><a href="contactus.html">Contact Us</a></li>
                 </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="index.html#personal-security">Personal Security</a></li>
+                    <li><a href="index.html#vip-security">Security for VIPs</a></li>
+                    <li><a href="index.html#bank-security">Bank Security</a></li>
+                    <li><a href="index.html#cctv-systems">CCTV & Alarm Systems</a></li>
+                    <li><a href="index.html#event-security">Event Security</a></li>
+                    <li><a href="index.html#retail-security">Retail Security</a></li>
+                    <li><a href="index.html#school-security">School Security</a></li>
+                    <li><a href="index.html#business-security">Business Security</a></li>
+                    <li><a href="index.html#security-consultants">Security Consultants</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact-col">
+                <h3>Contact</h3>
+                <p><a href="tel:0719829694">071 982 9694</a> / <a href="tel:0741506033">074 150 6033</a></p>
+                <p><a href="mailto:info.singhasec@gmail.com">info.singhasec@gmail.com</a></p>
+                <p>6/3B, Rathnapura Rd., Ilimba Junction, Munagama, Horana.</p>
+            </div>
+        </div>
+
+        <div class="footer-mission">
+            <div class="footer-motto">
+                <h3>Our Mission</h3>
+                <p>"<strong>To provide innovative security solutions with high quality standards in order to help our clients in preventing losses of life, property, assets and the environment.</strong>"</p>
+            </div>
+            <div class="footer-motto">
+                <h3>Our Vision</h3>
+                <p>"<strong>To be the most professional and reliable security solutions partner in the industry by exceeding our customer's expectations while valuing our employees.</strong>"</p>
             </div>
         </div>
 
